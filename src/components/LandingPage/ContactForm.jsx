@@ -1,4 +1,4 @@
-import {ArrowRight, Copy, LocationEdit, Mail, Pencil, Phone, UserRound} from "lucide-react";
+import { Copy, LocationEdit, Mail, Pencil, Phone, UserRound} from "lucide-react";
 import {Button} from "@/components/ui/Button";
 
 export const ContactForm = () => {

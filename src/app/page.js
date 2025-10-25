@@ -3,7 +3,6 @@ import {OurPartners} from "@/components/LandingPage/OurPartners";
 import {Products} from "@/components/LandingPage/Products";
 import {ContactForm} from "@/components/LandingPage/ContactForm";
 import {Testimonials} from "@/components/LandingPage/Testimonials";
-import {About} from "@/components/LandingPage/About";
 import {Container} from "@/components/LandingPage/Container";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
         <OurPartners/><Testimonials/>
         <Container subHeading={"Why Choose Us"} image={"https://aptinverex.com/assets/img/update1/normal/why_7.png"} heading={"Pakistan's Leading Solar Company"} text={"HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients. HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients. HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients."}  directtion={'left'}/>
         <Container subHeading={"Why Choose Us"} image={"https://aptinverex.com/assets/img/update1/normal/why_7.png"} heading={"Pakistan's Leading Solar Company"} text={"HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients. HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients. HMA Associates is a leading solar company in Pakistan, providing innovative and cost-effective solutions for residential and commercial clients."} button={"Contact Us"} link={"/contact"} directtion={'right'}/>
-
         <ContactForm/>
     </div>
   );

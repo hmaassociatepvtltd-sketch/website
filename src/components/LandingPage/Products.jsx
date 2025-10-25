@@ -1,6 +1,6 @@
 "use client"
 
-import {ArrowUpRightFromCircle, ChevronLeft, ChevronRight, CircleArrowRight} from "lucide-react";
+import { ChevronLeft, ChevronRight, CircleArrowRight} from "lucide-react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {useRef} from "react";

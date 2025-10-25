@@ -1,11 +1,6 @@
 "use client"
 
-import {ArrowUp} from "lucide-react";
-import {useScroll} from "motion/react"
-
 export const ScrollUp = () => {
-
-    const {scrollYProgress} = useScroll()
 
     return (
         <div className={'fixed bottom-0 z-50 right-0 p-10'}>

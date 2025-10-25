@@ -1,6 +1,6 @@
-import {ArrowRight, Mail, Phone} from "lucide-react";
+import {ArrowRight,  Phone} from "lucide-react";
 import Link from "next/link";
-import {PiFacebookLogo, PiInstagramLogoFill} from "react-icons/pi";
+import { PiInstagramLogoFill} from "react-icons/pi";
 import {SiFacebook, SiLinkedin} from "react-icons/si";
 import {IoIosMail} from "react-icons/io";
 
@@ -17,7 +17,7 @@ export const Footer = () => {
                <div className={'max-w-[1260px] px-5 xl:px-0 w-full pt-20 lg:pt-40 pb-28'}>
                    <div className={'grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid w-full gap-10'}>
                        <div className={'col-span-1 w-full flex flex-col gap-5'}>
-                           <img className={'w-full sm:w-[200px] filter invert grayscale-100'} src={'/assets/logo.png'}/>
+                           <img alt={'logo'} className={'w-full sm:w-[200px] filter invert grayscale-100'} src={'/assets/logo.png'}/>
                            <p className={'text-white font-medium'}>Head Office: Gujranwala, Rahwali, Near Cennab
                                Gate</p>
                            <div className={'flex flex-row gap-3 items-center'}>

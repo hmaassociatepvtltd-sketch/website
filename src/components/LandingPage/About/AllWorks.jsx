@@ -2,8 +2,6 @@
 
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-import Link from "next/link";
-import {ArrowRight} from "lucide-react";
 
 export const AllWorks = () => {
 
@@ -53,7 +51,7 @@ export const AllWorks = () => {
                 loop={true}
             >
 
-                {projects.map((project, index)=>(
+                {projects.map((project)=>(
                     <SwiperSlide>
                         <div style={{
                             backgroundImage: `url('https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg')`

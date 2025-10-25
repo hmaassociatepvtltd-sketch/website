@@ -62,7 +62,7 @@
 ;
   @keyframes aurora {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
     transform: rotate(-5deg) scale(0.9);}
   25% {
     background-position: 50% 100%;
@@ -74,7 +74,7 @@
     background-position: 50% 0%;
     transform: rotate(3deg) scale(1.05);}
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
     transform: rotate(-5deg) scale(0.9);}}}
 
 body {
@@ -117,6 +117,8 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+    --duration: 0.3s;
+    --gap: 10px;
 }
 
 @layer base {
@@ -140,7 +142,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    box-shadow: 0 0 0 4px rgba(180, 160, 255, 0.253);
     cursor: pointer;
     transition-duration: 0.3s;
     overflow: hidden;
@@ -176,7 +178,7 @@ body {
     content: "Back to Top";
     color: white;
     /* transition-duration: .3s; */
-    font-size: 0px;
+    font-size: 0;
 }
 
 .button:hover::before {
@@ -213,7 +215,7 @@ body {
     border: 2px solid black;
     background-color: #f27405;
     margin-bottom: -6em;
-    margin-left: 0em;
+    margin-left: 0;
     z-index: -1;
 }
 .antenna_shadow {
@@ -226,11 +228,11 @@ body {
     transform: rotate(140deg);
     border: 4px solid transparent;
     box-shadow:
-            inset 0px 16px #a85103,
-            inset 0px 16px 1px 1px #a85103;
+            inset 0 16px #a85103,
+            inset 0 16px 1px 1px #a85103;
     -moz-box-shadow:
-            inset 0px 16px #a85103,
-            inset 0px 16px 1px 1px #a85103;
+            inset 0 16px #a85103,
+            inset 0 16px 1px 1px #a85103;
 }
 .antenna::after {
     content: "";
@@ -351,9 +353,9 @@ body {
     height: 9em;
     border-radius: 15px;
     background:
-            repeating-radial-gradient(#d36604 0 0.0001%, #00000070 0 0.0002%) 50% 0/2500px
+            repeating-radial-gradient(#d36604 0, #00000070 0.0002%) 50% 0/2500px
             2500px,
-            repeating-conic-gradient(#d36604 0 0.0001%, #00000070 0 0.0002%) 60% 60%/2500px
+            repeating-conic-gradient(#d36604 0, #00000070 0.0002%) 60% 60%/2500px
             2500px;
     background-blend-mode: difference;
     opacity: 0.09;
@@ -371,7 +373,7 @@ body {
     align-self: center;
     justify-content: center;
     border-radius: 15px;
-    box-shadow: 3.5px 3.5px 0px #e69635;
+    box-shadow: 3.5px 3.5px 0 0 #e69635;
 }
 .screen_out {
     width: auto;
@@ -390,7 +392,6 @@ body {
 .screen {
     width: 13em;
     height: 7.85em;
-    font-family: Montserrat;
     border: 2px solid #1d0e01;
     background:
             repeating-radial-gradient(#000 0 0.0001%, #ffffff 0 0.0002%) 50% 0/2500px

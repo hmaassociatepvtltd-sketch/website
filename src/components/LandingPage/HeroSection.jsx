@@ -1,5 +1,3 @@
-import {ArrowRight} from "lucide-react";
-import Link from "next/link";
 import {Button} from "@/components/ui/Button";
 
 export const HeroSection = ({image="", heading="", text="", button="", link=""}) => {

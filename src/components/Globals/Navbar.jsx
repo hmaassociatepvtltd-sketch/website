@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {ArrowRight, ChevronRight, Menu} from "lucide-react";
+import { ChevronRight, Menu} from "lucide-react";
 import {Sheet, SheetContent, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import {Button} from "@/components/ui/Button";
 
