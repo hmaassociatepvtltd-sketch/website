@@ -1,7 +1,5 @@
 import { defineConfig } from "tinacms";
 
-const isLocal = process.env.NODE_ENV === 'development';
-
 const templates= [
     {
         name: "heroSection",
@@ -262,10 +260,9 @@ const templates= [
 ]
 
 export default defineConfig({
-  branch: isLocal ? 'main' : (process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || 'main'),
-  clientId: isLocal ? null : process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  token: isLocal ? null : process.env.TINA_TOKEN,
-  local: isLocal,
+  branch: 'master',
+    clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+    token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
     publicFolder: "public",

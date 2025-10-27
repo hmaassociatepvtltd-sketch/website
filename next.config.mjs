@@ -7,7 +7,15 @@ const nextConfig = {
               destination: '/admin/index.html'
           }
       ]
-  }
+  },
+    images: {
+      remotePatterns: [
+          {
+              protocol: 'https',
+              hostname: 'assets.tina.io'
+          }
+      ]
+    }
 };
 
 export default nextConfig;
