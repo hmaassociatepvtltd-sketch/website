@@ -105,8 +105,8 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                                   {servicesOpen && (
                                       <div className="flex flex-col mt-0.5 bg-gray-50 border-l-2 border-primary/20">
                                           {Array.from(serviceTypes)?.map((item, idx) => (
-                                              <Link key={idx} href={item.href} className={'pl-10 pr-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-200 w-full text-sm'}>
-                                                  {item.name}
+                                              <Link key={idx} href={`/services/${item.replace(' ', '-')}`} className={'pl-10 pr-4 py-4 text-gray-600 hover:bg-gray-100 transition-colors duration-200 w-full text-sm'}>
+                                                  {item}
                                               </Link>
                                           ))}
                                       </div>
@@ -128,8 +128,8 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                                   {productsOpen && (
                                       <div className="flex flex-col mt-0.5 bg-gray-50 border-l-2 border-primary/20">
                                           {Array.from(productTypes)?.map((item, idx) => (
-                                              <Link key={idx} href={item.href} className={'pl-10 pr-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors duration-200 w-full text-sm'}>
-                                                  {item.name}
+                                              <Link key={idx} href={`/products/${item}`} className={'pl-10 pr-4 py-4 text-gray-600 hover:bg-gray-100 transition-colors duration-200 w-full text-sm'}>
+                                                  {item}
                                               </Link>
                                           ))}
                                       </div>
