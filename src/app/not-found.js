@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from "@/components/ui/Button";
 
-const NotFound = () => {
+const NotFound = async () => {
     return (
            <div className={' min-h-screen overflow-hidden w-full max-w-screen h-full justify-center items-center flex flex-col'}>
                <div className="main_wrapper ">

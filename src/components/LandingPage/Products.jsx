@@ -3,52 +3,13 @@
 import { ChevronLeft, ChevronRight, CircleArrowRight} from "lucide-react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
-import {useRef} from "react";
+import {useRef, useState} from "react";
+import {tinaField} from "tinacms/dist/react";
 
-const products = [
-    {
-        name: "Product 1",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 2",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 3",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 4",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 5",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 6",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 7",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 8",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 9",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-    {
-        name: "Product 10",
-        image: "https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png"
-    },
-]
+export const Products = ({productsData = [], ...props}) => {
 
-export const Products = () => {
+    const [products] = useState(productsData)
+
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -57,8 +18,8 @@ export const Products = () => {
        <div className={'w-full  justify-center gap-20 flex flex-col items-center py-20'}>
            <div className={'max-w-[1260px] flex flex-col md:flex-row justify-between items-end gap-5 px-5 xl:px-0 w-full'}>
             <div>
-                <h1 className={' font-bold font-josefin-sans text-4xl tracking-tighter'}>Our Products</h1>
-                <p className={'text-balance text-lg opacity-75 w-full max-w-[800px]'}>We offer a wide range of solar products and solutions to help you harness the power of the sun and reduce your carbon footprint.</p>
+                <h1 data-tina-field={tinaField(props, 'title')} className={' font-bold font-josefin-sans text-4xl tracking-tighter'}>{props.title}</h1>
+                <p data-tina-field={tinaField(props, 'description')} className={'text-balance text-lg opacity-75 w-full max-w-[800px]'}>{props.description}</p>
             </div>
                <div className={'gap-3 w-full flex flex-row flex-nowrap items-center justify-end'}>
                    <button ref={prevRef} className={'bg-primary  cursor-pointer text-white px-4 py-4 hover:bg-primary/80 transition-all duration-300 rounded-xl'}><ChevronLeft/></button>
@@ -101,7 +62,7 @@ export const Products = () => {
                }}
                loop={true}
            >
-               {products.map((product, index) => (
+               {products?.map((product, index) => (
                    <SwiperSlide key={index} className={'w-full'}>
                        <div style={{
                            backgroundImage: `url('${product.image}')`,

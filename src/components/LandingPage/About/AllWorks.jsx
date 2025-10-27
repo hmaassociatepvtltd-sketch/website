@@ -2,36 +2,11 @@
 
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
+import {useRouter} from "next/navigation";
 
-export const AllWorks = () => {
+export const AllWorks = ({worksData = [], ...props}) => {
 
-    const projects = [
-        {
-            name: "Project Name",
-            description: "Project Description",
-            image: "https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg"
-        },
-        {
-            name: "Project Name",
-            description: "Project Description",
-            image: "https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg"
-        },
-        {
-            name: "Project Name",
-            description: "Project Description",
-            image: "https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg"
-        },
-        {
-            name: "Project Name",
-            description: "Project Description",
-            image: "https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg"
-        },
-        {
-            name: "Project Name",
-            description: "Project Description",
-            image: "https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg"
-        },
-    ]
+    const router = useRouter()
 
     return (
         <div>
@@ -51,11 +26,13 @@ export const AllWorks = () => {
                 loop={true}
             >
 
-                {projects.map((project)=>(
+                {worksData.map((project, index)=>(
                     <SwiperSlide>
-                        <div style={{
-                            backgroundImage: `url('https://www.hmago.com/wp-content/uploads/2023/08/53310b4a-2cf9-445a-9f4d-4b4de6f7f2f8_11zon.jpg')`
-                        }} className={'p-5 h-[600px] bg-cover bg-bottom border-[1px] border-t-0 border-primary relative'}>
+                        <div onClick={()=>{
+                            router.push(`/work/${project._sys.filename}`)
+                        }} style={{
+                            backgroundImage: `url('${project.mainImage}')`
+                        }} className={'p-5 h-[600px] cursor-pointer bg-cover bg-bottom border-[1px] border-t-0 border-primary relative'}>
                             <div className={' z-0 inset-0 absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/25 to-black'} />
                             <div className={'z-10 relative justify-end gap-3 flex flex-col text-white h-full'}>
                                 <h1 className={'font-bold text-4xl font-josefin-sans tracking-tighter'} >{project.name}</h1>
