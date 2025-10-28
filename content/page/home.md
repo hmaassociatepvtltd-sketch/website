@@ -1,44 +1,32 @@
 ---
 title: Hello
 blocks:
-  - title: Pakistan Leading Solar Company
-    description: >-
-      Inverex Solar Energy stands as Pakistan’s largest and most trusted solar
-      brand, proudly leading the way in renewable energy solutions for over a
-      decade. 
+  - title: Empowering Communities  with Energy &  Innovation
+    description: Empowering Communities  with Energy &  Innovation
     buttonText: Contact Us
     buttonLink: '#contactForm'
     _template: heroSection
-  - subHeading: ' More Info'
-    heading: Our Mission
-    text: >
-      HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients
+  - subHeading: Who We Are ?
+    heading: ABOUT US!
+    text: |2
+       HMA Associates (SMC-Private) Limited is a trusted name in Construction,Renewable Energy Solutions, Engineering Design, and MEP Services acrossPakistan. The company possesses good experience in specialized nature of work, leveraging a team of skilled professionals and advanced technology to deliver reliable, efficient, and sustainable built environments tailored to the needs of residential, commercial, and institutional clients
     image: /products/batteries-1.jpg
     direction: left
     _template: container
   - subHeading: Why Choose Us
     heading: Pakistan's Leading Solar Company
     text: >
-      HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients
+      As a PEC-licensed C1 Constructor, we are authorized to execute large-scale
+      projects with precision and excellence. In addition, our AEDB/PPIB
+      certification as a certified solar installer empowers us to deliver Large
+      Scale Projects in compliance with national renewable energy standards. Our
+      strength lies in delivering reliable, cost-effective, and tailored
+      solutions that meet the unique needs of every client.
     image: /Landing%20Page/why_7.png
     direction: right
     _template: container
-  - title: Our Products
-    description: >-
-      We offer a wide range of solar products and solutions to help you harness
-      the power of the sun and reduce your carbon footprint.
+  - title: Our Services & Products
+    description: Construction & MEP  Services
     _template: products
   - title: Testimonials
     description: >-
