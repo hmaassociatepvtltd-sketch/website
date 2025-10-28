@@ -8,9 +8,15 @@ blocks:
     _template: heroSection
   - subHeading: Who We Are ?
     heading: ABOUT US!
-    text: |2
-       HMA Associates (SMC-Private) Limited is a trusted name in Construction,Renewable Energy Solutions, Engineering Design, and MEP Services acrossPakistan. The company possesses good experience in specialized nature of work, leveraging a team of skilled professionals and advanced technology to deliver reliable, efficient, and sustainable built environments tailored to the needs of residential, commercial, and institutional clients
-    image: /products/batteries-1.jpg
+    text: >
+      HMA Associates (SMC-Private) Limited is a trusted name in
+      Construction,Renewable Energy Solutions, Engineering Design, and MEP
+      Services acrossPakistan. The company possesses good experience in
+      specialized nature of work, leveraging a team of skilled professionals and
+      advanced technology to deliver reliable, efficient, and sustainable built
+      environments tailored to the needs of residential, commercial, and
+      institutional clients
+    image: /hrui_AdobeStock_276818517_RV.jpg
     direction: left
     _template: container
   - subHeading: Why Choose Us
