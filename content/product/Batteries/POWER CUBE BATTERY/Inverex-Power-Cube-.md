@@ -1,6 +1,6 @@
 ---
 name: Inverex Power Cube
-image: /products/batteries-2.jpg
+image: /goodwe25kw.webp
 description: |
   # Products Details
 
