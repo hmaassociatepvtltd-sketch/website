@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: Goodwe
+image: /GOODWELOGO.png
 ---
 
