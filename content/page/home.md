@@ -5,6 +5,7 @@ blocks:
     description: Empowering Communities  with Energy &  Innovation
     buttonText: Contact Us
     buttonLink: '#contactForm'
+    backgroundImage: /sun-solar-blog-image-768x436.png
     _template: heroSection
   - subHeading: Who We Are ?
     heading: ABOUT US!
