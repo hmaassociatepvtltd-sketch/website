@@ -16,8 +16,6 @@ export const  ServicesComponents = (props) => {
 
     const {data} = useTina(props)
 
-    console.log(data)
-
     return (
         <div className={"w-full relative h-full"}>
             {data && data?.service?.blocks?.map((block, index) => {

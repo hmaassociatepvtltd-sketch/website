@@ -36,7 +36,7 @@ const Product = ({product}) => {
 
     return (
         <Link href={`/products/detail/${product._sys.basename}`} className={'flex max-w-[420px] col-span-1 w-fit hover:scale-[1.010] hover:cursor-pointer group hover:bg-primary/10 p-5 rounded-xl transition-all duration-300 flex-col gap-10'} >
-            <Image width={250} height={250} className={'w-[400px] object-cover rounded-xl'} src={product.image} alt={product.name} />
+            <Image width={250} height={250} className={'w-[400px] object-cover rounded-xl'} src={product.coverImage} alt={product.name} />
             <h1 className={'text-xl font-semibold group-hover:text-primary transition-all duration-300 text-center tracking-tighter'}>{product.name}</h1>
         </Link>
     )

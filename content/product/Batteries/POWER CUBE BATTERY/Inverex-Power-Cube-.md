@@ -1,8 +1,19 @@
 ---
-name: Inverex Power Cube
 image: /goodwe25kw.webp
+name: Inverex Power Cube New
+coverImage: /goodwe25kw.webp
+images:
+  - image: /products/Inverex-Nitrox-10-KW-3Ph-On-Grid-Solar-Inverter.jpg
+  - image: /products/Inverex-Nitrox-50KW-3Ph-5G-PV-Solar-On-Gird-Inverter.jpg
+  - image: /products/batteries-1.jpg
+  - image: /goodwe25kw.webp
+  - image: /products/5.jpg
+  - image: /products/batteries-2.jpg
+  - image: /products/batteries-1.jpg
+  - image: /globe.svg
+  - image: /products/Inverex-Nitrox-10-KW-3Ph-On-Grid-Solar-Inverter.jpg
 description: |
-  # Products Details
+  ###### Products Details
 
   * Each group battery Flexible capacity from 5kWh to 20kWh
   * 12 groups can be connected in parallel by communication 240kWh (12 Packs)
@@ -12,7 +23,7 @@ description: |
   * Remote firmware upgrade
   * Long lifespan, 5 years warranty
 
-  # Delivery & Returns
+  ###### Delivery & Returns
 
   * Standard Delivery 4-5 days.
   * Inverex 5 years Warranty

@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {tinaField} from "tinacms/dist/react";
+import Image from 'next/image';
 
 export const OurPartners = ({partnersData = [], ...props}) => {
     return (
@@ -42,7 +43,7 @@ export const OurPartners = ({partnersData = [], ...props}) => {
                     >
                         {partnersData?.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <img className={'max-w-[200px] grayscale-100 rounded-full w-full h-full aspect-square max-h-[200px] object-cover'} src={image.image} alt="" />
+                                <Image width={100} height={100} className={'max-w-[200px] grayscale-100 rounded-full w-full h-full aspect-square max-h-[200px] object-cover'} src={image.image} alt={image+index} />
                             </SwiperSlide>
                         ))}
 

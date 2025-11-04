@@ -70,8 +70,6 @@ export default async function RootLayout({ children }) {
 
         siteSettings = siteSettingsResponse;
 
-        console.log(siteSettingsResponse);
-
     } catch (error) {
         console.error(`Error fetching all products from TinaCMS:`, error);
     }
@@ -81,7 +79,7 @@ export default async function RootLayout({ children }) {
       <body className={`${josefinSans.variable} ${poppins.variable} antialiased`}>
       <Navbar logo={siteSettings.data.site.navbarLogo} serviceTypes={serviceTypes} productTypes={productTypes} />
           {children}
-      <Footer {...siteSettings} />
+      <Footer serviceTypes={serviceTypes} productTypes={productTypes} site={siteSettings} />
       <ScrollUp/>
       </body>
     </html>

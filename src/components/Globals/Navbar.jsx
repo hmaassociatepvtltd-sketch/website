@@ -16,8 +16,8 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
     return (
         <div className={'fixed top-0 left-0 pt-5 w-full px-5 xl:px-0 z-50 flex justify-center items-center'}>
           <div className={'w-full  max-w-[1260px] flex justify-between items-center'}>
-              <Image width={100} height={100} alt={'Hma Solar Logo'} className={'w-[100px]'}  src={logo} />
-              <div className={'text-white hidden border-b-[10px] border-r-[10px] border-primary py-5 px-10 rounded-xl bg-secondary-background font-semibold lg:flex flex-row items-center gap-8'}>
+              <Image width={50} height={50} alt={'Hma Solar Logo'} className={'w-20 xl:w-[100px]'}  src={logo} />
+              <div className={'text-white hidden border-b-10 border-r-10 border-primary py-5 px-10 rounded-xl bg-secondary-background font-semibold lg:flex flex-row items-center gap-8'}>
                     <Link className={'hover:opacity-85'} href={'/'}>Home</Link>
                     <Link className={'hover:opacity-85'} href={'/about'}>About</Link>
                   <motion.div
@@ -67,18 +67,18 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                        </AnimatePresence>
                    </motion.div>
                     <Link className={'hover:opacity-85'} href={'/work'}>Work</Link>
-                  <Button link={'/'} >Get Qoute</Button>
+                  <Button link={'/#contact'} >Get Qoute</Button>
               </div>
               <div className={'lg:hidden flex flex-col items-center justify-center'}>
                   <Sheet >
                       <SheetTrigger asChild>
-                          <button className={'bg-primary cursor-pointer text-white px-4 py-3 hover:bg-primary/80 transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'}>
+                          <div className={'bg-primary cursor-pointer text-white px-4 py-3 hover:bg-primary/80 transition-all duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'}>
                               <Menu className="h-6 w-6" />
-                          </button>
+                          </div>
                       </SheetTrigger>
                       <SheetContent side={'left'} className="flex flex-col p-0"> {/* Full height, padding, flex column */}
                           <SheetTitle className={'flex items-center gap-2 p-6 border-b border-gray-200'}>
-                              <img alt={'Hma Solar Logo'} className={'w-[70px] h-auto object-contain'} src={'/assets/logo.png'} />
+                              <Image width={50} height={50} alt={'Hma Solar Logo'} className={'w-[70px] h-auto object-contain'} src={'/assets/logo.png'} />
                               <p className={'font-josefin-sans tracking-tight font-bold text-lg text-gray-800'}>HMA ASSOCIATES & CO</p>
                           </SheetTitle>
 
@@ -145,7 +145,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                           <div className="mt-auto p-4 border-t border-gray-200">
                               <Button
                                   className={'w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'}
-                                  link={'/contact'}
+                                  link={'/#contact'}
                               >
                                   Get Quote
                               </Button>

@@ -24,8 +24,6 @@ export const  PageComponent = ({partners = [] , products = [], works= [], ...pro
         <div className={"w-full relative h-full"}>
             {page.blocks?.map((block, index) => {
 
-                console.log("block?.__typename: ", block?.__typename)
-
                 switch (block?.__typename) {
                     case "PageBlocksHeroSection": {
                         return <HeroSection {...block} key={index} />

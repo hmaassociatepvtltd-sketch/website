@@ -5,7 +5,7 @@ import {tinaField} from "tinacms/dist/react";
 export const ContactForm = (props) => {
 
     return (
-        <div className={'w-full bg-secondary-background justify-center items-center flex flex-col py-24'}>
+        <div id="contact" className={'w-full bg-secondary-background justify-center items-center flex flex-col py-24'}>
             <div className={'max-w-[1260px] w-full items-center grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-5 px-5 xl:px-0'}>
                 <div className={'space-y-5'}>
                     <p data-tina-field={tinaField(props, "subheading")} className={'text-primary font-bold font-josefin-sans text-xl tracking-tighter flex flex-row gap-1'}><Copy/> {props.subheading}</p>

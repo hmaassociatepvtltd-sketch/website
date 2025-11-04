@@ -1,6 +1,6 @@
 import { defineConfig } from "tinacms";
 
-const templates= [
+const templates = [
     {
         name: "heroSection",
         label: "Hero Section",
@@ -25,6 +25,11 @@ const templates= [
                 label: "Button Link",
                 type: "string",
             },
+            {
+                name: "backgroundImage",
+                label: "Background Image",
+                type: "image"
+            }
         ]
     },
     {
@@ -172,7 +177,7 @@ const templates= [
                 name: "description",
                 label: "Description",
                 type: "string",
-                ui:{
+                ui: {
                     component: "textarea"
                 }
             },
@@ -222,7 +227,7 @@ const templates= [
     },
     {
         name: "allwork",
-        label : "All Works",
+        label: "All Works",
         fields: [
             {
                 name: "title",
@@ -260,19 +265,19 @@ const templates= [
 ]
 
 export default defineConfig({
-  branch: 'master',
+    branch: 'master',
     clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
     token: process.env.TINA_TOKEN,
-  build: {
-    outputFolder: "admin",
-    publicFolder: "public",
-  },
-  media: {
-    tina: {
-      mediaRoot: "",
-      publicFolder: "public",
+    build: {
+        outputFolder: "admin",
+        publicFolder: "public",
     },
-  },
+    media: {
+        tina: {
+            mediaRoot: "",
+            publicFolder: "public",
+        },
+    },
     schema: {
         collections: [
             {
@@ -307,18 +312,32 @@ export default defineConfig({
                 path: "content/product",
                 format: "md",
                 fields: [
-                            {
-                                name: "name",
-                                label: "Name",
-                                type: "string",
-                                isTitle: true,
-                                required: true,
-                            },
+                    {
+                        name: "name",
+                        label: "Name",
+                        type: "string",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        name: "coverImage",
+                        label: "Cover Image",
+                        type: "image",
+                    },
+                    {
+                        name: "images",
+                        label: "Images",
+                        type: "object",
+                        list: true,
+                        fields: [
                             {
                                 name: "image",
                                 label: "Image",
                                 type: "image",
-                            },
+                                required: true,
+                            }
+                        ],
+                    },
                     {
                         name: "description",
                         label: "Description",
@@ -455,9 +474,9 @@ export default defineConfig({
                         type: "string",
                     },
                     {
-                      name: "footerText",
-                      label: "Footer Text",
-                      type: "string",
+                        name: "footerText",
+                        label: "Footer Text",
+                        type: "string",
                     },
                     {
                         name: "footerImage",

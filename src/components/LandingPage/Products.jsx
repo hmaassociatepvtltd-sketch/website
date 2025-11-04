@@ -5,11 +5,14 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
 import {useRef, useState} from "react";
 import {tinaField} from "tinacms/dist/react";
+import { useRouter } from "next/navigation";
 
 export const Products = ({productsData = [], ...props}) => {
 
     const [products] = useState(productsData)
+    const router = useRouter()
 
+    console.log(products)
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -64,10 +67,12 @@ export const Products = ({productsData = [], ...props}) => {
            >
                {products?.map((product, index) => (
                    <SwiperSlide key={index} className={'w-full'}>
-                       <div style={{
-                           backgroundImage: `url('${product.image}')`,
-                       }}  className={'relative hover:cursor-pointer p-5 w-full h-[600px] rounded-xl overflow-hidden'}>
-                           <div className={'absolute top-0 left-0 bg-black/50 w-full h-full'} />
+                       <div onClick={()=>{
+                        router.push(`/products/detail/${product._sys.basename}`)
+                       }} style={{
+                           backgroundImage: `url('${product.coverImage}')`,
+                       }}  className={'relative hover:cursor-pointer p-5 w-full h-[600px] rounded-xl bg-cover overflow-hidden'}>
+                           <div className={'absolute top-0 left-0 bg-gradient-to-b from-black/50 to-transparent w-full h-full'} />
                          <div className={'absolute group space-y-3 top-0 left-0 w-full h-full p-5'}>
                              <p className={'text-xl font-josefin-sans font-bold text-white'}>{product.name}</p>
                              <div className={'flex opacity-0 group-hover:opacity-100 transition-all duration-300   flex-row items-end gap-1 text-white'}>
