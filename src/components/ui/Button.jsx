@@ -6,6 +6,7 @@ export const Button = ({children, link, className}) => {
     return (
         <Link
             href={link}
+aria-label={children}
             className={cn('relative bg-primary text-white font-medium text-[17px] px-4 py-4 pl-5 h-[3.3em] rounded-[0.7em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#714da6] group w-fit', className)}
         >
             <span className="mr-20 text-lg font-medium w-fit">{children}</span>
