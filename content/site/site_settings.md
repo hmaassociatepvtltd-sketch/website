@@ -9,9 +9,9 @@ footerLogo: /assets/logo.png
 location: 'Head Office: 1st Floor Near Eagle Estate Chenab Cantt Gate Gujranwala'
 phone: +92 55 3828498
 email: ' info@hmago.com'
-instagram: test
-facebook: ''
-twitter: test
-linkedin: test
+instagram: instagram
+facebook: facebook
+twitter: twitter
+linkedin: linkedin
 ---
 
