@@ -36,5 +36,8 @@ blocks:
   - height: '200'
     backgroundColor: white
     _template: Spacer
+  - title: our patners
+    description: Project
+    _template: partner
 ---
 

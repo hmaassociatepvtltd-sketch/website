@@ -14,7 +14,7 @@ export const HeroSection = (props) => {
             }}
             className={'w-full bg-cover bg-no-repeat py-10 h-full relative justify-center items-center flex flex-col'}
         >
-            <div className={'w-full h-full absolute top-0 left-0 bg-black opacity-75'} />
+            <div className={'w-full h-full absolute top-0 left-0 bg-black opacity-25'} />
             <div className={`w-full px-5 xl:px-0 z-10 h-full items-end xl:items-center py-10 grid grid-cols-1 xl:grid-cols-2 inset-0 max-w-[1260px] ${ props?.description ? 'min-h-[80vh]' : 'min-h-[50vh]' } `}>
                 <div className={'flex flex-col gap-5 max-w-[700px]'}>
                     <h1

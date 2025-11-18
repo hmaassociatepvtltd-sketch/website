@@ -33,7 +33,7 @@ export const Products = ({productsData = [], ...props}) => {
                modules={[Navigation, Pagination, Autoplay]}
                spaceBetween={15}
                className={'w-full'}
-               autoplay={{delay: 2000}}
+               autoplay={{delay: 3000}}
                onBeforeInit={(swiper) => {
                    // Connect custom buttons
                    swiper.params.navigation.prevEl = prevRef.current;
@@ -67,7 +67,7 @@ export const Products = ({productsData = [], ...props}) => {
            >
                {products?.map((product, index) => (
                    <SwiperSlide key={index} className={'w-full'}>
-                       <div onClick={()=>{
+                       {/* <div onClick={()=>{
                         router.push(`/products/detail/${product._sys.basename}`)
                        }} style={{
                            backgroundImage: `url('${product.coverImage}')`,
@@ -79,6 +79,17 @@ export const Products = ({productsData = [], ...props}) => {
                                  <CircleArrowRight/> <p>View Details</p>
                              </div>
                          </div>
+                       </div> */}
+                       <div onClick={()=>{
+                        router.push(`/products/detail/${product._sys.basename}`)
+                       }} className="h-full hover:scale-[1.025] flex flex-col justify-between gap-2 bg-accent rounded-xl transition-transform relative hover:cursor-pointer p-5 w-full">
+                        <img className="rounded-xl min-h-[400px] w-full object-center object-cover h-full" alt={product.name} src={product.coverImage}/>
+                        <div className="py-2">
+                             <p className={'text-xl font-josefin-sans font-bold text-black'}>{product.name}</p>
+                              <div className={'flex transition-all duration-300 items-center  flex-row gap-1 text-black'}>
+                                 <CircleArrowRight size={16}/> <p>View Details</p>
+                             </div>
+                        </div>
                        </div>
                    </SwiperSlide>
                ))}

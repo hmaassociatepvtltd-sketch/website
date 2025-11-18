@@ -5,7 +5,7 @@ blocks:
     description: Empowering Communities  with Energy &  Innovation
     buttonText: Contact Us
     buttonLink: '#contactForm'
-    backgroundImage: /sun-solar-blog-image-768x436.png
+    backgroundImage: /Landing%20Page/hero_bg_8_2.png
     _template: heroSection
   - subHeading: Who We Are ?
     heading: ABOUT US!
@@ -97,20 +97,6 @@ blocks:
       foster our strategic relationships with a foundation of transparency,
       trust, and mutual growth.
     _template: partner
-  - subHeading: HMA Associates & Co
-    heading: Complete Solar Systems for Offices & Industries
-    text: >
-      Welcome to HMA Associates & Co., a trusted leader in providing quality
-      solutions for Construction Sector, Solar Energy, Real Estate Business,
-      Accounting and Tax Consultancy. We take great pride in our attention to
-      detail and the quality of our services, ensuring that each customer
-      receives highest satisfaction from our services. We look forward to
-      working together to reach your business goals.
-    buttonText: Learn More
-    buttonLink: /about
-    image: /Landing Page/why_7.png
-    direction: left
-    _template: container
   - subHeading: Why Choose Us
     heading: Pakistan's Leading Solar Company
     text: >
@@ -123,6 +109,15 @@ blocks:
       clients
     image: /Landing%20Page/why_7.png
     direction: right
+    _template: container
+  - subHeading: Why Choose Us
+    heading: Pakistan's Leading Solar Company
+    text: |
+      [https://www.aptinverex.com/](https://www.aptinverex.com/)
+    buttonText: ''
+    buttonLink: ''
+    image: /hrui_AdobeStock_276818517_RV.jpg
+    direction: left
     _template: container
   - subheading: Let's Talk
     heading: You Get Free Consultation For Any Help

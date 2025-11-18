@@ -38,12 +38,12 @@ export const OurPartners = ({partnersData = [], ...props}) => {
                                 slidesPerView: 7
                             },
                         }}
-                        autoplay={{delay: 2000}}
+                        autoplay={{delay: 9999000}}
                         loop={true}
                     >
                         {partnersData?.map((image, index) => (
-                            <SwiperSlide key={index}>
-                                <Image width={100} height={100} className={'max-w-[200px] grayscale-100 rounded-full w-full h-full aspect-square max-h-[200px] object-cover'} src={image.image} alt={image+index} />
+                            <SwiperSlide className='min-h-[150px] !flex !justify-center !items-center' key={index}>
+                                <Image width={200} height={200} className={'w-fit h-fit object-center object-cover'} src={image.image} alt={image+index} />
                             </SwiperSlide>
                         ))}
 

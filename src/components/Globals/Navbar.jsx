@@ -14,7 +14,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
     const [servicesOpen, setServicesOpen] = useState(false)
 
     return (
-        <div className={'fixed top-0 left-0 pt-5 w-full px-5 xl:px-0 z-50 flex justify-center items-center'}>
+        <div className={'absolute top-0 left-0 pt-5 w-full px-5 xl:px-0 z-50 flex justify-center items-center'}>
           <div className={'w-full  max-w-[1260px] flex justify-between items-center'}>
               <Image width={50} height={50} alt={'Hma Solar Logo'} className={'w-20 xl:w-[100px]'}  src={logo} />
               <div className={'text-white hidden border-b-10 border-r-10 border-primary py-5 px-10 rounded-xl bg-secondary-background font-semibold lg:flex flex-row items-center gap-8'}>
