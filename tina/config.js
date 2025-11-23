@@ -144,6 +144,27 @@ const templates = [
         ]
     },
     {
+        name: "services",
+        label: "Services",
+        fields: [
+            
+            {
+                name: "title",
+                label: "Title",
+                type: "string",
+            },
+            {
+                name: "description",
+                label: "Description",
+                type: "string",
+            },{
+                name: "backgroundImage",
+                label: "Background Image",
+                type: "image"
+            }
+        ]
+    },
+    {
         name: "partner",
         label: "Partners",
         fields: [
@@ -261,7 +282,31 @@ const templates = [
                 ],
             },
         ]
-    }
+    },
+     {
+        name: "calculator",
+        label: "Calculator",
+        fields: [
+            {
+                name: "subheading",
+                label: "Sub Heading",
+                type: "string",
+            },
+            {
+                name: "heading",
+                label: "Heading",
+                type: "string",
+            },
+            {
+                name: "description",
+                label: "Description",
+                type: "string",
+                ui: {
+                    component: "textarea"
+                }
+            }
+        ]
+    },
 ]
 
 export default defineConfig({
@@ -393,6 +438,18 @@ export default defineConfig({
                         type: "string",
                         isTitle: true,
                         required: true,
+                    },
+                     {
+                        name: "description",
+                        label: "Description",
+                        type: "string",
+                        required: true,
+                    },
+                    {
+                        name: "coverImage",
+                        label: "Cover Image",
+                        type: "image",
+                         required: true,
                     },
                     {
                         name: "blocks",

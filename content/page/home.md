@@ -32,9 +32,17 @@ blocks:
     image: /Landing%20Page/why_7.png
     direction: right
     _template: container
+  - title: Our Services
+    description: >-
+      Delivering excellence through our specialized services in energy and
+      infrastructure.
+    backgroundImage: /hrui_AdobeStock_276818517_RV.jpg
+    _template: services
   - title: Our Services & Products
     description: Construction & MEP  Services
     _template: products
+  - subheading: ''
+    _template: calculator
   - title: Testimonials
     description: >-
       We offer a wide range of solar products and solutions to help you harness
@@ -97,6 +105,9 @@ blocks:
       foster our strategic relationships with a foundation of transparency,
       trust, and mutual growth.
     _template: partner
+  - height: '100'
+    backgroundColor: background
+    _template: Spacer
   - subHeading: Why Choose Us
     heading: Pakistan's Leading Solar Company
     text: >

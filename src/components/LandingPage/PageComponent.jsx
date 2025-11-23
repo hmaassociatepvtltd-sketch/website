@@ -13,8 +13,10 @@ import {TinaMarkdown} from "tinacms/dist/rich-text";
 import {components} from "@/components/ui/MarkdownComponents";
 import {AllWorks} from "@/components/LandingPage/About/AllWorks";
 import {Gallery} from "@/components/LandingPage/Gallery";
+import { CalculatorForm } from "./CalculatorForm";
+import Services from "./OurServices";
 
-export const  PageComponent = ({partners = [] , products = [], works= [], ...props}) => {
+export const  PageComponent = ({partners = [] , services = [], products = [], works= [], ...props}) => {
 
     const {data} = useTina(props)
 
@@ -65,10 +67,14 @@ export const  PageComponent = ({partners = [] , products = [], works= [], ...pro
                     case "PageBlocksGallery": {
                         return <Gallery {...block} key={index}/>
                     }
+                    case "PageBlocksCalculator":{
+                        return  <CalculatorForm {...block} key={index}/>
+                    }
+                    case "PageBlocksServices":{
+                        return <Services {...block} servicesData={services} key={index}/>
+                    }
                 }
             })}
-
-
 
         </div>
     )
