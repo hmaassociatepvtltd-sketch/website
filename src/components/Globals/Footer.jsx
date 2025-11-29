@@ -127,7 +127,7 @@ export const Footer = ({ site, productTypes, serviceTypes }) => {
                                     href={'#contact'}> <ArrowRight /> Contacts</Link>
 
                                 <Link className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                    href={'/work'}> <ArrowRight /> Work</Link>
+                                    href={'/work'}> <ArrowRight /> Projects</Link>
                             </div>
                         </div>
                         <div className={'col-span-1 w-full flex flex-col gap-5'}>
