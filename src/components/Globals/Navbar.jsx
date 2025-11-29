@@ -20,9 +20,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
               <div className={'text-white hidden border-b-10 border-r-10 border-primary py-5 px-10 rounded-xl bg-secondary-background font-semibold lg:flex flex-row items-center gap-8'}>
                     <Link className={'hover:opacity-85'} href={'/'}>Home</Link>
                     <Link className={'hover:opacity-85'} href={'/about'}>About</Link>
-                    <Link className={'hover:opacity-85'} href={'/ourclients'}>Clients</Link>
-                    <Link className={'hover:opacity-85'} href={'/certifications'}>Certifications</Link>
-                  <motion.div
+                     <motion.div
                       onMouseEnter={() => setServicesOpen(true)}
                       onMouseLeave={() => setServicesOpen(false)}
                       animate={{opacity: 1}}
@@ -69,6 +67,9 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                        </AnimatePresence>
                    </motion.div>
                     <Link className={'hover:opacity-85'} href={'/work'}>Projects</Link>
+                    {/* <Link className={'hover:opacity-85'} href={'/ourclients'}>Clients</Link>
+                    <Link className={'hover:opacity-85'} href={'/certifications'}>Certifications</Link> */}
+                 
                   <Button link={'/#contact'} >Get Qoute</Button>
               </div>
               <div className={'lg:hidden flex flex-col items-center justify-center'}>
@@ -139,7 +140,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                               </div>
 
                               <Link href={'/work'} className={'flex items-center gap-2 rounded-r-full pl-5 pr-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors duration-200 w-full font-medium'}>
-                                  <ChevronRight className="h-4 w-4" /> Work
+                                  <ChevronRight className="h-4 w-4" /> Projects
                               </Link>
                           </nav>
 
