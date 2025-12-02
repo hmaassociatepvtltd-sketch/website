@@ -70,7 +70,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                     {/* <Link className={'hover:opacity-85'} href={'/ourclients'}>Clients</Link>
                     <Link className={'hover:opacity-85'} href={'/certifications'}>Certifications</Link> */}
                  
-                  <Button link={'/#contact'} >Get Qoute</Button>
+                  <Button link={'/#contact'} >Contact Us</Button>
               </div>
               <div className={'lg:hidden flex flex-col items-center justify-center'}>
                   <Sheet >
@@ -150,7 +150,7 @@ export const Navbar = ({productTypes, serviceTypes, logo}) => {
                                   className={'w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'}
                                   link={'/#contact'}
                               >
-                                  Get Quote
+                                  Contact Us
                               </Button>
                           </div>
                       </SheetContent>
