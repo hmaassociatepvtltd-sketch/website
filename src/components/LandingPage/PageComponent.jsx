@@ -15,12 +15,15 @@ import {AllWorks} from "@/components/LandingPage/About/AllWorks";
 import {Gallery} from "@/components/LandingPage/Gallery";
 import { CalculatorForm } from "./CalculatorForm";
 import Services from "./OurServices";
+import { SlideHeroSection } from "./SlideHeroSection";
 
 export const  PageComponent = ({partners = [] , services = [], products = [], works= [], ...props}) => {
 
     const {data} = useTina(props)
 
     const page = data.page;
+
+    console.log(page.blocks)
 
     return (
         <div className={"w-full relative h-full"}>
@@ -29,6 +32,9 @@ export const  PageComponent = ({partners = [] , services = [], products = [], wo
                 switch (block?.__typename) {
                     case "PageBlocksHeroSection": {
                         return <HeroSection {...block} key={index} />
+                    }
+                    case "PageBlocksSlideHero":{
+                        return <SlideHeroSection {...block} key={index}/>
                     }
                     case "PageBlocksContainer":{
                         return <Container {...block} key={index}/>

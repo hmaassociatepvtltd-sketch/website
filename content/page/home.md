@@ -1,12 +1,19 @@
 ---
 title: Hello
 blocks:
-  - title: Empowering Communities  with Energy &  Innovation
-    description: Empowering Communities  with Energy &  Innovation
-    buttonText: Contact Us
-    buttonLink: '#contactForm'
-    backgroundImage: /Landing%20Page/hero_bg_8_2.png
-    _template: heroSection
+  - slideDuration: 5000
+    slides:
+      - title: Empowering Communities  with Energy &  Innovation
+        description: Empowering Communities with Energy & Innovation
+        backgroundImage: /hrui_AdobeStock_276818517_RV.jpg
+        buttonText: Contact Us
+        buttonLink: '#contact'
+      - title: Second Title
+        description: Second Description
+        backgroundImage: /photo-1509391366360-2e959784a276.avif
+        buttonText: Second Button
+        buttonLink: '#contact'
+    _template: slideHero
   - subHeading: Who We Are ?
     heading: ABOUT US!
     text: >

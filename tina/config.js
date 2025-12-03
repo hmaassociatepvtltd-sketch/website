@@ -2,6 +2,57 @@ import { defineConfig } from "tinacms";
 
 const templates = [
     {
+  name: 'slideHero',
+  label: 'Slides Hero Section',
+  fields: [
+    {
+      type: 'number',
+      name: 'slideDuration',
+      label: 'Slide Duration (ms)',
+      description: 'Time in milliseconds (e.g., 5000 for 5 seconds)',
+    },
+    {
+      type: 'object',
+      name: 'slides',
+      label: 'Slides',
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return { label: item?.title || 'New Slide' };
+        },
+      },
+      fields: [
+        {
+          type: 'string',
+          name: 'title',
+          label: 'Title',
+        },
+        {
+          type: 'string',
+          name: 'description',
+          label: 'Description',
+          ui: { component: 'textarea' },
+        },
+        {
+          type: 'image',
+          name: 'backgroundImage',
+          label: 'Background Image',
+        },
+        {
+          type: 'string',
+          name: 'buttonText',
+          label: 'Button Text',
+        },
+        {
+          type: 'string',
+          name: 'buttonLink',
+          label: 'Button Link',
+        },
+      ],
+    },
+  ],
+},
+    {
         name: "heroSection",
         label: "Hero Section",
         fields: [
