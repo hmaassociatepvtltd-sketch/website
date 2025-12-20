@@ -3,7 +3,7 @@ title: Hello
 blocks:
   - slideDuration: 5000
     slides:
-      - title: Empowering Communities  with Energy &  Innovation
+      - title: Empowering Communities  with Energy &  Innovations
         description: Empowering Communities with Energy & Innovation
         backgroundImage: /hrui_AdobeStock_276818517_RV.jpg
         buttonText: Contact Us
