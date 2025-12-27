@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: Huawei
+image: /4.jpg
 ---
 

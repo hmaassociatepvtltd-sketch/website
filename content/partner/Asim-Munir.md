@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: Canadian Solar
+image: /9.jpg
 ---
 

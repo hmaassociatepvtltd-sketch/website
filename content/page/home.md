@@ -8,11 +8,15 @@ blocks:
         backgroundImage: /hrui_AdobeStock_276818517_RV.jpg
         buttonText: Contact Us
         buttonLink: '#contact'
-      - title: Second Title
-        description: Second Description
-        backgroundImage: /photo-1509391366360-2e959784a276.avif
-        buttonText: Second Button
+      - title: Construction Services
+        description: 'Modern, functional, and sustainable '
+        backgroundImage: /AdobeStock_290512663-scaled.webp
+        buttonText: Contact Us
         buttonLink: '#contact'
+      - title: MEP Services
+        description: 'Safe, efficient, and optimized power distribution solutions'
+        backgroundImage: /MEP-Plan-in-Construction-IMG_1.webp
+        buttonText: Contact Us
     _template: slideHero
   - subHeading: Who We Are ?
     heading: ABOUT US!
@@ -56,55 +60,48 @@ blocks:
       the power of the sun and reduce your carbon footprint.
     items:
       - message: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        name: Waleed Nasir
-        position: CTO
+          Working with HMA Associates on our solar integration was a seamless
+          experience. They met the rigorous standards required by DHA with
+          professionalism and technical expertise. The installation is not only
+          efficient but aesthetically pleasing, perfectly matching our
+          infrastructure. A highly recommended partner for large-scale
+          developments."
+        name: DHA Gujranwala
+        position: 'Project Director, DHA Gujranwala'
       - message: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        name: Bilal Nasir
-        position: CEO
+          We trusted HMA Associates with two critical projects: our industrial
+          unit at Hilal Dyes and our private residence. They delivered
+          exceptional results on both fronts. Whether it was handling the heavy
+          load of our factory or ensuring uninterrupted power for our home,
+          their team provided a comprehensive energy solution that has
+          drastically cut our electricity bills.
+        name: Hilal Dyes & Hilal Dyes Residential
+        position: 'CEO, Hilal Dyes'
       - message: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        name: Zuha Nasir
-        position: Chef
+          "In the education sector, power outages can be a major disruption. HMA
+          Associates installed a robust solar system that ensures our classrooms
+          and labs remain powered throughout the day. It’s not just about
+          savings; it’s about providing a comfortable, uninterrupted learning
+          environment for our students while teaching them the value of green
+          energy.
+        name: The Educators Schools
+        position: 'Principal/Administrator, The Educators Schools'
       - message: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        name: Hadi Nasir
-        position: CFO
+          Textile manufacturing is energy-intensive, and rising grid costs were
+          impacting our bottom line. HMA Associates analyzed our load
+          requirements perfectly and installed a solar solution that provided
+          immediate ROI. Our operational efficiency has improved, and our
+          dependency on the grid has significantly decreased.
+        name: Insaf Textile
+        position: 'Director of Operations, Insaf Textile'
       - message: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        name: Umer
-        position: Trainer
+          Running a rice mill requires massive power, especially during peak
+          seasons. HMA Associates installed a high-capacity solar system that
+          handles our heavy machinery loads with ease. They understand the needs
+          of the agro-industry in Pakistan and delivered a solution that is both
+          durable and economically beneficial.
+        name: Elahi Rice Mills
+        position: 'Managing Director, Elahi Rice Mills'
     _template: testimonials
   - title: Our Associate Partners
     description: >-
@@ -116,22 +113,72 @@ blocks:
     backgroundColor: background
     _template: Spacer
   - subHeading: Why Choose Us
-    heading: Pakistan's Leading Solar Company
+    heading: Construction & MEP Services
     text: >
-      HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients. HMA Associates is a leading solar company in Pakistan, providing
-      innovative and cost-effective solutions for residential and commercial
-      clients
+      **Architectural & Structural Design**– Modern, functional, and sustainable
+      planning.
+
+
+      **Grey Structure Works** – Strong foundations and durable building
+      structures.
+
+
+      **Finishing & Interior Works** – High-quality finishing with modern
+      aesthetics.
+
+
+      **Supervision & Quality Control** – On-site monitoring for timely and
+      quality delivery.
+
+
+      **Turnkey Projects**– Complete execution from design to handover.
+
+
+      **Electrical Systems**– Safe, efficient, and optimized power distribution
+      solutions.
+
+
+      **Plumbing & Drainage** – Water supply and wastewater management systems.
+
+
+      **HVAC Systems**– Energy-efficient heating, ventilation, and cooling
+      solutions.
+
+
+      **Fire Fighting Systems** – Advanced fire protection and suppression
+      installations.
     image: /Landing%20Page/why_7.png
     direction: right
     _template: container
   - subHeading: Why Choose Us
-    heading: Pakistan's Leading Solar Company
-    text: |
-      [https://www.aptinverex.com/](https://www.aptinverex.com/)
+    heading: Renewable Energy
+    text: >
+      **On-Grid Solar Systems** – Smart grid-tied systems to reduce electricity
+      bills.
+
+
+      **Hybrid Solar Systems** – Solar with battery backup for uninterrupted
+      power supply.
+
+
+      **Off-Grid Solar Systems** – Independent energy solutions for remote
+      areas.
+
+
+      **Net-Metering Solutions** – NEPRA-compliant licensed installations.
+
+
+      **Utility-Scale Solar Projects** – MW-scale systems for industries &
+      institutions.
+
+
+      **Battery Energy Storage Systems (BESS)** – Advanced energy storage
+      solutions for
+
+      load management, grid stability, and optimized power utilization.
+
+
+      **Operation & Maintenance (O\&M)** – Long-term monitoring & servicing.
     buttonText: ''
     buttonLink: ''
     image: /hrui_AdobeStock_276818517_RV.jpg
@@ -143,7 +190,7 @@ blocks:
       Unlock the potential of our cutting-edge solar solutions designed to
       energize your home or business sustainably. Connect with us today and take
       the first step toward a cleaner, smarter, and more eco-friendly future.
-    phone: +92 300 1234567
+    phone: +92 309 777 8006
     _template: contact
   - height: '100'
     backgroundColor: background

@@ -1,5 +1,5 @@
 ---
 name: Goodwe
-image: /GOODWELOGO.png
+image: /1.jpg
 ---
 

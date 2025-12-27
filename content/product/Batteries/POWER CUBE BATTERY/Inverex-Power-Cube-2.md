@@ -1,6 +1,7 @@
 ---
-name: Inverex Power Cube 2
 image: /products/batteries-2.jpg
+name: Soluna EOS 5K
+coverImage: /6.png
 description: |
   # Products Details
 
@@ -16,5 +17,6 @@ description: |
 
   * Standard Delivery 4-5 days.
   * Inverex 5 years Warranty
+detailDescription: ''
 ---
 

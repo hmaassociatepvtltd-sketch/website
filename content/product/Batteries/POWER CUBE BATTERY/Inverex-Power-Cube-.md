@@ -1,7 +1,7 @@
 ---
 image: /goodwe25kw.webp
-name: Inverex Power Cube New
-coverImage: /goodwe25kw.webp
+name: Soluna 6K Pack HV
+coverImage: /8.png
 images:
   - image: /products/Inverex-Nitrox-10-KW-3Ph-On-Grid-Solar-Inverter.jpg
   - image: /products/Inverex-Nitrox-50KW-3Ph-5G-PV-Solar-On-Gird-Inverter.jpg

@@ -1,6 +1,7 @@
 ---
-name: Inverex Tall Tubular 12V-220Ah Battery
 image: /products/batteries-1.jpg
+name: GoodWe Lynx Home Battery Series
+coverImage: /2.png
 description: >
   # Products Details
 
@@ -29,5 +30,6 @@ description: >
   * Standard Delivery 4-5 days.
 
   * Inverex 5 years Warranty
+detailDescription: ''
 ---
 

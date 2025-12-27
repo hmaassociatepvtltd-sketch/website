@@ -54,7 +54,7 @@ images:
   - image: /sun-solar-blog-image-768x436.png
   - image: /products/5.jpg
   - image: /assets/OIP.webp
-name: Cantt Project
+name: ' Project Testimonials '
 mainImage: /sun-solar-blog-image-768x436.png
 description: Our recent project in dc colony very beneficial best projext
 blocks:
@@ -80,7 +80,7 @@ blocks:
       - image: /sun-solar-blog-image-768x436.png
       - image: /Landing%20Page/hero_bg_8_2.png
       - image: /products/batteries-1.jpg
-      - image: /assets/OIP.webp
+      - image: /photo-1509391366360-2e959784a276.avif
       - image: /Landing%20Page/why_7.png
     _template: gallery
   - height: '200'

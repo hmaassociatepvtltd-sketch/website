@@ -1,6 +1,7 @@
 ---
-name: ' Inverex Mustang Series 530 to 550 Watt Mono crystalline Perc half cut cell'
 image: /products/5.jpg
+name: JA DeepBlue 3.0
+coverImage: /10.png
 description: |
   # Products Details
 
@@ -18,5 +19,6 @@ description: |
 
   * Standard Delivery 4-5 days.
   * Inverex 5 years Warranty
+detailDescription: ''
 ---
 

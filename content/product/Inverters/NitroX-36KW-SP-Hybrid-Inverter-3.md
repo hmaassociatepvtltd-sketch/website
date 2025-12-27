@@ -1,6 +1,7 @@
 ---
-name: NitroX 3.6KW SP Hybrid Inverter 3
 image: /products/Inverex-Nitrox-10-KW-3Ph-On-Grid-Solar-Inverter.jpg
+name: Solis S5 Commercial Series (S5-GC)
+coverImage: /11.png
 description: >
   The NitroX 3.6KW SP Hybrid Inverter is a robust and future-ready solution for
   hybrid solar installations. With smart battery management, high PV input
@@ -52,5 +53,6 @@ description: >
   * Fast shipping across Pakistan (3-5 working days)
 
   * Installation support & product warranty from Inverex
+detailDescription: ''
 ---
 

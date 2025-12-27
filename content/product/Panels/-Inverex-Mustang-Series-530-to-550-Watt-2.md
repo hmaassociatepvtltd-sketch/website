@@ -1,6 +1,7 @@
 ---
-name: ' Inverex Mustang Series 530 to 550 Watt 2'
 image: /products/5.jpg
+name: ASTRO N5 Series (Bifacial)
+coverImage: /3.png
 description: |
   # Products Details
 
@@ -18,5 +19,6 @@ description: |
 
   * Standard Delivery 4-5 days.
   * Inverex 5 years Warranty
+detailDescription: ''
 ---
 

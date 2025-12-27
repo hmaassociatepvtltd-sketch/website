@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: ABB
+image: /8.jpg
 ---
 

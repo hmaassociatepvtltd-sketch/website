@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: Chint
+image: /7.jpg
 ---
 

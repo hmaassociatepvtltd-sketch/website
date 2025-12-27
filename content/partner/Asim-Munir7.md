@@ -1,5 +1,5 @@
 ---
-name: Asim Munir
-image: /assets/OIP.webp
+name: JA Solar
+image: /10.jpg
 ---
 
