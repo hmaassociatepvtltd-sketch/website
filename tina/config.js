@@ -2,56 +2,56 @@ import { defineConfig } from "tinacms";
 
 const templates = [
     {
-  name: 'slideHero',
-  label: 'Slides Hero Section',
-  fields: [
-    {
-      type: 'number',
-      name: 'slideDuration',
-      label: 'Slide Duration (ms)',
-      description: 'Time in milliseconds (e.g., 5000 for 5 seconds)',
+        name: 'slideHero',
+        label: 'Slides Hero Section',
+        fields: [
+            {
+                type: 'number',
+                name: 'slideDuration',
+                label: 'Slide Duration (ms)',
+                description: 'Time in milliseconds (e.g., 5000 for 5 seconds)',
+            },
+            {
+                type: 'object',
+                name: 'slides',
+                label: 'Slides',
+                list: true,
+                ui: {
+                    itemProps: (item) => {
+                        return { label: item?.title || 'New Slide' };
+                    },
+                },
+                fields: [
+                    {
+                        type: 'string',
+                        name: 'title',
+                        label: 'Title',
+                    },
+                    {
+                        type: 'string',
+                        name: 'description',
+                        label: 'Description',
+                        ui: { component: 'textarea' },
+                    },
+                    {
+                        type: 'image',
+                        name: 'backgroundImage',
+                        label: 'Background Image',
+                    },
+                    {
+                        type: 'string',
+                        name: 'buttonText',
+                        label: 'Button Text',
+                    },
+                    {
+                        type: 'string',
+                        name: 'buttonLink',
+                        label: 'Button Link',
+                    },
+                ],
+            },
+        ],
     },
-    {
-      type: 'object',
-      name: 'slides',
-      label: 'Slides',
-      list: true,
-      ui: {
-        itemProps: (item) => {
-          return { label: item?.title || 'New Slide' };
-        },
-      },
-      fields: [
-        {
-          type: 'string',
-          name: 'title',
-          label: 'Title',
-        },
-        {
-          type: 'string',
-          name: 'description',
-          label: 'Description',
-          ui: { component: 'textarea' },
-        },
-        {
-          type: 'image',
-          name: 'backgroundImage',
-          label: 'Background Image',
-        },
-        {
-          type: 'string',
-          name: 'buttonText',
-          label: 'Button Text',
-        },
-        {
-          type: 'string',
-          name: 'buttonLink',
-          label: 'Button Link',
-        },
-      ],
-    },
-  ],
-},
     {
         name: "heroSection",
         label: "Hero Section",
@@ -198,7 +198,7 @@ const templates = [
         name: "services",
         label: "Services",
         fields: [
-            
+
             {
                 name: "title",
                 label: "Title",
@@ -208,7 +208,7 @@ const templates = [
                 name: "description",
                 label: "Description",
                 type: "string",
-            },{
+            }, {
                 name: "backgroundImage",
                 label: "Background Image",
                 type: "image"
@@ -334,7 +334,7 @@ const templates = [
             },
         ]
     },
-     {
+    {
         name: "calculator",
         label: "Calculator",
         fields: [
@@ -490,7 +490,7 @@ export default defineConfig({
                         isTitle: true,
                         required: true,
                     },
-                     {
+                    {
                         name: "description",
                         label: "Description",
                         type: "string",
@@ -500,7 +500,7 @@ export default defineConfig({
                         name: "coverImage",
                         label: "Cover Image",
                         type: "image",
-                         required: true,
+                        required: true,
                     },
                     {
                         name: "blocks",

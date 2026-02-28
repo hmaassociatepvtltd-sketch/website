@@ -23,8 +23,6 @@ export const  PageComponent = ({partners = [] , services = [], products = [], wo
 
     const page = data.page;
 
-    console.log(page.blocks)
-
     return (
         <div className={"w-full relative h-full"}>
             {page.blocks?.map((block, index) => {
@@ -77,7 +75,7 @@ export const  PageComponent = ({partners = [] , services = [], products = [], wo
                         return  <CalculatorForm {...block} key={index}/>
                     }
                     case "PageBlocksServices":{
-                        return <Services {...block} servicesData={services} key={index}/>
+                        return <Services {...block} servicesData={services} key={index}/> 
                     }
                 }
             })}

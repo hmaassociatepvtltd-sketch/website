@@ -29,7 +29,7 @@ export const Testimonials = (props) => {
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={15}
                     slidesPerView={3}
-                    className={'w-full'}
+                    className={'w-full '}
                     autoplay={{delay: 2000}}
                     breakpoints={{
                         320: {
@@ -46,8 +46,8 @@ export const Testimonials = (props) => {
                 >
                     {testimonials?.map((testimonial, index) => (
                                <SwiperSlide>
-                                   <div  className={" space-y-5 h-full p-8 rounded-xl bg-white"}>
-                                    <p className="font-bold text-primary" data-tina-field={tinaField(testimonial, "heading")}>{testimonial.heading || 'Cantt Project'}</p>
+                                   <div  className={" space-y-5 h-[400px] flex flex-col justify-between p-8 rounded-xl bg-white"}>
+                                    {/* <p className="font-bold text-primary" data-tina-field={tinaField(testimonial, "heading")}>{testimonial.heading || 'Cantt Project'}</p> */}
                                        <p data-tina-field={tinaField(testimonial, "message")}>{testimonial.message}</p>
                                        <div>
                                            <p data-tina-field={tinaField(testimonial, "name")} className={'font-bold text-primary '}>{testimonial.name}</p>

@@ -38,7 +38,7 @@ export const OurPartners = ({partnersData = [], ...props}) => {
                                 slidesPerView: 7
                             },
                         }}
-                        autoplay={{delay: 9999000}}
+                        autoplay={{delay: 1000}}
                         loop={true}
                     >
                         {partnersData?.map((image, index) => (

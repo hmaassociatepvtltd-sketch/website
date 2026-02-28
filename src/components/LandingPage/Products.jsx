@@ -12,7 +12,6 @@ export const Products = ({productsData = [], ...props}) => {
     const [products] = useState(productsData)
     const router = useRouter()
 
-    console.log(products)
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);

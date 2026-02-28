@@ -54,68 +54,7 @@ export const Footer = ({ site, productTypes, serviceTypes }) => {
                                 </button>
                                 <p className={'text-white text-lg '}>{data.site.phone}</p>
                             </div>
-                            <div className={'flex flex-row gap-3 items-center'}>
-
-
-                                {data.site.instagram && (
-                                    <Link href={data.site.instagram}
-                                        className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                    >
-                                        <div
-                                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                        ></div>
-                                        <div className="relative text-white z-10">
-                                            <PiInstagramLogoFill size={25} />
-                                        </div>
-                                    </Link>
-                                )}
-                                {
-                                    data.site.linkedin && (
-                                        <Link href={data.site.linkedin}
-                                            className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                        >
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                            ></div>
-                                            <div className="relative text-white z-10">
-                                                <SiLinkedin size={25} />
-                                            </div>
-                                        </Link>
-                                    )
-                                }
-                                {
-                                    data.site.facebook && (
-                                        <Link href={data.site.facebook}
-                                            className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                        >
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                            ></div>
-                                            <div className="relative text-white z-10">
-                                                <SiFacebook size={25} />
-                                            </div>
-                                        </Link>
-                                    )
-                                }
-
-                                {
-                                    data.site.twitter && (
-                                        <Link href={data.site.twitter}
-                                            className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                        >
-                                            <div
-                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                            ></div>
-                                            <div className="relative text-white z-10">
-                                                <FaTwitter size={25} />
-                                            </div>
-                                        </Link>
-                                    )
-                                }
-
-
-
-                            </div>
+                          
                         </div>
                         <div className={'col-span-1 w-full flex flex-col gap-5'}>
                             <h1 className={'text-white font-josefin-sans font-bold text-3xl'}>INFORMATIONS</h1>

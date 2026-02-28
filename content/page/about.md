@@ -3,6 +3,7 @@ title: About Us
 blocks:
   - title: About Us
     description: ''
+    buttonText: ''
     _template: heroSection
   - subHeading: HMA ASSOCIATES & CO
     heading: About Us
@@ -33,7 +34,7 @@ blocks:
     image: /Landing%20Page/hero_bg_8_2.png
     direction: left
     _template: container
-  - height: '200'
+  - height: '100'
     backgroundColor: white
     _template: Spacer
   - title: our patners

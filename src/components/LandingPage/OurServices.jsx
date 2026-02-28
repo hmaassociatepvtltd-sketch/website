@@ -4,7 +4,6 @@ import { Button } from '../ui/Button';
 
 const Services = ({servicesData=[], ...props}) => {
 
-    console.log(servicesData)
 
   return (
     <section style={{

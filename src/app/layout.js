@@ -5,6 +5,11 @@ import {Navbar} from "@/components/Globals/Navbar";
 import {Footer} from "@/components/Globals/Footer";
 import {ScrollUp} from "@/components/Globals/ScrollUp";
 import client from "../../tina/__generated__/client";
+import Link from "next/link";
+import { PiInstagramLogoFill } from "react-icons/pi";
+import { SiFacebook, SiLinkedin } from "react-icons/si";
+import { FaTwitter } from "react-icons/fa";
+import { useTina } from "tinacms/dist/react";
 
 const josefinSans = Josefin_Sans({
     subsets: ["latin"],
@@ -54,6 +59,7 @@ export default async function RootLayout({ children }) {
     let productTypes = new Set();
     let serviceTypes = new Set();
     let siteSettings = {};
+    let data;
     try {
         // Fetch ALL products first (to work around the GraphQL filter limitation)
         const response = await client.queries.productConnection();
@@ -70,9 +76,14 @@ export default async function RootLayout({ children }) {
 
         siteSettings = siteSettingsResponse;
 
+        data = siteSettings.data
+
+        
     } catch (error) {
         console.error(`Error fetching all products from TinaCMS:`, error);
     }
+    
+
 
   return (
     <html lang="en">
@@ -81,6 +92,69 @@ export default async function RootLayout({ children }) {
           {children}
       <Footer serviceTypes={serviceTypes} productTypes={productTypes} site={siteSettings} />
       <ScrollUp/>
+          <div className={'flex flex-row gap-3 items-center fixed left-0 bottom-0 p-10 z-50'}>
+
+
+                                {data.site.instagram && (
+                                    <Link href={data.site.instagram}
+                                        className="p-3 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
+                                    >
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
+                                        ></div>
+                                        <div className="relative text-white z-10">
+                                            <PiInstagramLogoFill size={25} />
+                                        </div>
+                                    </Link>
+                                )}
+                                {
+                                    data.site.linkedin && (
+                                        <Link href={data.site.linkedin}
+                                            className="p-3 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
+                                        >
+                                            <div
+                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
+                                            ></div>
+                                            <div className="relative text-white z-10">
+                                                <SiLinkedin size={25} />
+                                            </div>
+                                        </Link>
+                                    )
+                                }
+                                {
+                                    data.site.facebook && (
+                                        <Link href={data.site.facebook}
+                                            className="p-3 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
+                                        >
+                                            <div
+                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
+                                            ></div>
+                                            <div className="relative text-white z-10">
+                                                <SiFacebook size={25} />
+                                            </div>
+                                        </Link>
+                                    )
+                                }
+
+                                {
+                                    data.site.twitter && (
+                                        <Link href={data.site.twitter}
+                                            className="p-3 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
+                                        >
+                                            <div
+                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
+                                            ></div>
+                                            <div className="relative text-white z-10">
+                                                <FaTwitter size={25} />
+                                            </div>
+                                        </Link>
+                                    )
+                                }
+
+
+
+        </div>
+      
       </body>
     </html>
   );
