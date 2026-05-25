@@ -1,7 +1,4 @@
 ---
-name: Ghakar Project
-mainImage: /sun-solar-blog-image-768x436.png
-description: Our recent project in dc colony very beneficial best projext
 text: >
   ###### Solar System Installation
 
@@ -57,5 +54,35 @@ images:
   - image: /sun-solar-blog-image-768x436.png
   - image: /products/5.jpg
   - image: /assets/OIP.webp
+name: '2 MW Solar Energy Park - Attock '
+mainImage: /Gemini_Generated_Image_xozrkfxozrkfxozr.png
+description: '2 MW Solar Energy Park - Attock '
+blocks:
+  - title: '2MW SOLAR POWER PROJECT KAMRA '
+    description: HMA Associates (SMC-Private) Limited
+    buttonText: ''
+    backgroundImage: '/Generated Image October 04, 2025 - 7_06PM.png'
+    _template: heroSection
+  - subHeading: Project Overview
+    heading: 2MW Solar Power Installation – Attock
+    text: >
+      Located in the heart of Attock, Punjab, this landmark 2 Megawatt (MW)
+      solar power project represents a significant step forward in sustainable
+      energy infrastructure. Designed, engineered, and executed by HMA
+      AsAssociates, this state-of-the-art facility is engineered to harness the
+      region's high solar irradiance, providing reliable, cost-effective, and
+      clean electricity to the local grid and supporting the region’s growing
+      energy demands.
+    image: /Gemini_Generated_Image_qscxleqscxleqscx.png
+    direction: left
+    _template: container
+  - images:
+      - image: /Gemini_Generated_Image_1upkcj1upkcj1upk.png
+      - image: /Gemini_Generated_Image_htwt5nhtwt5nhtwt.png
+      - image: /Clean_the_Dirt_202603311401.png
+    _template: gallery
+  - height: '250'
+    backgroundColor: white
+    _template: Spacer
 ---
 

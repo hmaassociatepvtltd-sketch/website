@@ -8,29 +8,40 @@ blocks:
   - subHeading: HMA ASSOCIATES & CO
     heading: About Us
     text: >
-      At HMA ASSOCIATES & CO., we are committed to delivering innovative and
-      effective solutions for our clients. We have a proven track record of
-      success in various domains, such as Solar Energy, Construction Sector, and
-      Real Estate Business.
+      HMA Associates (SMC-Private) Limited is a trusted name in
+      Construction,Renewable Energy Solutions, Engineering Design, and MEP
+      Services across Pakistan. The company possesses good experience in
+      specialized nature of work, leveraging a team of skilled professionals and
+      advanced technology to deliver reliable, efficient, and sustainable built
+      environments tailored to the needs of residential, commercial, and
+      institutional clients.
 
 
-      We work closely with our clients to understand their goals, challenges,
-      and opportunities, and tailor our solutions accordingly. We also offer
-      ongoing support and maintenance to ensure the quality and performance of
-      our solutions. Our mission is to help our clients achieve their objectives
-      and grow their business with our solutions. We are HMA ASSOCIATES & CO.,
-      the leading provider in solutions.
+      As a PEC-licensed C1 Constructor, we are authorized to execute large-scale
+      projects with precision and excellence. In addition, our AEDB/PPIB
+      certification as a certified solar installer empowers us to deliver Large
+      Scale Projects in compliance with national renewable energy standards. Our
+      strength lies in delivering reliable, cost-effective, and tailored
+      solutions that meet the unique needs of every client.
     image: /Landing%20Page/why_7.png
     direction: right
     _template: container
   - subHeading: ' More Info'
     heading: Our Mission
     text: >
-      At HMA Associates & Co., we believe in a better future for all. That’s why
-      we’re committed to providing sustainable, innovative solutions that help
-      our clients achieve their goals while protecting the environment. With a
-      focus on excellence and a passion for innovation, we’re dedicated to
-      delivering exceptional results that exceed our clients’ expectations.
+      At HMA Associates (SMC-Private) Limited, our mission is to deliver
+      innovative, reliable, and sustainable solutions in Construction, Renewable
+      Energy, Engineering Design, and MEP Services that contribute to the
+      development of modern infrastructure across Pakistan. We are committed to
+      maintaining the highest standards of quality, safety, and professionalism
+      while ensuring client satisfaction through cost-effective and customized
+      project execution.
+
+
+      By combining technical expertise, advanced technology, and a highly
+      skilled workforce, we aim to create durable and energy-efficient
+      environments that support economic growth, environmental responsibility,
+      and long-term value for our clients and communities.
     image: /Landing%20Page/hero_bg_8_2.png
     direction: left
     _template: container

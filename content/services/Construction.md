@@ -6,11 +6,12 @@ description: >-
 coverImage: /photo-1541888946425-d81bb19240f5.avif
 blocks:
   - title: Construction Solutions
+    backgroundImage: /Gemini_Generated_Image_mge1owmge1owmge1.png
     _template: heroSection
   - subHeading: Services
-    heading: Our Construction Services
+    heading: Construction Services
     text: >
-      We provide a wide range of construction services, tailored to meet the
+      We provide a wide range of construction services tailored to meet the
       unique needs of our clients. From residential projects to commercial
       developments, our team ensures quality, efficiency, and timely delivery on
       every project.
@@ -19,26 +20,20 @@ blocks:
       ###### Our Services Include:
 
 
-      * Residential building construction and renovation
+      * **Architectural & Structural Design **– Modern, functional, and
+      sustainable planning.
 
-      * Commercial and industrial construction
+      * **Grey Structure Works** –Strong foundations and durable building
+      structures.
 
-      * Interior fit-outs and finishing works
+      * **Finishing & Interior Works –** High-quality finishing with modern
+      aesthetics.
 
-      * Roofing and structural works
+      * **Supervision & Quality Control **– On-site monitoring for timely and
+      quality delivery.
 
-      * Electrical and plumbing installations
-
-      * Project planning, management, and supervision
-
-      * Sustainable and eco-friendly construction solutions
-
-      * Maintenance and repair services
-
-
-      This format works well for a website section with a short intro paragraph
-      and clear bullet points.
-    image: /photo-1541888946425-d81bb19240f5.avif
+      * **Turnkey Projects–** Complete execution from design to handover.
+    image: /AdobeStock_290512663-scaled.webp
     direction: left
     _template: container
   - height: '150'

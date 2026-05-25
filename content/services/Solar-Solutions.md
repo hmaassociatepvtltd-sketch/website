@@ -5,13 +5,15 @@ description: >-
   applications designed for maximum efficiency.
 coverImage: /photo-1509391366360-2e959784a276.avif
 blocks:
-  - title: Solar Solutions
+  - title: 'Solar Energy Solutions '
+    description: HMA Associates (SMC-Private) Limited
+    backgroundImage: /Gemini_Generated_Image_7gq3p7gq3p7gq3p7.png
     _template: heroSection
   - subHeading: Services
     heading: Our Solar Services
     text: >
-      We provide a wide range of Solar services, tailored to meet the
-      unique needs of our clients. From residential projects to commercial
+      We provide a wide range of Solar services, tailored to meet the unique
+      needs of our clients. From residential projects to commercial
       developments, our team ensures quality, efficiency, and timely delivery on
       every project.
 
@@ -19,26 +21,26 @@ blocks:
       ###### Our Services Include:
 
 
-      * Residential building Solar and renovation
+      * **On-Grid Solar Systems **– Smart grid-tied systems to reduce
+      electricity bills
 
-      * Commercial and industrial Solar
+      * **Hybrid Solar Systems** – Solar with battery backup for uninterrupted
+      power supply.
 
-      * Interior fit-outs and finishing works
+      * **Off-Grid Solar Systems** – Independent energy solutions for remote
+      areas
 
-      * Roofing and structural works
+      * **Net-Metering Solutions** – NEPRA-compliant licensed installations.
 
-      * Electrical and plumbing installations
+      * **Utility-Scale Solar Projects** – MW-scale systems for industries &
+      institutions.
 
-      * Project planning, management, and supervision
+      * **Battery Energy Storage Systems (BESS)** – Advanced energy storage
+      solutions for
 
-      * Sustainable and eco-friendly Solar solutions
-
-      * Maintenance and repair services
-
-
-      This format works well for a website section with a short intro paragraph
-      and clear bullet points.
-    image: /photo-1541888946425-d81bb19240f5.avif
+        load management, grid stability, and optimized power utilization.
+      * **Operation & Maintenance (O\&M)** – Long-term monitoring & servicing.
+    image: /Gemini_Generated_Image_oobw64oobw64oobw.png
     direction: left
     _template: container
   - height: '150'

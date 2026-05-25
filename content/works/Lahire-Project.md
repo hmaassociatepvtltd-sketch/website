@@ -1,7 +1,4 @@
 ---
-name: Lahire Project
-mainImage: /sun-solar-blog-image-768x436.png
-description: Our recent project in dc colony very beneficial best projext
 text: >
   ###### Solar System Installation
 
@@ -57,5 +54,8 @@ images:
   - image: /sun-solar-blog-image-768x436.png
   - image: /products/5.jpg
   - image: /assets/OIP.webp
+name: 'EPC Solar Energy System - Gujranwala '
+mainImage: /Enhance_the_Image_202603311417.png
+description: 'EPC Solar Energy System - Gujranwala '
 ---
 

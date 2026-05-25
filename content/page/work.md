@@ -6,15 +6,16 @@ blocks:
       installation services! Whether you need a solar system for your home,
       business, factory, or farm, our team ensures flawless installation
       tailored to your specific energy needs.
+    backgroundImage: /Gemini_Generated_Image_139hus139hus139h.png
     _template: heroSection
   - subHeading: Process
-    heading: Our Step by Step Installation Process
+    heading: Our Best Work
     text: >
-      Harness the power of the sun with SUNSOLAR’s professional solar
-      installation services! Whether you need a solar system for your home,
-      business, factory, or farm, our team ensures flawless installation
-      tailored to your specific energy needs.
-    image: /sun-solar-blog-image-768x436.png
+      We don't just build structures; we power and sustain them. Browse our
+      project gallery to see how we bring blueprints to life through expert
+      general contracting, cutting-edge solar installations, and comprehensive
+      MEP services. See the difference our end-to-end expertise makes.
+    image: /Gemini_Generated_Image_qscxleqscxleqscx.png
     direction: left
     _template: container
   - title: Hola Amigo

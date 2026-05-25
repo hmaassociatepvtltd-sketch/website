@@ -54,24 +54,25 @@ images:
   - image: /sun-solar-blog-image-768x436.png
   - image: /products/5.jpg
   - image: /assets/OIP.webp
-name: ' Project Testimonials '
-mainImage: /sun-solar-blog-image-768x436.png
-description: Our recent project in dc colony very beneficial best projext
+name: '50KW Solar Power Solution Hybrid - Gujranwala '
+mainImage: /Enhance_the_Uploaded_202603311405.png
+description: 'EPC Solar Energy System - Wapda Town - Gujranwala '
 blocks:
   - title: Cantt Project
-    description: >-
-      Harness the power of the sun with SUNSOLAR’s professional solar
-      installation services! Whether you need a solar system for your home,
-      business, factory, or farm, our team ensures flawless installation
-      tailored to your specific energy needs.
+    description: ''
     _template: heroSection
   - subHeading: Process
     heading: Our Step by Step Installation Process
     text: >
-      Harness the power of the sun with SUNSOLAR’s professional solar
-      installation services! Whether you need a solar system for your home,
-      business, factory, or farm, our team ensures flawless installation
-      tailored to your specific energy needs.
+      As a PEC-licensed C1 Constructor, we are authorized to execute large-scale
+      projects with precision and excellence. In addition, our AEDB/PPIB
+      certification as a certified solar installer empowers us to deliver Large
+      Scale Projects in compliance with national renewable energy standards. Our
+      strength lies in delivering reliable, cost-effective, and tailored
+      solutions that meet the unique
+
+
+      needs of every client.
     image: /sun-solar-blog-image-768x436.png
     direction: left
     _template: container

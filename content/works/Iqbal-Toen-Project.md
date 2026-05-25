@@ -1,7 +1,4 @@
 ---
-name: Iqbal Toen Project
-mainImage: /sun-solar-blog-image-768x436.png
-description: Our recent project in dc colony very beneficial best projext
 text: >
   ###### Solar System Installation
 
@@ -57,5 +54,8 @@ images:
   - image: /sun-solar-blog-image-768x436.png
   - image: /products/5.jpg
   - image: /assets/OIP.webp
+name: DHA Gujranwala 1.2 MW On-Grid
+mainImage: /hrui_AdobeStock_276818517_RV.jpg
+description: DHA Gujranwala 1.2 MW On-Grid
 ---
 

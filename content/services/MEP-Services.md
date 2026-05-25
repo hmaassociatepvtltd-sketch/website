@@ -6,39 +6,53 @@ description: >-
 coverImage: /photo-1621905251189-08b45d6a269e.avif
 blocks:
   - title: Mep services
+    backgroundImage: /Gemini_Generated_Image_b8nz1b8nz1b8nz1b.png
     _template: heroSection
   - subHeading: Services
-    heading: Our MEP Services
+    heading: MEP Services
     text: >
-      We provide a wide range of construction services, tailored to meet the
-      unique needs of our clients. From residential projects to commercial
-      developments, our team ensures quality, efficiency, and timely delivery on
-      every project.
+      We deliver reliable and efficient MEP (Mechanical, Electrical & Plumbing)
+      solutions designed to ensure safety, comfort, and long-term operational
+      performance for residential, commercial, and industrial facilities.
 
 
       ###### Our Services Include:
 
 
-      * Residential building construction and renovation
+      * Electrical System Design & Installation
 
-      * Commercial and industrial construction
+      * Power Distribution Systems
 
-      * Interior fit-outs and finishing works
+      * Internal & External Electrical Wiring
 
-      * Roofing and structural works
+      * Lighting Design & Installation
 
-      * Electrical and plumbing installations
+      * Generator & UPS Backup Solutions
 
-      * Project planning, management, and supervision
+      * Electrical Panels & Load Management
 
-      * Sustainable and eco-friendly construction solutions
+      * Hot & Cold Water Supply Systems
 
-      * Maintenance and repair services
+      * Internal & External Plumbing Works
 
+      * Sewerage & Drainage Systems
 
-      This format works well for a website section with a short intro paragraph
-      and clear bullet points.
-    image: /photo-1541888946425-d81bb19240f5.avif
+      * Rainwater Disposal Systems
+
+      * Water Storage & Pumping Solutions
+
+      * Sanitary Fixture Installation
+
+      * Water Filtration & Treatment Systems
+
+      * HVAC System Design & Installation
+
+      * Heating, Ventilation & Air Conditioning Systems
+
+      * Ventilation & Exhaust Systems
+
+      * Energy-Efficient Climate Control Solutions
+    image: /Gemini_Generated_Image_82zfbk82zfbk82zf.png
     direction: left
     _template: container
   - height: '150'
