@@ -1,103 +1,223 @@
-"use client"
+"use client";
 
-import { ArrowRight, Phone } from "lucide-react";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useTina } from "tinacms/dist/react";
+import { ArrowRight, Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { SiFacebook, SiLinkedin } from "react-icons/si";
-import { IoIosMail } from "react-icons/io";
-import { useTina } from "tinacms/dist/react";
-import Image from "next/image";
 import { FaTwitter } from "react-icons/fa";
 
-export const Footer = ({ site, productTypes, serviceTypes }) => {
+export const Footer = ({ site, productTypes = [], serviceTypes = [] }) => {
+    const { data } = useTina(site);
+    const siteData = data?.site || {};
 
-    const { data } = useTina(site)
-
+    const socialLinks = [
+        { icon: SiFacebook, href: siteData.facebook || "#", label: "Facebook" },
+        { icon: SiLinkedin, href: siteData.linkedin || "#", label: "LinkedIn" },
+        { icon: PiInstagramLogoFill, href: siteData.instagram || "#", label: "Instagram" },
+        { icon: FaTwitter, href: siteData.twitter || "#", label: "Twitter" },
+    ];
 
     return (
-        <div className={"w-full relative h-full flex flex-col items-center justify-center"}>
-            <div style={{
-                backgroundImage: `url(${data.site.footerImage})`,
-            }} className={'rounded-xl absolute -top-0 hidden xl:flex -translate-y-1/2 w-full bg-cover bg-no-repeat p-20 max-w-[1260px] '}>
-                <h1 className={'text-4xl text-white font-bold tracking-tighter text-center font-josefin-sans'} >{data.site.footerText}</h1>
-            </div>
-            <div className={'bg-secondary-background w-full flex justify-center flex-col items-center'}>
-
-                <div className={'max-w-[1260px] px-5 xl:px-0 w-full pt-20 lg:pt-40 pb-28'}>
-                    <div className={'grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid w-full gap-10'}>
-                        <div className={'col-span-1 w-full flex flex-col gap-5'}>
-                            <Image width={100} height={100} alt={'logo'} className={'w-full sm:w-[200px] filter invert grayscale-100'} src={data.site.footerLogo} />
-                            <p className={'text-white font-medium'}>{data.site.location}</p>
-                            <div className={'flex flex-row gap-3 items-center'}>
-                                <button
-                                    className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                >
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                    ></div>
-                                    <div className="relative text-white z-10">
-                                        <IoIosMail size={25} />
-                                    </div>
-                                </button>
-                                <p className={'text-white text-lg '}>{data.site.email}</p>
-                            </div>
-                            <div className={'flex flex-row gap-3 items-center'}>
-                                <button
-                                    className="p-4 rounded-full backdrop-blur-lg border border-white/10 bg-gradient-to-tr from-primary/60 to-primary/40 shadow-lg hover:shadow-2xl hover:shadow-white/20 hover:scale-110 hover:rotate-3 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-white/30 hover:bg-gradient-to-tr hover:from-white/10 hover:to-primary/40 group relative overflow-hidden"
-                                >
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"
-                                    ></div>
-                                    <div className="relative text-white z-10">
-                                        <Phone fill={'#ffffff'} size={25} />
-                                    </div>
-                                </button>
-                                <p className={'text-white text-lg '}>{data.site.phone}</p>
-                            </div>
-                          
+        <footer className="w-full relative bg-gradient-to-b from-slate-950 via-zinc-950 to-black text-slate-300 font-poppins pt-16">
+            {/* Top Floating Banner (if footerText or footerImage exists) */}
+            {siteData.footerText && (
+                <div className="max-w-[1260px] mx-auto px-5 xl:px-0 mb-12">
+                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary via-indigo-900 to-slate-900 p-8 sm:p-12 lg:p-14 border border-white/10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 group">
+                        {siteData.footerImage && (
+                            <Image
+                                src={siteData.footerImage}
+                                alt="Footer CTA Background"
+                                fill
+                                className="object-cover opacity-20 mix-blend-overlay group-hover:scale-105 transition-transform duration-700 pointer-events-none"
+                            />
+                        )}
+                        <div className="relative z-10 max-w-2xl text-center md:text-left space-y-2">
+                            <span className="text-xs uppercase tracking-widest font-semibold text-primary-foreground/80 bg-white/10 px-3 py-1 rounded-full border border-white/15 inline-block">
+                                Work With Us
+                            </span>
+                            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-josefin-sans text-white tracking-tight leading-tight">
+                                {siteData.footerText}
+                            </h3>
                         </div>
-                        <div className={'col-span-1 w-full flex flex-col gap-5'}>
-                            <h1 className={'text-white font-josefin-sans font-bold text-3xl'}>INFORMATIONS</h1>
-                            <div className={'w-[150px] h-0.5 bg-white'} />
-                            <div className={'flex text-white flex-col gap-4'}>
-                                <Link className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                    href={'/about'}> <ArrowRight /> About Us</Link>
-                                <Link className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                    href={'#contact'}> <ArrowRight /> Contacts</Link>
-
-                                <Link className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                    href={'/work'}> <ArrowRight /> Projects</Link>
-                            </div>
-                        </div>
-                        <div className={'col-span-1 w-full flex flex-col gap-5'}>
-                            <h1 className={'text-white font-josefin-sans font-bold text-3xl'}>PRODUCTS</h1>
-                            <div className={'w-[150px] h-0.5 bg-white'} />
-                            <div className={'flex text-white flex-col gap-4'}>
-                                {Array.from(productTypes).map((product, index) => (
-                                    <Link key={index} className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                        href={`/products/${product}`}> <ArrowRight /> {product}</Link>
-                                ))}
-                            </div>
-                        </div>
-                        <div className={'col-span-1 w-full flex flex-col gap-5'}>
-                            <h1 className={'text-white font-josefin-sans font-bold text-3xl'}>SERVICES</h1>
-                            <div className={'w-[150px] h-0.5 bg-white'} />
-                            <div className={'flex text-white flex-col gap-4'}>
-                               {Array.from(serviceTypes).map((service, index) => (
-                                    <Link key={index} className={'flex flex-row gap-1 items-center hover:opacity-85 font-semibold'}
-                                        href={`/services/${service.replace(' ', '-')}`}> <ArrowRight /> {service}</Link>
-                                ))}
-                            </div>
+                        <div className="relative z-10 shrink-0">
+                            <Link
+                                href="/quotation"
+                                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white text-primary font-semibold text-sm hover:bg-slate-100 shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                            >
+                                <span>Get a Free Quote</span>
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 </div>
-                <div className={'w-full h-0.5 bg-secondary '} />
-                <div
-                    className={'max-w-[1260px] px-5 xl:px-0 text-white flex flex-row justify-between items-center w-full py-10'}>
-                    <p>Copyright &copy; {new Date().getFullYear()}. All Rights Reserved</p>
-                    <p>{data.site.title}</p>
+            )}
+
+            {/* Main Footer Grid */}
+            <div className="max-w-[1260px] mx-auto px-5 xl:px-0 pt-8 pb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+                    {/* Column 1: Brand Info & Contact (span 4) */}
+                    <div className="lg:col-span-4 space-y-6">
+                        <Link href="/" className="inline-block">
+                            <Image
+                                width={260}
+                                height={90}
+                                alt="HMA Associates - Solar Power Solutions & MEP Engineering Gujranwala Pakistan"
+                                className="w-48 sm:w-56 lg:w-64 h-auto object-contain brightness-0 invert opacity-95 hover:opacity-100 transition-all duration-300"
+                                src="/assets/Fulllogo.png"
+                                priority={false}
+                            />
+                        </Link>
+
+                        {siteData.location && (
+                            <div className="flex items-start gap-3 text-sm text-slate-400">
+                                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                <span>{siteData.location}</span>
+                            </div>
+                        )}
+
+                        <div className="space-y-3 pt-2">
+                            {siteData.email && (
+                                <a
+                                    href={`mailto:${siteData.email}`}
+                                    className="group flex items-center gap-3 text-sm text-slate-300 hover:text-white transition-colors"
+                                >
+                                    <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                        <Mail className="w-4 h-4" />
+                                    </div>
+                                    <span>{siteData.email}</span>
+                                </a>
+                            )}
+
+                            {siteData.phone && (
+                                <a
+                                    href={`tel:${siteData.phone}`}
+                                    className="group flex items-center gap-3 text-sm text-slate-300 hover:text-white transition-colors"
+                                >
+                                    <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                        <Phone className="w-4 h-4" />
+                                    </div>
+                                    <span>{siteData.phone}</span>
+                                </a>
+                            )}
+                        </div>
+
+                        {/* Social Icons */}
+                        <div className="flex items-center gap-3 pt-4">
+                            {socialLinks.map((item, idx) => {
+                                const IconComponent = item.icon;
+                                return (
+                                    <a
+                                        key={idx}
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`Follow HMA Associates on ${item.label}`}
+                                        className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-primary/20 hover:border-primary/40 transition-all duration-300"
+                                    >
+                                        <IconComponent className="w-4 h-4" />
+                                    </a>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Column 2: Quick Links / Information (span 2) */}
+                    <div className="lg:col-span-2 space-y-5">
+                        <div className="space-y-2">
+                            <h4 className="text-base font-bold font-josefin-sans tracking-wide text-white uppercase">
+                                Quick Links
+                            </h4>
+                            <div className="w-8 h-0.5 rounded-full bg-primary" />
+                        </div>
+                        <ul className="space-y-3 text-sm">
+                            {[
+                                { label: "About Us", href: "/about" },
+                                { label: "Services", href: "/#services" },
+                                { label: "Projects", href: "/work" },
+                                { label: "Certifications", href: "/certifications" },
+                                { label: "Get Quotation", href: "/quotation" },
+                            ].map((link, idx) => (
+                                <li key={idx}>
+                                    <Link
+                                        href={link.href}
+                                        className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200"
+                                    >
+                                        <ChevronRight className="w-3.5 h-3.5 text-primary opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                        <span>{link.label}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 3: Products (span 3) */}
+                    <div className="lg:col-span-3 space-y-5">
+                        <div className="space-y-2">
+                            <h4 className="text-base font-bold font-josefin-sans tracking-wide text-white uppercase">
+                                Products
+                            </h4>
+                            <div className="w-8 h-0.5 rounded-full bg-primary" />
+                        </div>
+                        <ul className="space-y-3 text-sm">
+                            {Array.from(productTypes).map((product, idx) => (
+                                <li key={idx}>
+                                    <Link
+                                        href={`/products/${product}`}
+                                        className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 capitalize"
+                                    >
+                                        <ChevronRight className="w-3.5 h-3.5 text-primary opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                        <span>{product}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 4: Services (span 3) */}
+                    <div className="lg:col-span-3 space-y-5">
+                        <div className="space-y-2">
+                            <h4 className="text-base font-bold font-josefin-sans tracking-wide text-white uppercase">
+                                Services
+                            </h4>
+                            <div className="w-8 h-0.5 rounded-full bg-primary" />
+                        </div>
+                        <ul className="space-y-3 text-sm">
+                            {Array.from(serviceTypes).map((service, idx) => (
+                                <li key={idx}>
+                                    <Link
+                                        href={`/services/${service.replace(/\s+/g, '-')}`}
+                                        className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-200 capitalize"
+                                    >
+                                        <ChevronRight className="w-3.5 h-3.5 text-primary opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                                        <span>{service}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
-}
+
+            {/* Bottom Copyright Divider */}
+            <div className="border-t border-slate-900 bg-black/40">
+                <div className="max-w-[1260px] mx-auto px-5 xl:px-0 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                    <p>© {new Date().getFullYear()} {siteData.title || "HMA Associates"}. All Rights Reserved.</p>
+                    <div className="flex items-center gap-6">
+                        <Link href="/about" className="hover:text-slate-400 transition-colors">
+                            About
+                        </Link>
+                        <Link href="/quotation" className="hover:text-slate-400 transition-colors">
+                            Quotation
+                        </Link>
+                        <Link href="/work" className="hover:text-slate-400 transition-colors">
+                            Portfolio
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};

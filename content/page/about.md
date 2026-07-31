@@ -1,10 +1,20 @@
 ---
 title: About Us
 blocks:
-  - title: About Us
-    description: ''
-    buttonText: ''
-    _template: heroSection
+  - sectionHeading: ''
+    slideDuration: 5000
+    slides:
+      - slideHeading: Engineering Excellence & Innovation
+        subHeading: HMA ASSOCIATES (SMC-PRIVATE) LIMITED
+        description: >-
+          A trusted name in Construction, Solar Solutions, Engineering Design,
+          and MEP Services across Pakistan. PEC-licensed C1 Constructor &
+          AEDB-certified solar provider.
+        animationType: fade-zoom
+        backgroundImage: /Landing%20Page/why_7.png
+        buttonText: Contact Us
+        buttonLink: /#contact
+    _template: animatedHeroSection
   - subHeading: HMA ASSOCIATES & CO
     heading: About Us
     text: >

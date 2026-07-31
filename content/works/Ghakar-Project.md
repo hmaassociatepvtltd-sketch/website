@@ -58,11 +58,17 @@ name: '2 MW Solar Energy Park - Attock '
 mainImage: /Gemini_Generated_Image_xozrkfxozrkfxozr.png
 description: '2 MW Solar Energy Park - Attock '
 blocks:
-  - title: '2MW SOLAR POWER PROJECT KAMRA '
-    description: HMA Associates (SMC-Private) Limited
-    buttonText: ''
-    backgroundImage: '/Generated Image October 04, 2025 - 7_06PM.png'
-    _template: heroSection
+  - sectionHeading: Megawatt Solar Power Project
+    slideDuration: 5000
+    slides:
+      - slideHeading: 2MW Solar Power Project Kamra
+        subHeading: ATTOCK, PUNJAB PROJECT
+        description: 2 Megawatt Solar Power Infrastructure engineered and commissioned by HMA Associates (SMC-Private) Limited.
+        backgroundImage: '/Generated Image October 04, 2025 - 7_06PM.png'
+        buttonText: View Case Study
+        buttonLink: '#overview'
+        animationType: fade-zoom
+    _template: animatedHeroSection
   - subHeading: Project Overview
     heading: 2MW Solar Power Installation – Attock
     text: >
@@ -84,5 +90,8 @@ blocks:
   - height: '250'
     backgroundColor: white
     _template: Spacer
+  - client_name: '2 MW Risalpur '
+    details: ''
+    _template: projectPortfolio
 ---
 

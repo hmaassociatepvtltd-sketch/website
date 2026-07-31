@@ -129,6 +129,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  p, .prose p, .prose-sm p, .prose-lg p, .prose-xl p {
+    text-align: justify;
+  }
 }
 
 
@@ -819,3 +822,61 @@ body {
     );
     background-size: calc(var(--s) * 1.732) var(--s);
 }
+
+/* Mobile & Tablet Responsive Design & Fluid Typography System */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw + 1rem, 3.25rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: clamp(1.1rem, 1.5vw + 0.8rem, 1.5rem);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+button, 
+a.btn,
+input[type="button"], 
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+

@@ -1,13 +1,16 @@
 ---
 blocks:
-  - title: Our clients
-    description: >-
-      Harness the power of the sun with SUNSOLAR’s professional solar
-      installation services! Whether you need a solar system for your home,
-      business, factory, or farm, our team ensures flawless installation
-      tailored to your specific energy needs.
-    backgroundImage: ''
-    _template: heroSection
+  - sectionHeading: Trusted Corporate Relationships
+    slideDuration: 5000
+    slides:
+      - slideHeading: Valued Clients & Associate Partners
+        subHeading: HMA ASSOCIATES (SMC-PRIVATE) LIMITED
+        description: Empowering major commercial, industrial, and institutional partners across Pakistan with reliable clean energy and engineering solutions.
+        backgroundImage: /sebastian-herrmann-NbtIDoFKGO8-unsplash.jpg
+        buttonText: View Clients
+        buttonLink: '#clients'
+        animationType: fade-zoom
+    _template: animatedHeroSection
   - subHeading: HMA ASSOCIATES & CO
     heading: Our Clients
     text: >

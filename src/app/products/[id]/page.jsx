@@ -60,8 +60,14 @@ export default async function Page(props) {
 
     groupedProducts.sort((a, b) => a.name.localeCompare(b.name));
 
+    let pageResponse = null;
+    try {
+        pageResponse = await client.queries.page({ relativePath: "products.md" });
+    } catch (e) {
+        console.log("No specific products.md page found, using default hero");
+    }
+
     return (
-        // Pass the groupedProducts to your AllProducts component
-        <AllProducts title={categoryName} groupedProducts={groupedProducts} />
+        <AllProducts title={categoryName} groupedProducts={groupedProducts} pageResponse={pageResponse} />
     );
 }

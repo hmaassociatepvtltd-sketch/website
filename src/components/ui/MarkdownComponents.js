@@ -2,56 +2,56 @@ import {Check} from "lucide-react";
 
 export const components = {
     h1: (props) => (
-        <h1 className={'text-9xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h1 className={'text-3xl sm:text-4xl font-bold font-josefin-sans tracking-tight text-primary my-3'}>
             {props.children}
         </h1>
     ),
     h2: (props) => (
-        <h2 className={'text-8xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h2 className={'text-2xl sm:text-3xl font-bold font-josefin-sans tracking-tight text-primary my-3'}>
             {props.children}
         </h2>
     ),
     h3: (props) => (
-        <h3 className={'text-7xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h3 className={'text-xl sm:text-2xl font-bold font-josefin-sans tracking-tight text-primary my-2'}>
             {props.children}
         </h3>
     ),
     h4: (props) => (
-        <h4 className={'text-6xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h4 className={'text-lg sm:text-xl font-semibold font-josefin-sans text-primary my-2'}>
             {props.children}
         </h4>
     ),
     h5: (props) => (
-        <h5 className={'text-5xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h5 className={'text-base font-semibold font-josefin-sans text-primary my-2'}>
             {props.children}
         </h5>
     ),
     h6: (props) => (
-        <h6 className={'text-3xl font-bold font-josefin-sans tracking-tighter text-primary mt-2'}>
+        <h6 className={'text-sm font-semibold font-josefin-sans text-primary my-1'}>
             {props.children}
         </h6>
     ),
     p: (props) => (
-        <p className={'text-lg font-poppins'}>
+        <p className={'text-base md:text-lg font-poppins whitespace-normal break-words leading-relaxed my-2.5 text-muted-foreground'}>
             {props.children}
         </p>
     ),
     ul: (props) => (
-        <ul className={'list-disc pl-6 mb-4 font-poppins text-lg'}>
+        <ul className={'list-disc pl-6 mb-4 font-poppins text-base md:text-lg space-y-2'}>
             {props.children}
         </ul>
     ),
     ol: (props) => (
-        <ol className={'list-decimal pl-6 mb-4 font-poppins text-lg'}>
+        <ol className={'list-decimal pl-6 mb-4 font-poppins text-base md:text-lg space-y-2'}>
             {props.children}
         </ol>
     ),
     li: (props) => (
-        <li className={'relative flex flex-row  items-start'}>
-               <span className={'min-h-4 translate-y-1/3 min-w-4 text-white rounded-full bg-primary flex justify-center items-center'}>
+        <li className={'relative flex flex-row items-start my-1'}>
+               <span className={'min-h-4 translate-y-1/3 min-w-4 text-white rounded-full bg-primary flex justify-center items-center shrink-0'}>
                    <Check size={10} strokeWidth={4}/>
                </span>
-            <span className={'ml-2 text-lg font-poppins'}>{props.children}</span>
+            <span className={'ml-2.5 text-base md:text-lg font-poppins text-muted-foreground'}>{props.children}</span>
         </li>
     ),
     a: (props) => (

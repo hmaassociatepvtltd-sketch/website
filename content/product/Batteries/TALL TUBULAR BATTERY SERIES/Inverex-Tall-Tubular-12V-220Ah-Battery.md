@@ -2,6 +2,8 @@
 image: /products/batteries-1.jpg
 name: GoodWe Lynx Home Battery Series
 coverImage: /2.png
+images:
+  - image: /2.png
 description: >
   # Products Details
 

@@ -3,7 +3,7 @@
 export const ScrollUp = () => {
 
     return (
-        <div className={'fixed bottom-0 z-50 right-0 p-10'}>
+        <div className={'fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40'}>
             <button aria-label='scrollUp' onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="button">
                 <svg className="svgIcon" viewBox="0 0 384 512">
                     <path

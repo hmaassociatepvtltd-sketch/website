@@ -1,61 +1,61 @@
 ---
-text: >
-  ###### Solar System Installation
-
-
-  Harness the power of the sun with SUNSOLAR’s professional solar installation
-  services! Whether you need a solar system for your home, business, factory, or
-  farm, our team ensures flawless installation tailored to your specific energy
-  needs.
-
-
-  ###### Installation Services for Every Sector
-
-
-  1. Residential Solar Installation: Our residential installations are designed
-  to provide homeowners with sustainable and cost effective energy solutions.
-  From small rooftop systems to complete off grid setups, we ensure that every
-  home gets maximum energy efficiency.
-
-  2. Commercial Solar Installation: Power your business with clean, renewable
-  energy. Our commercial solar solutions cater to offices, shops, and retail
-  spaces, reducing operational costs while enhancing your brand’s eco friendly
-  image.
-
-  3. Industrial Solar Installation: For factories and large scale operations, we
-  specialize in high capacity solar installations designed to handle the
-  demanding energy requirements of industrial setups.
-
-  4. Agricultural Solar Installation: Reduce dependency on expensive electricity
-  for your agricultural operations. Our systems power everything from irrigation
-  pumps to cold storage facilities, ensuring seamless and affordable energy
-  solutions for farmers.
-
-
-  ###### Why Choose SUNSOLAR for Installation?
-
-
-  1. Certified Experts: Our skilled technicians are certified and trained to
-  handle installations of all scales.
-
-  2. Custom Solutions: We assess your energy needs and design a solar system
-  that perfectly fits your requirements.
-
-  3. Top Quality Equipment: We use premium materials and follow industry best
-  practices to ensure reliable installations.
-
-  4. Timely Delivery: Our team values your time and completes every project
-  within the promised timeline.
-
-  5. After Sales Support: We don’t just install and leave! Enjoy ongoing support
-  and maintenance to keep your system running smoothly.
-images:
-  - image: /Landing%20Page/hero_bg_8_2.png
-  - image: /sun-solar-blog-image-768x436.png
-  - image: /products/5.jpg
-  - image: /assets/OIP.webp
-name: 'DC Colony - EPC Solar Project '
+name: 'DC Colony Commercial Solar Infrastructure - Gujranwala'
 mainImage: /sun-solar-blog-image-768x436.png
-description: 'DC Colony - EPC Solar Project '
+description: 'High-capacity commercial rooftop solar project delivered at DC Colony, Gujranwala by HMA Associates (SMC-Private) Limited.'
+text: >
+  ### DC Colony Commercial Solar Infrastructure – Gujranwala
+
+  Designed and commissioned by HMA Associates (SMC-Private) Limited, this turnkey solar installation powers commercial offices and retail complexes in DC Colony, Gujranwala. Integrating net-metering bidirectional power flow, the system significantly slashes peak electricity tariffs while exporting surplus energy back to GEPCO grid.
+
+  #### Key Infrastructure Deliverables
+
+  1. **Tier-1 Monocrystalline Solar Array**: High-density 545W Mono PERC modules with anti-reflective glass coating.
+  2. **Three-Phase Net-Metering Integration**: Fully compliant AEDB-certified grid-tied inverter setup with dual MPPTs and automated anti-islanding protection.
+  3. **Custom Raised Aluminum Mounting Structure**: Engineered for high wind load tolerance without penetrating roof waterproofing membranes.
+images:
+  - image: /sun-solar-blog-image-768x436.png
+  - image: /Landing%20Page/hero_bg_8_2.png
+  - image: /photo-1509391366360-2e959784a276.avif
+blocks:
+  - sectionHeading: Commercial EPC Project
+    slideDuration: 5000
+    slides:
+      - slideHeading: DC Colony Commercial Solar Project
+        subHeading: GUJRANWALA COMMERCIAL INFRASTRUCTURE
+        description: High-capacity commercial rooftop solar project delivered at DC Colony, Gujranwala by HMA Associates (SMC-Private) Limited.
+        backgroundImage: /sun-solar-blog-image-768x436.png
+        buttonText: View Case Study
+        buttonLink: '#overview'
+        animationType: fade-zoom
+    _template: animatedHeroSection
+  - subHeading: Commercial Turnkey EPC
+    heading: Sustainable Energy for DC Colony Business Hub
+    text: >
+      Engineered to deliver 100% daytime power independence, this commercial installation features precision tilt angles for optimal year-round irradiance harvesting in Gujranwala.
+    image: /Landing%20Page/hero_bg_8_2.png
+    direction: left
+    _template: container
+  - client_name: 'DC Colony Commercial Plaza'
+    location: 'DC Colony, Gujranwala, Pakistan'
+    key_metrics:
+      - label: Installed Capacity
+        value: 75 kW Grid-Tied
+      - label: Monthly Savings
+        value: PKR 450,000+
+      - label: Payback Period
+        value: ~3.2 Years
+    details: 'Completed with GEPCO net-metering meter installation and remote Wi-Fi telemetry.'
+    _template: projectPortfolio
+  - title: Installation Gallery
+    images:
+      - image: /sun-solar-blog-image-768x436.png
+      - image: /Landing%20Page/hero_bg_8_2.png
+      - image: /photo-1509391366360-2e959784a276.avif
+    _template: gallery
+  - subheading: 'Commercial Net-Metering Solutions'
+    heading: 'Reduce Commercial Electricity Tariffs Today'
+    phone: '+923097778006'
+    _template: contact
 ---
+
 

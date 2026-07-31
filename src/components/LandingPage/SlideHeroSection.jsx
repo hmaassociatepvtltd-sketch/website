@@ -35,14 +35,28 @@ export const SlideHeroSection = (props) => {
                 return (
                     <div
                         key={index}
-                        className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out
+                        className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out
                             ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}
                         `}
-                        style={{
-                            backgroundImage: `url('${slide?.backgroundImage || 'https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png'}')`,
-                        }}
                     >
-                        <div className={'w-full h-full absolute top-0 left-0 bg-black opacity-25'} />
+                        {slide?.backgroundVideo || slide?.video ? (
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="absolute inset-0 w-full h-full object-cover"
+                                src={slide.backgroundVideo || slide.video}
+                            />
+                        ) : (
+                            <div
+                                className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+                                style={{
+                                    backgroundImage: `url('${slide?.backgroundImage || 'https://aptinverex.com/assets/img/update1/hero/hero_bg_8_2.png'}')`,
+                                }}
+                            />
+                        )}
+                        <div className={'w-full h-full absolute top-0 left-0 bg-black opacity-40 z-10'} />
 
                         
                         <div className={`w-full h-full relative px-5 xl:px-0 flex flex-col justify-center items-center`}>
@@ -71,6 +85,7 @@ export const SlideHeroSection = (props) => {
                                         <div data-tina-field={tinaField(slide, 'buttonText')} className={'w-fit'}>
                                             <Button 
                                                 link={slide?.buttonLink || '#'}
+                                                variant={slide?.buttonStyle}
                                             >
                                                 {slide.buttonText}
                                             </Button>
