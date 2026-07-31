@@ -14,7 +14,162 @@ const buttonStyleField = {
     ]
 };
 
+const spacingFields = [
+    {
+        name: 'paddingTop',
+        label: 'Top Padding (Upper Padding)',
+        type: 'string',
+        options: [
+            { label: 'Default / Standard', value: 'pt-16 md:pt-24' },
+            { label: 'None (0px)', value: 'pt-0' },
+            { label: 'Compact / Small (16px - 32px)', value: 'pt-4 md:pt-8' },
+            { label: 'Medium (32px - 48px)', value: 'pt-8 md:pt-12' },
+            { label: 'Large (64px - 96px)', value: 'pt-16 md:pt-28' },
+            { label: 'Extra Large (128px)', value: 'pt-24 md:pt-36' },
+        ],
+    },
+    {
+        name: 'paddingBottom',
+        label: 'Bottom Padding (Lower Padding)',
+        type: 'string',
+        options: [
+            { label: 'Default / Standard', value: 'pb-16 md:pb-24' },
+            { label: 'None (0px)', value: 'pb-0' },
+            { label: 'Compact / Small (16px - 32px)', value: 'pb-4 md:pb-8' },
+            { label: 'Medium (32px - 48px)', value: 'pb-8 md:pb-12' },
+            { label: 'Large (64px - 96px)', value: 'pb-16 md:pb-28' },
+            { label: 'Extra Large (128px)', value: 'pb-24 md:pb-36' },
+        ],
+    },
+    {
+        name: 'paddingX',
+        label: 'Left & Right Padding (Horizontal Padding)',
+        type: 'string',
+        options: [
+            { label: 'Default Container (px-5 xl:px-0)', value: 'px-5 xl:px-0' },
+            { label: 'Full Bleed (px-0)', value: 'px-0' },
+            { label: 'Compact Padding (px-4 md:px-8)', value: 'px-4 md:px-8' },
+            { label: 'Generous Padding (px-8 md:px-16)', value: 'px-8 md:px-16' },
+        ],
+    },
+    {
+        name: 'marginTop',
+        label: 'Top Margin (Upper Margin)',
+        type: 'string',
+        options: [
+            { label: 'None (0px)', value: 'mt-0' },
+            { label: 'Small (16px)', value: 'mt-4 md:mt-8' },
+            { label: 'Medium (32px)', value: 'mt-8 md:mt-16' },
+            { label: 'Large (64px)', value: 'mt-16 md:mt-24' },
+        ],
+    },
+    {
+        name: 'marginBottom',
+        label: 'Bottom Margin (Lower Margin)',
+        type: 'string',
+        options: [
+            { label: 'None (0px)', value: 'mb-0' },
+            { label: 'Small (16px)', value: 'mb-4 md:mb-8' },
+            { label: 'Medium (32px)', value: 'mb-8 md:mb-16' },
+            { label: 'Large (64px)', value: 'mb-16 md:mb-24' },
+        ],
+    },
+];
+
 const templates = [
+    {
+        name: 'aboutUsBlock',
+        label: 'About Us Content Card Section',
+        fields: [
+            {
+                type: 'string',
+                name: 'badgeText',
+                label: 'Section Tag Badge Text',
+            },
+            {
+                type: 'string',
+                name: 'heading',
+                label: 'Main Heading',
+            },
+            {
+                type: 'string',
+                name: 'description',
+                label: 'Description Narrative',
+                ui: { component: 'textarea' },
+            },
+            {
+                type: 'image',
+                name: 'image',
+                label: 'Showcase Image',
+            },
+            {
+                type: 'string',
+                name: 'buttonText',
+                label: 'Button Label',
+            },
+            {
+                type: 'string',
+                name: 'buttonLink',
+                label: 'Button Link',
+            },
+            ...spacingFields,
+        ],
+    },
+    {
+        name: 'directorMessage',
+        label: "Director's Message",
+        fields: [
+            {
+                type: 'image',
+                name: 'image',
+                label: 'Director Photo / Logo',
+            },
+            {
+                type: 'string',
+                name: 'badgeText',
+                label: 'Badge Text (e.g. Director\'s Message)',
+            },
+            {
+                type: 'string',
+                name: 'directorName',
+                label: 'Director Name',
+            },
+            {
+                type: 'string',
+                name: 'directorTitle',
+                label: 'Director Designation / Company',
+            },
+            {
+                type: 'string',
+                name: 'message',
+                label: 'Primary Quote Message',
+                ui: { component: 'textarea' },
+            },
+            {
+                type: 'string',
+                name: 'secondaryMessage',
+                label: 'Secondary Message / Paragraph',
+                ui: { component: 'textarea' },
+            },
+            {
+                type: 'string',
+                name: 'tags',
+                label: 'Tags / Badges (Comma-separated)',
+                description: 'e.g. Solar Solutions, MEP Engineering, Turnkey Construction, Zero Hidden Costs',
+            },
+            {
+                type: 'string',
+                name: 'buttonText',
+                label: 'CTA Button Label',
+            },
+            {
+                type: 'string',
+                name: 'buttonLink',
+                label: 'CTA Button URL / Link',
+            },
+            ...spacingFields,
+        ],
+    },
     {
         name: 'slideHero',
         label: 'Slides Hero Section',
@@ -256,6 +411,50 @@ const templates = [
                     { label: "Primary Tint Glow", value: "primary-tint" },
                 ],
             },
+            {
+                name: "imageTopBadge",
+                label: "Image Top Right Badge Text",
+                type: "string",
+            },
+            {
+                name: "imageCardTagline",
+                label: "Image Bottom Card Tagline / Subtitle",
+                type: "string",
+            },
+            {
+                name: "imageCardTitle",
+                label: "Image Bottom Card Main Title",
+                type: "string",
+            },
+            {
+                name: "items",
+                label: "Feature Highlight Tags (Under Text)",
+                type: "object",
+                list: true,
+                ui: {
+                    itemProps: (item) => ({ label: item?.text || item?.title || 'New Highlight Tag' }),
+                },
+                fields: [
+                    {
+                        name: "text",
+                        label: "Tag Text",
+                        type: "string",
+                    },
+                    {
+                        name: "icon",
+                        label: "Icon Type",
+                        type: "string",
+                        options: [
+                            { label: "Shield / License", value: "shield" },
+                            { label: "Sun / Solar", value: "sun" },
+                            { label: "Building / MEP", value: "building" },
+                            { label: "Zap / Power", value: "zap" },
+                            { label: "Award / Star", value: "award" },
+                        ],
+                    },
+                ],
+            },
+            ...spacingFields,
         ]
     },
     {

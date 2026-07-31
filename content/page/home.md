@@ -36,40 +36,56 @@ blocks:
         buttonLink: ''
         buttonStyle: secondary-glass
     _template: animatedHeroSection
+  - image: /5.jpeg
+    directorName: Haseeb Almas
+    directorTitle: 'Director, HMA Associates (SMC-Private) Limited'
+    buttonText: 'Contact Us! '
+    _template: directorMessage
+  - badgeText: About HMA Associates
+    heading: Empowering Pakistan's Infrastructure & Renewable Future
+    description: >
+      HMA Associates (SMC-Private) Limited is a premier engineering, construction, and renewable energy enterprise in Pakistan. PEC-licensed C1 constructor and AEDB certified solar provider, we combine technical mastery with top-tier equipment to build reliable infrastructure, power industrial facilities, and drive energy independence.
+    image: /hrui_AdobeStock_276818517_RV.jpg
+    buttonText: Learn More About Us
+    buttonLink: /about
+    _template: aboutUsBlock
   - subHeading: Who We Are
     heading: Empowering Infrastructure & Renewable Energy
     text: >
-      HMA Associates (SMC-Private) Limited is a trusted leader in
-      Construction, Renewable Energy Solutions, Engineering Design, and MEP
-      Services across Pakistan. With extensive experience in specialized engineering,
-      we leverage a team of skilled professionals and cutting-edge technology to
-      deliver reliable, efficient, and sustainable built environments tailored to
-      residential, commercial, and industrial clients.
+      HMA Associates (SMC-Private) Limited is a trusted leader in Construction,
+      Renewable Energy Solutions, Engineering Design, and MEP Services across
+      Pakistan. With extensive experience in specialized engineering, we
+      leverage a team of skilled professionals and cutting-edge technology to
+      deliver reliable, efficient, and sustainable built environments tailored
+      to residential, commercial, and industrial clients.
     image: /hrui_AdobeStock_276818517_RV.jpg
     direction: left
+    imageCardTagline: Engineering & Construction
     _template: container
   - subHeading: Why Choose Us
     heading: Pakistan's Leading Solar & Engineering Enterprise
     text: >
       As a PEC-licensed C1 Constructor, we are authorized to execute large-scale
-      engineering and infrastructure projects with unmatched precision and excellence.
-      In addition, our AEDB & PPIB certifications empower us to design and deploy
-      utility-scale and commercial solar power systems in full compliance with
-      national standards. Our strength lies in delivering reliable, cost-effective,
-      and tailored solutions.
+      engineering and infrastructure projects with unmatched precision and
+      excellence. In addition, our AEDB & PPIB certifications empower us to
+      design and deploy utility-scale and commercial solar power systems in full
+      compliance with national standards. Our strength lies in delivering
+      reliable, cost-effective, and tailored solutions.
     image: /Landing%20Page/why_7.png
     direction: right
     bgTheme: light
     _template: container
   - heading: Our Core Engineering Services
     subHeading: >
-      Unleashing Comprehensive Solar, MEP & Infrastructure Engineering Solutions Tailored to Elevate Your Power & Facility Efficiency.
+      Unleashing Comprehensive Solar, MEP & Infrastructure Engineering Solutions
+      Tailored to Elevate Your Power & Facility Efficiency.
     buttonText: Explore All Services
     buttonStyle: primary-arrow
     items:
       - title: Construction Services
         description: >-
-          PEC C1 licensed turnkey construction services delivering robust infrastructure, commercial developments, and sustainable architecture.
+          PEC C1 licensed turnkey construction services delivering robust
+          infrastructure, commercial developments, and sustainable architecture.
         link: services/Construction-Services
         image: >-
           /11-Tips-for-Effective-Construction-Site-Management-Procore-Blog-Hero--768x384.png
@@ -77,21 +93,25 @@ blocks:
         featured: false
       - title: MEP Services
         description: >
-          Safe, efficient, and optimized electrical distribution, HVAC, and mechanical engineering for industrial and commercial facilities.
+          Safe, efficient, and optimized electrical distribution, HVAC, and
+          mechanical engineering for industrial and commercial facilities.
         link: services/MEP-Services
         image: /photo-1621905251189-08b45d6a269e.avif
         iconName: users
         featured: false
       - title: Solar Power Solutions
         description: >
-          Tier-1 AEDB/PPIB certified solar power engineering, hybrid & on-grid installations, and commercial energy storage solutions.
+          Tier-1 AEDB/PPIB certified solar power engineering, hybrid & on-grid
+          installations, and commercial energy storage solutions.
         link: services/Solar-Solutions
         image: /Clean_the_Dirt_202603311401.png
         iconName: sun
         featured: true
     _template: modernServices
   - title: Commercial & Industrial Products
-    description: High-Efficiency Solar Inverters, Energy Storage Batteries, PV Modules & MEP Equipment.
+    description: >-
+      High-Efficiency Solar Inverters, Energy Storage Batteries, PV Modules &
+      MEP Equipment.
     bgTheme: light
     _template: products
   - title: Testimonials

@@ -1,12 +1,40 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { components } from "@/components/ui/MarkdownComponents";
 import { ShieldCheck, Award, CheckCircle2, Zap, Building2, Sun } from "lucide-react";
+
+const getHighlightIcon = (iconName) => {
+    switch (iconName?.toLowerCase()) {
+        case "sun":
+        case "solar":
+            return <Sun className="w-4 h-4" />;
+        case "building":
+        case "mep":
+            return <Building2 className="w-4 h-4" />;
+        case "zap":
+        case "power":
+            return <Zap className="w-4 h-4" />;
+        case "award":
+        case "star":
+            return <Award className="w-4 h-4" />;
+        case "check":
+        case "shield":
+        default:
+            return <ShieldCheck className="w-4 h-4" />;
+    }
+};
+
+const defaultHighlights = [
+    { text: "PEC C1 Licensed Constructor", icon: "shield" },
+    { text: "AEDB & PPIB Certified Installer", icon: "sun" },
+    { text: "Turnkey MEP & Engineering Services", icon: "building" },
+    { text: "Commercial & Residential Power Solutions", icon: "zap" }
+];
 
 export const Container = (props) => {
     const isImageOnLeft = props.direction === "right";
@@ -31,15 +59,25 @@ export const Container = (props) => {
 
     const isDarkBg = bgTheme === "navy" || bgTheme === "dark-zinc";
 
-    const defaultHighlights = [
-        { icon: ShieldCheck, text: "PEC C1 Licensed Constructor" },
-        { icon: Sun, text: "AEDB & PPIB Certified Installer" },
-        { icon: Building2, text: "Turnkey MEP & Engineering Services" },
-        { icon: Zap, text: "Commercial & Residential Power Solutions" }
-    ];
+    const highlightsToRender = useMemo(() => {
+        const custom = props.highlights || props.items;
+        if (Array.isArray(custom) && custom.length > 0) {
+            return custom.map(item => {
+                if (typeof item === "string") return { text: item, icon: "shield" };
+                return { text: item.text || item.title || item.name || "", icon: item.icon || item.iconName || "shield" };
+            });
+        }
+        return defaultHighlights;
+    }, [props.highlights, props.items]);
+
+    const ptClass = props.paddingTop || "pt-16 md:pt-24";
+    const pbClass = props.paddingBottom || "pb-16 md:pb-24";
+    const pxClass = props.paddingX || "";
+    const mtClass = props.marginTop || "";
+    const mbClass = props.marginBottom || "";
 
     return (
-        <section className={`relative w-full py-16 md:py-24 flex justify-center items-center overflow-hidden transition-colors duration-500 ${getBgThemeStyles()}`}>
+        <section className={`relative w-full ${ptClass} ${pbClass} ${pxClass} ${mtClass} ${mbClass} flex justify-center items-center overflow-hidden transition-colors duration-500 ${getBgThemeStyles()}`}>
             {/* Ambient Background Glows */}
             <div className="absolute top-1/2 -left-40 -translate-y-1/2 w-[450px] h-[450px] bg-primary/10 rounded-full blur-[120px] pointer-events-none opacity-70" />
             <div className="absolute top-1/3 -right-40 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[100px] pointer-events-none opacity-60" />
@@ -105,25 +143,22 @@ export const Container = (props) => {
 
                         {/* Feature Highlights Grid */}
                         {hasImage && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                                {defaultHighlights.map((item, idx) => {
-                                    const IconComp = item.icon;
-                                    return (
-                                        <div
-                                            key={idx}
-                                            className={`flex items-center gap-2.5 p-2.5 rounded-xl border ${
-                                                isDarkBg
-                                                    ? "bg-white/5 border-white/10 text-slate-200"
-                                                    : "bg-slate-50/80 dark:bg-zinc-800/60 border-slate-200/80 dark:border-zinc-700/60 text-foreground"
-                                            } text-xs sm:text-sm font-medium transition-all duration-300 hover:border-primary/40`}
-                                        >
-                                            <div className="p-1.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                                                <IconComp className="w-4 h-4" />
-                                            </div>
-                                            <span className="truncate">{item.text}</span>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2" data-tina-field={tinaField(props, "highlights")}>
+                                {highlightsToRender.map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`flex items-center gap-2.5 p-2.5 rounded-xl border ${
+                                            isDarkBg
+                                                ? "bg-white/5 border-white/10 text-slate-200"
+                                                : "bg-slate-50/80 dark:bg-zinc-800/60 border-slate-200/80 dark:border-zinc-700/60 text-foreground"
+                                        } text-xs sm:text-sm font-medium transition-all duration-300 hover:border-primary/40`}
+                                    >
+                                        <div className="p-1.5 rounded-lg bg-primary/10 text-primary shrink-0">
+                                            {getHighlightIcon(item.icon)}
                                         </div>
-                                    );
-                                })}
+                                        <span className="truncate">{item.text}</span>
+                                    </div>
+                                ))}
                             </div>
                         )}
 
@@ -153,6 +188,12 @@ export const Container = (props) => {
 };
 
 const ImageFrame = ({ props }) => {
+    const topBadgeText = props?.imageTopBadge ?? "Verified Enterprise";
+    const cardTagline = props?.imageCardTagline ?? "Engineering Excellence";
+    const cardTitle = props?.imageCardTitle ?? "PEC C1 & AEDB Certified";
+    const showTopBadge = props?.showTopBadge !== false && Boolean(topBadgeText);
+    const showBottomCard = props?.showBottomCard !== false && Boolean(cardTitle || cardTagline);
+
     return (
         <div className="relative w-full group">
             {/* Ambient Shadow/Glow */}
@@ -172,21 +213,32 @@ const ImageFrame = ({ props }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80" />
 
                 {/* Top-Right Glass Badge */}
-                <div className="absolute top-4 right-4 z-20 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-semibold font-poppins flex items-center gap-2 shadow-lg">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Verified Enterprise</span>
-                </div>
+                {showTopBadge && (
+                    <div 
+                        data-tina-field={tinaField(props, "imageTopBadge")}
+                        className="absolute top-4 right-4 z-20 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-semibold font-poppins flex items-center gap-2 shadow-lg"
+                    >
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>{topBadgeText}</span>
+                    </div>
+                )}
 
                 {/* Floating Bottom Glass Card */}
-                <div className="absolute bottom-5 left-5 right-5 sm:right-auto z-20 p-4 rounded-2xl bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-white/40 dark:border-zinc-700/60 shadow-2xl flex items-center gap-3.5 max-w-sm transition-transform duration-300 group-hover:-translate-y-1">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-sky-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                        <Award className="w-6 h-6" />
+                {showBottomCard && (
+                    <div className="absolute bottom-5 left-5 right-5 sm:right-auto z-20 p-4 rounded-2xl bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-white/40 dark:border-zinc-700/60 shadow-2xl flex items-center gap-3.5 max-w-sm transition-transform duration-300 group-hover:-translate-y-1">
+                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-sky-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Award className="w-6 h-6" />
+                        </div>
+                        <div>
+                            {cardTagline && (
+                                <p data-tina-field={tinaField(props, "imageCardTagline")} className="text-xs uppercase tracking-wider text-primary font-bold font-poppins">{cardTagline}</p>
+                            )}
+                            {cardTitle && (
+                                <p data-tina-field={tinaField(props, "imageCardTitle")} className="text-sm font-semibold text-foreground leading-snug">{cardTitle}</p>
+                            )}
+                        </div>
                     </div>
-                    <div>
-                        <p className="text-xs uppercase tracking-wider text-primary font-bold font-poppins">Engineering Excellence</p>
-                        <p className="text-sm font-semibold text-foreground leading-snug">PEC C1 & AEDB Certified</p>
-                    </div>
-                </div>
+                )}
             </div>
         </div>
     );

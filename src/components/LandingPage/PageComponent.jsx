@@ -26,6 +26,9 @@ import { ServiceDetailShowcase } from "./ServiceDetailShowcase";
 import { CertificateCard } from "./CertificateCard";
 import { ContentShowroom } from "./ContentShowroom";
 import { LocationBlock } from "./LocationBlock";
+import { DirectorMessage } from "./DirectorMessage";
+import { AboutUsBlock } from "./AboutUsBlock";
+import React from "react";
 
 export const PageComponent = ({ partners = [], services = [], products = [], works = [], ...props }) => {
 
@@ -36,29 +39,37 @@ export const PageComponent = ({ partners = [], services = [], products = [], wor
     return (
         <main className="w-full relative h-full">
             {page.blocks?.map((block, index) => {
+                const isHeroBlock = index === 0;
 
-                switch (block?.__typename) {
-                    case "PageBlocksHeroSection": {
-                        return <HeroSection {...block} key={index} />
-                    }
-                    case "PageBlocksAnimatedHeroSection": {
-                        return <AnimatedHeroSection {...block} key={index} />
-                    }
-                    case "PageBlocksLocationBlock": {
-                        return <LocationBlock {...block} key={index} />
-                    }
-                    case "PageBlocksContentShowroom": {
-                        return <ContentShowroom {...block} key={index} />
-                    }
-                    case "PageBlocksCertificateCard": {
-                        return <CertificateCard {...block} key={index} />
-                    }
-                    case "PageBlocksServiceDetailShowcase": {
-                        return <ServiceDetailShowcase {...block} key={index} />
-                    }
-                    case "PageBlocksSlideHero": {
-                        return <SlideHeroSection {...block} key={index} />
-                    }
+                const renderBlockContent = () => {
+                    switch (block?.__typename) {
+                        case "PageBlocksHeroSection": {
+                            return <HeroSection {...block} key={index} />
+                        }
+                        case "PageBlocksAnimatedHeroSection": {
+                            return <AnimatedHeroSection {...block} key={index} />
+                        }
+                        case "PageBlocksAboutUsBlock": {
+                            return <AboutUsBlock {...block} key={index} />
+                        }
+                        case "PageBlocksLocationBlock": {
+                            return <LocationBlock {...block} key={index} />
+                        }
+                        case "PageBlocksContentShowroom": {
+                            return <ContentShowroom {...block} key={index} />
+                        }
+                        case "PageBlocksCertificateCard": {
+                            return <CertificateCard {...block} key={index} />
+                        }
+                        case "PageBlocksServiceDetailShowcase": {
+                            return <ServiceDetailShowcase {...block} key={index} />
+                        }
+                        case "PageBlocksSlideHero": {
+                            return <SlideHeroSection {...block} key={index} />
+                        }
+                        case "PageBlocksDirectorMessage": {
+                            return <DirectorMessage {...block} key={index} />
+                        }
                     case "PageBlocksContainer": {
                         return <Container {...block} key={index} />
                     }
@@ -124,9 +135,11 @@ export const PageComponent = ({ partners = [], services = [], products = [], wor
                         return <ModernContainer {...block} key={index} />
                     }
                 }
-            })}
+            };
 
-        </main>
-    )
-}
+            return renderBlockContent();
+        })}
+    </main>
+);
+};
 

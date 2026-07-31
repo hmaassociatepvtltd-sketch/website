@@ -15,6 +15,7 @@ blocks:
         buttonText: Contact Us
         buttonLink: /#contact
     _template: animatedHeroSection
+  - _template: aboutUsBlock
   - subHeading: HMA ASSOCIATES & CO
     heading: About Us
     text: >
@@ -58,8 +59,8 @@ blocks:
   - height: '100'
     backgroundColor: white
     _template: Spacer
-  - title: our patners
-    description: Project
+  - title: Our Product Partners
+    description: ''
     _template: partner
 ---
 
