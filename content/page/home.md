@@ -36,66 +36,62 @@ blocks:
         buttonLink: ''
         buttonStyle: secondary-glass
     _template: animatedHeroSection
-  - subHeading: Who We Are ?
-    heading: ABOUT US!
+  - subHeading: Who We Are
+    heading: Empowering Infrastructure & Renewable Energy
     text: >
-      HMA Associates (SMC-Private) Limited is a trusted name in
-      Construction,Renewable Energy Solutions, Engineering Design, and MEP
-      Services acrossPakistan. The company possesses good experience in
-      specialized nature of work, leveraging a team of skilled professionals and
-      advanced technology to deliver reliable, efficient, and sustainable built
-      environments tailored to the needs of residential, commercial, and
-      institutional clients
+      HMA Associates (SMC-Private) Limited is a trusted leader in
+      Construction, Renewable Energy Solutions, Engineering Design, and MEP
+      Services across Pakistan. With extensive experience in specialized engineering,
+      we leverage a team of skilled professionals and cutting-edge technology to
+      deliver reliable, efficient, and sustainable built environments tailored to
+      residential, commercial, and industrial clients.
     image: /hrui_AdobeStock_276818517_RV.jpg
     direction: left
     _template: container
   - subHeading: Why Choose Us
-    heading: Pakistan's Leading Solar Company
+    heading: Pakistan's Leading Solar & Engineering Enterprise
     text: >
       As a PEC-licensed C1 Constructor, we are authorized to execute large-scale
-      projects with precision and excellence. In addition, our AEDB/PPIB
-      certification as a certified solar installer empowers us to deliver Large
-      Scale Projects in compliance with national renewable energy standards. Our
-      strength lies in delivering reliable, cost-effective, and tailored
-      solutions that meet the unique needs of every client.
+      engineering and infrastructure projects with unmatched precision and excellence.
+      In addition, our AEDB & PPIB certifications empower us to design and deploy
+      utility-scale and commercial solar power systems in full compliance with
+      national standards. Our strength lies in delivering reliable, cost-effective,
+      and tailored solutions.
     image: /Landing%20Page/why_7.png
     direction: right
     bgTheme: light
     _template: container
-  - heading: Our Services
+  - heading: Our Core Engineering Services
     subHeading: >
-      Unleashing Comprehensive Solar & Energy Engineering Services Tailored to
-      Elevate Your Power Efficiency.
-    buttonText: ''
-    buttonStyle: ''
+      Unleashing Comprehensive Solar, MEP & Infrastructure Engineering Solutions Tailored to Elevate Your Power & Facility Efficiency.
+    buttonText: Explore All Services
+    buttonStyle: primary-arrow
     items:
-      - title: Construction
+      - title: Construction Services
         description: >-
-          High-quality construction services delivering robust infrastructure
-          with a focus on modern engineering and sustainability
+          PEC C1 licensed turnkey construction services delivering robust infrastructure, commercial developments, and sustainable architecture.
+        link: services/Construction-Services
         image: >-
           /11-Tips-for-Effective-Construction-Site-Management-Procore-Blog-Hero--768x384.png
-        iconImage: /3752632.png
-        iconName: google
+        iconName: shield
         featured: false
       - title: MEP Services
         description: >
-          High-quality construction services delivering robust infrastructure
-          with a focus on modern engineering and sustainability
+          Safe, efficient, and optimized electrical distribution, HVAC, and mechanical engineering for industrial and commercial facilities.
         link: services/MEP-Services
         image: /photo-1621905251189-08b45d6a269e.avif
         iconName: users
+        featured: false
       - title: Solar Power Solutions
-        description: >+
-          Unleashing Comprehensive Solar & Energy Engineering Services Tailored
-          to Elevate Your Power Efficiency.
-
+        description: >
+          Tier-1 AEDB/PPIB certified solar power engineering, hybrid & on-grid installations, and commercial energy storage solutions.
         link: services/Solar-Solutions
         image: /Clean_the_Dirt_202603311401.png
         iconName: sun
+        featured: true
     _template: modernServices
-  - title: Our Services & Products
-    description: Construction & MEP  Services
+  - title: Commercial & Industrial Products
+    description: High-Efficiency Solar Inverters, Energy Storage Batteries, PV Modules & MEP Equipment.
     bgTheme: light
     _template: products
   - title: Testimonials

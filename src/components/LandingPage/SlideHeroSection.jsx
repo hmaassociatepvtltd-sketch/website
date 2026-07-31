@@ -100,16 +100,31 @@ export const SlideHeroSection = (props) => {
             })}
             
             {slides.length > 1 && (
-                <div className="absolute bottom-10 z-20 flex gap-3">
-                    {slides.map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setCurrentSlide(idx)}
-                            className={`h-3 w-3 rounded-full transition-all ${
-                                idx === currentSlide ? "bg-white scale-125" : "bg-white/50"
-                            }`}
-                        />
-                    ))}
+                <div className="absolute bottom-6 sm:bottom-10 z-20 max-w-[1260px] w-full px-5 xl:px-0 flex items-center justify-end">
+                    <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/15">
+                        {slides.map((_, idx) => {
+                            const isActive = idx === currentSlide;
+                            return (
+                                <div
+                                    key={idx}
+                                    onClick={() => setCurrentSlide(idx)}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) => e.key === "Enter" && setCurrentSlide(idx)}
+                                    className="cursor-pointer py-1"
+                                    aria-label={`Slide ${idx + 1}`}
+                                >
+                                    <div className="relative h-1 bg-white/25 rounded-full overflow-hidden transition-all duration-500 w-8 sm:w-12">
+                                        <div
+                                            className={`absolute inset-y-0 left-0 bg-primary rounded-full transition-all duration-500 ${
+                                                isActive ? "w-full shadow-sm" : "w-0"
+                                            }`}
+                                        />
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             )}
         </div>

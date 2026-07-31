@@ -253,33 +253,45 @@ export const AnimatedHeroSection = (props) => {
                         <ChevronRight className="w-6 h-6" />
                     </button>
 
-                    {/* Bottom Progress Bar & Pagination Controls */}
-                    <div className="absolute bottom-6 sm:bottom-10 z-30 max-w-[1260px] w-full px-5 sm:px-8 xl:px-0 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        {/* Slide Counter Indicator */}
-                        <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-widest text-white/80">
-                            <span className="text-white text-base">
-                                {String(currentSlide + 1).padStart(2, "0")}
-                            </span>
-                            <span className="w-8 h-0.5 bg-white/30 rounded-full inline-block" />
-                            <span className="text-white/50">
-                                {String(slides.length).padStart(2, "0")}
+                    {/* Completely Redesigned Ultra-Modern Hero Slide Control */}
+                    <div className="absolute bottom-6 sm:bottom-10 z-30 max-w-[1260px] w-full px-5 sm:px-8 xl:px-0 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pointer-events-auto">
+                        {/* Current Slide Info Badge */}
+                        <div className="flex items-center gap-3.5 bg-black/50 backdrop-blur-xl px-4 py-2.5 rounded-2xl border border-white/15 shadow-2xl w-fit">
+                            <div className="flex items-baseline gap-1 text-white font-josefin-sans">
+                                <span className="text-xl font-bold text-primary">{String(currentSlide + 1).padStart(2, "0")}</span>
+                                <span className="text-xs text-white/40 font-medium">/{String(slides.length).padStart(2, "0")}</span>
+                            </div>
+                            <div className="h-4 w-px bg-white/20" />
+                            <span className="text-xs font-medium font-poppins text-slate-200 truncate max-w-[200px] sm:max-w-[340px]">
+                                {slides[currentSlide]?.slideHeading || slides[currentSlide]?.subHeading || "HMA Associates"}
                             </span>
                         </div>
 
-                        {/* Interactive Pagination Dots / Tabs */}
-                        <div className="flex items-center gap-2.5">
-                            {slides.map((_, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setCurrentSlide(idx)}
-                                    className={`relative h-2.5 rounded-full transition-all duration-500 overflow-hidden cursor-pointer ${
-                                        idx === currentSlide
-                                            ? "w-10 sm:w-12 bg-primary shadow-[0_0_15px_rgba(99,102,241,0.8)]"
-                                            : "w-2.5 bg-white/40 hover:bg-white/80"
-                                    }`}
-                                    aria-label={`Go to slide ${idx + 1}`}
-                                />
-                            ))}
+                        {/* Segmented Line Progress Navigation */}
+                        <div className="flex items-center gap-2">
+                            {slides.map((_, idx) => {
+                                const isActive = idx === currentSlide;
+                                return (
+                                    <div
+                                        key={idx}
+                                        onClick={() => setCurrentSlide(idx)}
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => e.key === "Enter" && setCurrentSlide(idx)}
+                                        className="group flex flex-col gap-1 cursor-pointer py-1.5"
+                                        aria-label={`Slide ${idx + 1}`}
+                                    >
+                                        {/* Line Track */}
+                                        <div className="relative h-1 bg-white/25 rounded-full overflow-hidden transition-all duration-500 w-10 sm:w-16 group-hover:bg-white/40">
+                                            <div
+                                                className={`absolute inset-y-0 left-0 bg-primary rounded-full transition-all duration-500 ${
+                                                    isActive ? "w-full shadow-[0_0_10px_rgba(35,72,208,0.9)]" : "w-0"
+                                                }`}
+                                            />
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </>

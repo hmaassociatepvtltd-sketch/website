@@ -53,7 +53,7 @@ export const ModernContainer = (props) => {
                         )}
 
                         {props.markdownContent && (
-                            <div data-tina-field={tinaField(props, "markdownContent")} className="prose dark:prose-invert max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed whitespace-normal break-words space-y-3 max-h-[360px] sm:max-h-[420px] overflow-y-auto pr-3.5 scrollbar-thin [scrollbar-width:thin] [scrollbar-color:rgba(35,72,208,0.5)_transparent]">
+                            <div data-tina-field={tinaField(props, "markdownContent")} className="prose dark:prose-invert max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed whitespace-normal break-words space-y-3">
                                 <TinaMarkdown components={components} content={props.markdownContent} />
                             </div>
                         )}
@@ -145,7 +145,7 @@ export const ModernContainer = (props) => {
                             )}
 
                             {props.markdownContent && (
-                                <div data-tina-field={tinaField(props, "markdownContent")} className="prose dark:prose-invert max-w-full text-base md:text-lg text-muted-foreground leading-relaxed whitespace-normal break-words space-y-3 max-h-[360px] sm:max-h-[420px] overflow-y-auto pr-3.5 scrollbar-thin [scrollbar-width:thin] [scrollbar-color:rgba(35,72,208,0.5)_transparent]">
+                                <div data-tina-field={tinaField(props, "markdownContent")} className="prose dark:prose-invert max-w-full text-base md:text-lg text-muted-foreground leading-relaxed whitespace-normal break-words space-y-3">
                                     <TinaMarkdown components={components} content={props.markdownContent} />
                                 </div>
                             )}
