@@ -135,7 +135,7 @@ export const Footer = ({ site, productTypes = [], serviceTypes = [] }) => {
                         <ul className="space-y-3 text-sm">
                             {[
                                 { label: "About Us", href: "/about" },
-                                { label: "Services", href: "/#services" },
+                                { label: "Services", href: "/services" },
                                 { label: "Projects", href: "/work" },
                                 { label: "Certifications", href: "/certifications" },
                                 { label: "Get Quotation", href: "/quotation" },

@@ -6,29 +6,32 @@ import { Container } from "@/components/LandingPage/Container";
 import { Testimonials } from "@/components/LandingPage/Testimonials";
 import { Products } from "@/components/LandingPage/Products";
 import client from "../../../tina/__generated__/client";
-import { ContactForm } from "@/components/LandingPage/ContactForm";
+import dynamic from "next/dynamic";
+import React, { Suspense } from "react";
 import { OurPartners } from "@/components/LandingPage/OurPartners";
 import { Spacer } from "@/components/LandingPage/Spacer";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { components } from "@/components/ui/MarkdownComponents";
-import { AllWorks } from "@/components/LandingPage/About/AllWorks";
-import { Gallery } from "@/components/LandingPage/Gallery";
-import { CalculatorForm } from "./CalculatorForm";
 import Services from "./OurServices";
 import { SlideHeroSection } from "./SlideHeroSection";
 import { AnimatedHeroSection } from "./AnimatedHeroSection";
 import { ModernServices } from "./ModernServices";
 import { ModernContainer } from "./ModernContainer";
 import { ProjectPortfolio } from "./ProjectPortfolio";
-import { ModernCalculator } from "./ModernCalculator";
-import { ProjectCardsGrid } from "./ProjectCardsGrid";
 import { ServiceDetailShowcase } from "./ServiceDetailShowcase";
 import { CertificateCard } from "./CertificateCard";
 import { ContentShowroom } from "./ContentShowroom";
-import { LocationBlock } from "./LocationBlock";
 import { DirectorMessage } from "./DirectorMessage";
 import { AboutUsBlock } from "./AboutUsBlock";
-import React from "react";
+
+// Lazy-loaded heavy components for mobile performance
+const ContactForm = dynamic(() => import("@/components/LandingPage/ContactForm").then(mod => mod.ContactForm));
+const AllWorks = dynamic(() => import("@/components/LandingPage/About/AllWorks").then(mod => mod.AllWorks));
+const Gallery = dynamic(() => import("@/components/LandingPage/Gallery").then(mod => mod.Gallery));
+const CalculatorForm = dynamic(() => import("./CalculatorForm").then(mod => mod.CalculatorForm));
+const ModernCalculator = dynamic(() => import("./ModernCalculator").then(mod => mod.ModernCalculator));
+const ProjectCardsGrid = dynamic(() => import("./ProjectCardsGrid").then(mod => mod.ProjectCardsGrid));
+const LocationBlock = dynamic(() => import("./LocationBlock").then(mod => mod.LocationBlock));
 
 export const PageComponent = ({ partners = [], services = [], products = [], works = [], ...props }) => {
 
@@ -136,8 +139,12 @@ export const PageComponent = ({ partners = [], services = [], products = [], wor
                     }
                 }
             };
-
-            return renderBlockContent();
+            
+            return (
+                <Suspense key={`suspense-${index}`} fallback={<div className="w-full h-32 md:h-64 animate-pulse bg-slate-50 dark:bg-slate-900/50" />}>
+                    {renderBlockContent()}
+                </Suspense>
+            );
         })}
     </main>
 );

@@ -2,6 +2,21 @@ import client from "../../../../tina/__generated__/client"; // !!! DOUBLE CHECK 
 import NotFound from "@/app/not-found";
 import { AllProducts } from "@/components/Products/AllProducts";
 
+export async function generateMetadata(props) {
+    const { id } = await props.params;
+    
+    // id is the category name, e.g., 'Inverters'
+    const categoryName = id.replace(/-/g, ' ');
+    const titleCategory = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+
+    return {
+        title: `${titleCategory} Products`,
+        description: `Explore our catalog of ${categoryName} and related equipment.`,
+        alternates: {
+            canonical: `/products/${id}`,
+        },
+    };
+}
 
 export default async function Page(props) {
     const {id} = await props.params; // From route: /products/[id], so params.id is the category folder name

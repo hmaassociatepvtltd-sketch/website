@@ -2,6 +2,14 @@
 import {PageComponent} from "@/components/LandingPage/PageComponent";
 import client from "../../../tina/__generated__/client";
 
+export const metadata = {
+    title: "About Us",
+    description: "Learn more about HMA Associates, our mission, vision, and team.",
+    alternates: {
+        canonical: "/about",
+    },
+};
+
 export default async function Home() {
     const result = await client.queries.page({relativePath: 'about.md'})
     

@@ -2,6 +2,19 @@ import client from "../../../../tina/__generated__/client";
 import NotFound from "@/app/not-found";
 import {ServicesComponents} from "@/components/LandingPage/Services/ServicesComponent";
 
+export async function generateMetadata(props) {
+    const { id } = await props.params;
+    
+    const cleanTitle = id.replace(/-/g, " ");
+    return {
+        title: `${cleanTitle} - Services`,
+        description: `Professional ${cleanTitle} services by HMA Associates.`,
+        alternates: {
+            canonical: `/services/${id}`,
+        },
+    };
+}
+
 export default async function Page(props) {
     const { id } = await props.params;
     if (!id) return <NotFound />;

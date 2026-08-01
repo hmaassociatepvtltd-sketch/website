@@ -940,3 +940,34 @@ input[type="submit"] {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+/* =========================================================
+   Mobile Performance Optimizations (Strictly <= 767px)
+   ========================================================= */
+@media screen and (max-width: 767px) {
+  /* Fix 300ms tap delay on mobile */
+  a, button, input, select, textarea, [role="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Defer rendering of off-screen sections */
+  section {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+  }
+
+  /* GPU Acceleration overrides for animations & paint effects */
+  * {
+    /* Disable expensive blur effects on mobile for better GPU framerate */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    
+    /* Simplify expensive shadows on mobile */
+    box-shadow: none !important;
+  }
+
+  /* Preserve essential background colors when blur is removed */
+  .bg-white\/10, .bg-white\/20, .bg-slate-900\/80 {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+  }
+}

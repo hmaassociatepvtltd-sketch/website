@@ -44,8 +44,12 @@ blocks:
   - badgeText: About HMA Associates
     heading: Empowering Pakistan's Infrastructure & Renewable Future
     description: >
-      HMA Associates (SMC-Private) Limited is a premier engineering, construction, and renewable energy enterprise in Pakistan. PEC-licensed C1 constructor and AEDB certified solar provider, we combine technical mastery with top-tier equipment to build reliable infrastructure, power industrial facilities, and drive energy independence.
-    image: /hrui_AdobeStock_276818517_RV.jpg
+      HMA Associates (SMC-Private) Limited is a premier engineering,
+      construction, and renewable energy enterprise in Pakistan. PEC-licensed C1
+      constructor and AEDB certified solar provider, we combine technical
+      mastery with top-tier equipment to build reliable infrastructure, power
+      industrial facilities, and drive energy independence.
+    image: /f.png
     buttonText: Learn More About Us
     buttonLink: /about
     _template: aboutUsBlock
@@ -58,7 +62,7 @@ blocks:
       leverage a team of skilled professionals and cutting-edge technology to
       deliver reliable, efficient, and sustainable built environments tailored
       to residential, commercial, and industrial clients.
-    image: /hrui_AdobeStock_276818517_RV.jpg
+    image: /fds.png
     direction: left
     imageCardTagline: Engineering & Construction
     _template: container
@@ -71,7 +75,7 @@ blocks:
       design and deploy utility-scale and commercial solar power systems in full
       compliance with national standards. Our strength lies in delivering
       reliable, cost-effective, and tailored solutions.
-    image: /Landing%20Page/why_7.png
+    image: /jocke-wulcan-0Q7yLkGSHpA-unsplash.jpg
     direction: right
     bgTheme: light
     _template: container
@@ -87,8 +91,7 @@ blocks:
           PEC C1 licensed turnkey construction services delivering robust
           infrastructure, commercial developments, and sustainable architecture.
         link: services/Construction-Services
-        image: >-
-          /11-Tips-for-Effective-Construction-Site-Management-Procore-Blog-Hero--768x384.png
+        image: /parth-savani-nZz9i0YxEQw-unsplash.jpg
         iconName: shield
         featured: false
       - title: MEP Services
@@ -96,7 +99,7 @@ blocks:
           Safe, efficient, and optimized electrical distribution, HVAC, and
           mechanical engineering for industrial and commercial facilities.
         link: services/MEP-Services
-        image: /photo-1621905251189-08b45d6a269e.avif
+        image: /andrew-hall-J7t5Ks8tpk8-unsplash.jpg
         iconName: users
         featured: false
       - title: Solar Power Solutions
@@ -108,6 +111,29 @@ blocks:
         iconName: sun
         featured: true
     _template: modernServices
+  - subHeading: Why Choose Us
+    heading: Construction & MEP Services
+    text: |
+      **Architecture & Design**: Modern, sustainable planning.
+
+      **Grey Structure**: Strong, durable foundations.
+
+      **Interiors & Finishing:** High-quality aesthetic finishes.
+
+      **Quality Supervision: **On-site monitoring for timely delivery.
+
+      **Turnkey Projects:** End-to-end project execution.
+
+      **Electrical Systems:** Safe, optimized power distribution.
+
+      **Plumbing & Drainage:** Efficient water management.
+
+      **HVAC Systems: **Energy-efficient climate control.
+
+      **Fire Protection:** Advanced safety and suppression systems.
+    image: '/ChatGPT Image Aug 1, 2026, 03_06_14 PM.png'
+    direction: right
+    _template: container
   - title: Commercial & Industrial Products
     description: >-
       High-Efficiency Solar Inverters, Energy Storage Batteries, PV Modules &
@@ -174,44 +200,6 @@ blocks:
   - height: '100'
     backgroundColor: background
     _template: Spacer
-  - subHeading: Why Choose Us
-    heading: Construction & MEP Services
-    text: >
-      **Architectural & Structural Design** – Modern, functional, and
-      sustainable planning.
-
-
-      **Grey Structure Works** – Strong foundations and durable building
-      structures.
-
-
-      **Finishing & Interior Works** – High-quality finishing with modern
-      aesthetics.
-
-
-      **Supervision & Quality Control** – On-site monitoring for timely and
-      quality delivery.
-
-
-      **Turnkey Projects** – Complete execution from design to handover.
-
-
-      **Electrical Systems** – Safe, efficient, and optimized power distribution
-      solutions.
-
-
-      **Plumbing & Drainage** – Water supply and wastewater management systems.
-
-
-      **HVAC Systems** – Energy-efficient heating, ventilation, and cooling
-      solutions.
-
-
-      **Fire Fighting Systems** – Advanced fire protection and suppression
-      installations.
-    image: /Landing%20Page/why_7.png
-    direction: right
-    _template: container
   - subheading: Let's Talk
     heading: You Get Free Consultation For Any Help
     description: >-

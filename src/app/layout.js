@@ -40,12 +40,15 @@ export async function generateMetadata() {
     }
 
     return {
-        title: siteTitle,
+        title: {
+            default: siteTitle,
+            template: "%s | HMA Associates",
+        },
         description: siteDescription,
         keywords: siteKeywords,
         metadataBase: new URL("https://hmaassociate.com"),
         alternates: {
-            canonical: "/",
+            canonical: "./",
         },
         openGraph: {
             title: siteTitle,

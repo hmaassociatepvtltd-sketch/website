@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { tinaField } from "tinacms/dist/react";
 import { MapPin, Phone, Globe, Clock, Mail, Navigation, ExternalLink, ShieldCheck } from "lucide-react";
 
@@ -19,6 +19,28 @@ export const LocationBlock = (props) => {
     const mapEmbedUrl =
         props?.mapEmbedUrl ||
         "https://maps.google.com/maps?q=HMA%20Associates%20(SMC-Private)%20Limited,%20Gujranwala&t=&z=15&ie=UTF8&iwloc=&output=embed";
+
+    const mapRef = useRef(null);
+    const [shouldLoadMap, setShouldLoadMap] = useState(false);
+
+    useEffect(() => {
+        const currentRef = mapRef.current;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShouldLoadMap(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" } // Load map when it is 200px away from viewport
+        );
+
+        if (currentRef) observer.observe(currentRef);
+
+        return () => {
+            if (currentRef) observer.disconnect();
+        };
+    }, []);
 
     return (
         <section
@@ -184,23 +206,30 @@ export const LocationBlock = (props) => {
 
                     {/* Right Column: Embedded Google Map Frame */}
                     <div
+                        ref={mapRef}
                         data-tina-field={tinaField(props, "mapEmbedUrl")}
                         className="lg:col-span-7 relative min-h-[400px] sm:min-h-[480px] lg:min-h-full rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900 group"
                     >
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            style={{ minHeight: "400px", border: 0, borderRadius: "1.5rem" }}
-                            frameBorder="0"
-                            scrolling="no"
-                            marginHeight={0}
-                            marginWidth={0}
-                            title="HMA Associates (SMC-Private) Limited Gujranwala Location Map"
-                            src={mapEmbedUrl}
-                            loading="lazy"
-                            allowFullScreen
-                            className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-95"
-                        />
+                        {shouldLoadMap ? (
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                style={{ minHeight: "400px", border: 0, borderRadius: "1.5rem" }}
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                                title="HMA Associates (SMC-Private) Limited Gujranwala Location Map"
+                                src={mapEmbedUrl}
+                                loading="lazy"
+                                allowFullScreen
+                                className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-95"
+                            />
+                        ) : (
+                            <div className="w-full h-full min-h-[400px] bg-slate-800 animate-pulse flex items-center justify-center text-slate-500">
+                                Loading Map...
+                            </div>
+                        )}
 
                         {/* Floating Location Tag Overlay */}
                         <div className="absolute top-6 left-6 z-20 pointer-events-none">
