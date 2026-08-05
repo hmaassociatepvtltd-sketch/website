@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowUpRight, MapPin, Zap, Building2, ShieldCheck, Sparkles, Filter } from "lucide-react";
+import { ArrowUpRight, MapPin, Zap, Building2, ShieldCheck, Filter } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export const AllWorks = ({ worksData = [], ...props }) => {
@@ -40,7 +40,7 @@ export const AllWorks = ({ worksData = [], ...props }) => {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
                     <div className="space-y-4 max-w-2xl">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/15 border border-primary/30 text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider shadow-lg">
-                            <Sparkles className="w-4 h-4 text-primary" />
+                            <ShieldCheck className="w-4 h-4 text-primary" />
                             <span>Executive Engineering Portfolio</span>
                         </div>
 

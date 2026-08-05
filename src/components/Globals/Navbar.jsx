@@ -10,18 +10,20 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
+    const [aboutOpen, setAboutOpen] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const pathname = usePathname();
 
-    // Coloured logo on Product Detail pages ONLY (/products/detail/*). Pure White Logo on all other pages.
-    const isProductDetail = pathname.startsWith("/products/detail");
-    const isDarkHeader = !isProductDetail;
+    // Coloured logo on Product Detail pages (/products/detail/*) and Quotation page (/quotation).
+    const isLightHeader = pathname.startsWith("/products/detail") || pathname === "/quotation";
+    const isDarkHeader = !isLightHeader;
 
     const navLinks = [
         { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
+        { name: "About Us", href: "/about" },
+        { name: "Our Clients", href: "/ourclients" },
         { name: "Projects", href: "/work" },
         { name: "Certifications", href: "/certifications" },
     ];
@@ -61,20 +63,72 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                         )}
                     </Link>
 
-                    <Link
-                        className={`transition-colors duration-200 relative py-1 ${pathname === "/about"
-                                ? "text-primary font-semibold"
-                                : isDarkHeader
-                                    ? "hover:text-primary text-slate-200"
-                                    : "hover:text-primary text-slate-800"
-                            }`}
-                        href="/about"
+                    {/* About Dropdown Menu */}
+                    <motion.div
+                        onMouseEnter={() => setAboutOpen(true)}
+                        onMouseLeave={() => setAboutOpen(false)}
+                        className="relative group cursor-pointer"
                     >
-                        About
-                        {pathname === "/about" && (
-                            <span className="absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-primary" />
-                        )}
-                    </Link>
+                        <div
+                            className={`flex items-center gap-1.5 py-1 transition-colors duration-200 ${
+                                pathname === "/about" || pathname === "/ourclients" || pathname === "/certifications"
+                                    ? "text-primary font-semibold"
+                                    : isDarkHeader
+                                        ? "hover:text-primary text-slate-200"
+                                        : "hover:text-primary text-slate-800"
+                            }`}
+                        >
+                            <Link href="/about" className="hover:text-primary">About</Link>
+                            <ChevronDown
+                                size={14}
+                                className={`transition-transform duration-300 ${
+                                    aboutOpen ? "rotate-180 text-primary" : ""
+                                }`}
+                            />
+                        </div>
+                        <AnimatePresence mode="wait">
+                            {aboutOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10, scale: 0.96 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50"
+                                >
+                                    <div className="w-56 p-3 rounded-2xl bg-slate-950/95 backdrop-blur-2xl border border-white/15 shadow-2xl shadow-black/80 flex flex-col gap-1 text-white">
+                                        <Link
+                                            href="/about"
+                                            className="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-primary text-slate-200 text-sm font-medium transition-all duration-200 flex items-center justify-between group"
+                                        >
+                                            <span>About Company</span>
+                                            <ChevronRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                                        </Link>
+                                        <Link
+                                            href="/company-structure"
+                                            className="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-primary text-slate-200 text-sm font-medium transition-all duration-200 flex items-center justify-between group"
+                                        >
+                                            <span>Company Structure</span>
+                                            <ChevronRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                                        </Link>
+                                        <Link
+                                            href="/ourclients"
+                                            className="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-primary text-slate-200 text-sm font-medium transition-all duration-200 flex items-center justify-between group"
+                                        >
+                                            <span>Our Clients</span>
+                                            <ChevronRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                                        </Link>
+                                        <Link
+                                            href="/certifications"
+                                            className="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-primary text-slate-200 text-sm font-medium transition-all duration-200 flex items-center justify-between group"
+                                        >
+                                            <span>Certifications</span>
+                                            <ChevronRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                                        </Link>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
 
                     {/* Services Dropdown */}
                     <motion.div
@@ -181,21 +235,6 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                     >
                         Projects
                         {pathname === "/work" && (
-                            <span className="absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-primary" />
-                        )}
-                    </Link>
-
-                    <Link
-                        className={`transition-colors duration-200 relative py-1 ${pathname === "/certifications"
-                                ? "text-primary font-semibold"
-                                : isDarkHeader
-                                    ? "hover:text-primary text-slate-200"
-                                    : "hover:text-primary text-slate-800"
-                            }`}
-                        href="/certifications"
-                    >
-                        Certifications
-                        {pathname === "/certifications" && (
                             <span className="absolute bottom-0 left-0 w-full h-0.5 rounded-full bg-primary" />
                         )}
                     </Link>

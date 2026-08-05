@@ -32,6 +32,8 @@ const CalculatorForm = dynamic(() => import("./CalculatorForm").then(mod => mod.
 const ModernCalculator = dynamic(() => import("./ModernCalculator").then(mod => mod.ModernCalculator));
 const ProjectCardsGrid = dynamic(() => import("./ProjectCardsGrid").then(mod => mod.ProjectCardsGrid));
 const LocationBlock = dynamic(() => import("./LocationBlock").then(mod => mod.LocationBlock));
+const ClientShowcase = dynamic(() => import("./ClientShowcase").then(mod => mod.ClientShowcase));
+const EmployeeShowcase = dynamic(() => import("./EmployeeShowcase").then(mod => mod.EmployeeShowcase));
 
 export const PageComponent = ({ partners = [], services = [], products = [], works = [], ...props }) => {
 
@@ -136,6 +138,12 @@ export const PageComponent = ({ partners = [], services = [], products = [], wor
                     }
                     case "PageBlocksModernContainer": {
                         return <ModernContainer {...block} key={index} />
+                    }
+                    case "PageBlocksClientShowcase": {
+                        return <ClientShowcase {...block} key={index} />
+                    }
+                    case "PageBlocksEmployeeShowcase": {
+                        return <EmployeeShowcase {...block} key={index} />
                     }
                 }
             };

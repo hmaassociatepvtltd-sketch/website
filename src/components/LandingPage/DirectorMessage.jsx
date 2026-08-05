@@ -12,8 +12,7 @@ import {
     Building2, 
     CheckCircle2, 
     ArrowRight, 
-    Award,
-    Sparkles
+    Award
 } from "lucide-react";
 
 export const DirectorMessage = (props) => {
@@ -97,7 +96,7 @@ export const DirectorMessage = (props) => {
                                 data-tina-field={tinaField(props, "badgeText")}
                                 className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-poppins uppercase tracking-wider bg-primary/10 text-primary border border-primary/20"
                             >
-                                <Sparkles className="w-3 h-3" />
+                                <ShieldCheck className="w-3 h-3" />
                                 <span>{badgeText}</span>
                             </span>
 

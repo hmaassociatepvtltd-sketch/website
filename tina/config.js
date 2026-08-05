@@ -855,6 +855,111 @@ const templates = [
         ]
     },
     {
+        name: "clientShowcase",
+        label: "Clients Logo & Services Showcase",
+        fields: [
+            {
+                name: "badgeText",
+                label: "Section Tag Badge Text",
+                type: "string",
+            },
+            {
+                name: "heading",
+                label: "Main Heading",
+                type: "string",
+            },
+            {
+                name: "description",
+                label: "Description Narrative",
+                type: "string",
+                ui: { component: "textarea" },
+            },
+            {
+                type: "object",
+                name: "stats",
+                label: "Statistics Counter Cards",
+                list: true,
+                ui: {
+                    itemProps: (item) => ({ label: `${item?.value || ''} - ${item?.label || 'Stat Card'}` }),
+                },
+                fields: [
+                    { type: 'string', name: 'value', label: 'Metric Value (e.g. 12+ or 50+ MW)' },
+                    { type: 'string', name: 'label', label: 'Metric Label (e.g. Enterprise Clients)' },
+                    { type: 'string', name: 'badge', label: 'Top Badge Pill (e.g. Satisfied Roster)' },
+                ],
+            },
+            {
+                name: "clients",
+                label: "Client Roster",
+                type: "object",
+                list: true,
+                ui: {
+                    itemProps: (item) => ({ label: `${item?.name || 'New Client'} (${item?.serviceCategory || 'Service'})` })
+                },
+                fields: [
+                    {
+                        name: "name",
+                        label: "Client Company Name",
+                        type: "string",
+                        required: true,
+                    },
+                    {
+                        name: "logo",
+                        label: "Client Logo Image",
+                        type: "image",
+                        required: true,
+                    },
+                    {
+                        name: "serviceCategory",
+                        label: "Service Category Provided",
+                        type: "string",
+                        options: [
+                            { label: "Solar Energy & Power Solutions", value: "Solar Solutions" },
+                            { label: "MEP & Electrical Engineering", value: "MEP Engineering" },
+                            { label: "Construction & Civil Building", value: "Construction" },
+                            { label: "Operations & Maintenance (O&M)", value: "Operations & Maintenance" },
+                            { label: "Turnkey Industrial Energy", value: "Industrial Energy" },
+                        ],
+                    },
+                    {
+                        name: "location",
+                        label: "City / Location",
+                        type: "string",
+                    },
+                    {
+                        name: "industryTag",
+                        label: "Industry Sector",
+                        type: "string",
+                        options: [
+                            { label: "Commercial Enterprise", value: "Commercial" },
+                            { label: "Industrial & Manufacturing", value: "Industrial" },
+                            { label: "Institutional & Educational", value: "Institutional" },
+                            { label: "Residential Estate", value: "Residential" },
+                            { label: "Government & Public Sector", value: "Government" },
+                        ],
+                    },
+                    {
+                        name: "projectScope",
+                        label: "Project Scope / Description",
+                        type: "string",
+                        ui: { component: "textarea" },
+                    },
+                    {
+                        name: "capacity",
+                        label: "Project Capacity / Size (e.g. 500 kW On-Grid, 120,000 Sq.Ft)",
+                        type: "string",
+                    },
+                    {
+                        name: "featured",
+                        label: "Highlight / Featured Client",
+                        type: "boolean",
+                    }
+                ]
+            },
+            ...spacingFields,
+        ]
+    },
+    {
         name: "contact",
         label: "Contact Form",
         fields: [
@@ -1421,6 +1526,62 @@ const templates = [
                 name: 'mapEmbedUrl',
                 label: 'Google Maps Embed Source URL',
             },
+        ],
+    },
+    {
+        name: 'employeeShowcase',
+        label: 'Employees & Team Showcase Block',
+        fields: [
+            {
+                type: 'string',
+                name: 'badgeText',
+                label: 'Section Tag Badge Text',
+            },
+            {
+                type: 'string',
+                name: 'heading',
+                label: 'Main Heading',
+            },
+            {
+                type: 'string',
+                name: 'description',
+                label: 'Description Narrative',
+                ui: { component: 'textarea' },
+            },
+            {
+                type: 'object',
+                name: 'employees',
+                label: 'Employee Roster List',
+                list: true,
+                ui: {
+                    itemProps: (item) => ({
+                        label: item?.name ? `${item.name} (${item.designation || 'Staff'})` : 'New Employee',
+                    }),
+                },
+                fields: [
+                    { type: 'string', name: 'name', label: 'Employee Name', required: true },
+                    { type: 'string', name: 'designation', label: 'Designation / Title', required: true },
+                    { type: 'string', name: 'department', label: 'Department Category' },
+                    { type: 'image', name: 'image', label: 'Employee Profile Photo' },
+                    { type: 'string', name: 'experience', label: 'Experience Tag (e.g., 10+ Years Exp)' },
+                    { type: 'string', name: 'email', label: 'Contact Email' },
+                    { type: 'string', name: 'phone', label: 'Contact Phone Number' },
+                    { type: 'string', name: 'linkedin', label: 'LinkedIn Profile URL' },
+                    {
+                        type: 'string',
+                        name: 'bio',
+                        label: 'Short Bio / Expertise Overview',
+                        ui: { component: 'textarea' },
+                    },
+                    {
+                        type: 'string',
+                        name: 'skills',
+                        label: 'Key Technical Skills / Certifications',
+                        list: true,
+                    },
+                ],
+            },
+            ...spacingFields,
         ],
     },
 ]

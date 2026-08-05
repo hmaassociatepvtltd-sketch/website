@@ -12,7 +12,6 @@ import {
     CheckCircle2, 
     ArrowRight, 
     Award,
-    Sparkles,
     Target,
     Zap,
     Users
@@ -74,7 +73,7 @@ export const AboutUsBlock = (props) => {
                         data-tina-field={tinaField(props, "badgeText")}
                         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold font-poppins uppercase tracking-widest bg-primary/10 text-primary border border-primary/20 shadow-sm backdrop-blur-md"
                     >
-                        <Sparkles className="w-3.5 h-3.5" />
+                        <ShieldCheck className="w-3.5 h-3.5" />
                         <span>{badgeText}</span>
                     </span>
 

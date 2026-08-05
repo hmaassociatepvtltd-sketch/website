@@ -5,7 +5,7 @@ import { AnimatedHeroSection } from "@/components/LandingPage/AnimatedHeroSectio
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowUpRight, Search, Zap, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, Search, Zap, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { useTina, tinaField } from "tinacms/dist/react";
 
 export const AllProducts = ({ groupedProducts = [], title, pageResponse }) => {
@@ -61,7 +61,7 @@ export const AllProducts = ({ groupedProducts = [], title, pageResponse }) => {
                     <div className="p-6 sm:p-8 rounded-3xl bg-white/80 border border-slate-200/80 backdrop-blur-xl shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div className="space-y-1">
                             <div className="inline-flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wider">
-                                <Sparkles className="w-4 h-4 text-primary" />
+                                <ShieldCheck className="w-4 h-4 text-primary" />
                                 <span>Certified Solar & MEP Equipment</span>
                             </div>
                             <h2 className="text-2xl sm:text-3xl font-bold font-josefin-sans text-slate-900">

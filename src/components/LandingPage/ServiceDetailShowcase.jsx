@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { tinaField } from "tinacms/dist/react";
-import { CheckCircle2, ShieldCheck, PhoneCall, Sparkles, ArrowRight, Award } from "lucide-react";
+import { CheckCircle2, ShieldCheck, PhoneCall, ArrowRight, Award } from "lucide-react";
 
 export const ServiceDetailShowcase = (props) => {
     const badgeText = props?.badgeText || "PEC C1 Licensed & AEDB Certified";
@@ -121,17 +121,29 @@ export const ServiceDetailShowcase = (props) => {
                             data-tina-field={tinaField(props, "specifications")}
                             className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2"
                         >
-                            {specs.map((spec, sIdx) => (
-                                <div
-                                    key={sIdx}
-                                    className="p-4 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-md text-center space-y-1"
-                                >
-                                    <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">
-                                        {spec.label}
-                                    </p>
-                                    <p className="text-sm sm:text-base font-bold text-white line-clamp-1">{spec.value}</p>
-                                </div>
-                            ))}
+                            {specs.map((spec, sIdx) => {
+                                const valStr = String(spec.value || "");
+                                const fontSize =
+                                    valStr.length > 18
+                                        ? "text-[10px] sm:text-xs font-semibold"
+                                        : valStr.length > 13
+                                        ? "text-xs sm:text-xs font-semibold"
+                                        : "text-xs sm:text-sm font-bold";
+
+                                return (
+                                    <div
+                                        key={sIdx}
+                                        className="p-3 sm:p-4 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-md text-left space-y-1 flex flex-col justify-center min-h-[80px]"
+                                    >
+                                        <p className="text-[10px] sm:text-[11px] font-medium text-slate-400 uppercase tracking-wider text-left line-clamp-1">
+                                            {spec.label}
+                                        </p>
+                                        <p className={`text-white text-left break-words leading-tight ${fontSize}`}>
+                                            {spec.value}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
 
                         {/* Action CTA Buttons */}
@@ -179,11 +191,11 @@ export const ServiceDetailShowcase = (props) => {
                             </div>
 
                             {/* Floating Service Title Bar */}
-                            <div className="absolute bottom-6 left-6 right-6 z-20 p-5 rounded-2xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-xl space-y-1">
-                                <p className="text-xs font-bold uppercase tracking-wider text-primary">
+                            <div className="absolute bottom-6 left-6 right-6 sm:left-44 z-20 p-4 sm:p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl space-y-1 text-left">
+                                <p className="text-xs font-bold uppercase tracking-wider text-primary text-left">
                                     HMA Engineering Standards
                                 </p>
-                                <p className="text-sm font-bold text-slate-900 line-clamp-1">{heading}</p>
+                                <p className="text-xs sm:text-sm font-bold text-slate-900 text-left leading-snug">{heading}</p>
                             </div>
                         </div>
 
@@ -191,7 +203,7 @@ export const ServiceDetailShowcase = (props) => {
                         {secondaryImage && (
                             <div
                                 data-tina-field={tinaField(props, "secondaryImage")}
-                                className="hidden sm:block absolute -bottom-8 -left-8 w-56 h-40 rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-30 bg-slate-900"
+                                className="hidden sm:block absolute -bottom-6 -left-6 w-44 sm:w-48 h-32 sm:h-36 rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-30 bg-slate-900 transition-transform duration-500 hover:scale-105"
                             >
                                 <Image
                                     src={secondaryImage}

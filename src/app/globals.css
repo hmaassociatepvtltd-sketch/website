@@ -97,7 +97,7 @@
 }
 
 body {
-  font-family: var(--font-poppins), serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%) fixed !important;
@@ -970,4 +970,37 @@ input[type="submit"] {
   .bg-white\/10, .bg-white\/20, .bg-slate-900\/80 {
     background-color: rgba(15, 23, 42, 0.95) !important;
   }
+}
+
+/* Custom Stylish Scrollbars & Hide Utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.scrollbar-none {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.stylish-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.stylish-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 9999px;
+  margin: 0 4px;
+}
+.stylish-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #0284c7 0%, #3b82f6 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+.stylish-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #38bdf8 0%, #60a5fa 100%);
+}
+.stylish-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 rgba(15, 23, 42, 0.7);
 }

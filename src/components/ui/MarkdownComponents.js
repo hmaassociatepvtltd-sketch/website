@@ -60,7 +60,7 @@ export const components = {
         </a>
     ),
     strong: (props) => (
-        <strong className={'font-bold font-poppins text-gray-900'}>
+        <strong className={'font-bold font-poppins text-foreground dark:text-slate-100'}>
             {props.children}
         </strong>
     ),

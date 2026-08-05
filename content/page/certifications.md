@@ -6,11 +6,12 @@ blocks:
       - slideHeading: Official Licenses & Quality Accreditations
         subHeading: HMA ASSOCIATES (SMC-PRIVATE) LIMITED
         description: >-
-          Certified by Pakistan Engineering Council (PEC C1), AEDB C-1, and ISO
-          9001 - 45001 & 14001 for uncompromised engineering quality, safety,
-          and performance.
+          Certified by Pakistan Engineering Council (PEC C1), AEDB C-1, MES Cat
+          'A', DHA Gujranwala, DHA Islamabad, GCC Chamber, and ISO 9001 - 45001
+          & 14001 for uncompromised engineering quality, safety, and
+          performance.
         animationType: fade-zoom
-        backgroundImage: /hrui_AdobeStock_276818517_RV.jpg
+        backgroundImage: /person-using-wax-seal-certificate.jpg
         buttonText: Explore Accreditations
         buttonLink: '#certificates'
     _template: animatedHeroSection
@@ -51,6 +52,88 @@ blocks:
       - text: 'DISCO Grid Interconnection Licensing (GEPCO, LESCO, IESCO)'
       - text: Megawatt-Scale Industrial Solar Park Authorization
     verificationLink: 'https://aedb.org.pk'
+    _template: certificateCard
+  - badgeText: GHQ MES Enlisted Category 'A' Contractor
+    title: Military Engineer Services (MES Category 'A' Enlistment)
+    issuingAuthority: 'GHQ Engineer in Chief''s Branch, Directorate of Planning & Works'
+    licenseNumber: 'Index #: AE-015 (Cat A)'
+    validity: Valid till 10 February 2027
+    description: >-
+      Official Enlistment Certificate issued by General Headquarters (GHQ)
+      Directorate of Planning & Works, Rawalpindi. Enlists HMA Associates
+      (SMC-Private) Limited under Index No. AE-015 in Category 'A' (No Limit),
+      authorizing execution of unlimited financial scale engineering,
+      electrical, MEP, and civil construction contracts across Army, Navy, and
+      Air Force formations.
+    certificateImage: /Screenshot 2026-08-03 153551.png
+    layout: left
+    highlights:
+      - text: Category 'A' Unlimited Financial Capacity Authorization
+      - text: GHQ Military Engineer Services (MES) Index No AE-015
+      - text: 'Enlisted for Categories a, b, c, d & f Engineering Works'
+      - text: 'Tri-Services Security Clearance (Army, Navy, Air Force & NLC)'
+    verificationLink: 'https://mes.gov.pk'
+    _template: certificateCard
+  - badgeText: DHA Gujranwala Registered Constructor
+    title: Defence Housing Authority Gujranwala (DHA GWA Enlistment)
+    issuingAuthority: Defence Housing Authority (DHA) Gujranwala
+    licenseNumber: DHA/Gwa/Civ-1/125/2025
+    validity: Enlisted Year 2025-2026
+    description: >-
+      Official enlistment with Defence Housing Authority (DHA) Gujranwala in
+      Category C-1 for the Year 2025-26 (Ref No. 111/21/CE Branch/125). Empowers
+      HMA Associates & Co to participate in competitive bidding and execution of
+      heavy civil infrastructure, commercial plazas, and residential development
+      within DHA Gujranwala.
+    certificateImage: /Screenshot 2026-08-03 153607.png
+    layout: right
+    highlights:
+      - text: Category C-1 Enlistment for DHA Gujranwala Civil Works
+      - text: Authorized for Infrastructure & Building Bidding Process
+      - text: Official Registration Number DHA/Gwa/Civ-1/125/2025
+      - text: High-Scale Turnkey Engineering & Site Execution
+    verificationLink: 'https://dhagujranwala.com'
+    _template: certificateCard
+  - badgeText: DHA Islamabad Registered Solar Company
+    title: Defence Housing Authority Islamabad (DHA ISB Registration)
+    issuingAuthority: Defence Housing Authority Islamabad - Rawalpindi
+    licenseNumber: 'Registration #: SC-073'
+    validity: Renewed upto 31 December 2025
+    description: >-
+      Official Registration Certificate as a specialized Solar Firm / Company
+      with Defence Housing Authority Islamabad-Rawalpindi (Registration No.
+      SC-073). Authorizes HMA Associates & Co (Engr. Mehtab Bashir, Principal
+      Engineer) for turnkey solar power installation, grid synchronization, and
+      net-metering execution across DHA Islamabad, Rawalpindi, and Gulberg
+      Greens.
+    certificateImage: /Screenshot 2026-08-03 153615.png
+    layout: left
+    highlights:
+      - text: Registered Solar Firm / Company with DHA Islamabad-Rawalpindi
+      - text: Specialized Solar License Registration No SC-073
+      - text: Engr. Mehtab Bashir (Principal Engineer) Registration
+      - text: Turnkey Solar PV Installation across DHA & Gulberg Greens
+    verificationLink: 'https://dhai-r.com.pk'
+    _template: certificateCard
+  - badgeText: Certified GCC Corporate Member
+    title: Gujranwala Chamber of Commerce & Industry (GCC Membership)
+    issuingAuthority: The Gujranwala Chamber Of Commerce & Industry (GCC)
+    licenseNumber: 'Membership #: C-3112'
+    validity: Valid upto 31 March 2026
+    description: >-
+      Official Membership Certificate issued by The Gujranwala Chamber Of
+      Commerce & Industry (Book No. B 18718, Serial No. B 1871722), certifying
+      HMA Associates (SMC-Private) Limited (NTN: D7370572) as an accredited
+      member affiliated with the Federation of Pakistan Chambers of Commerce &
+      Industry (FPCCI).
+    certificateImage: /Screenshot 2026-08-03 153559.png
+    layout: right
+    highlights:
+      - text: Official Member of Gujranwala Chamber of Commerce & Industry
+      - text: Registered Corporate Membership No C-3112
+      - text: Affiliated with Federation of Pakistan Chambers (FPCCI)
+      - text: Corporate NTN License D7370572
+    verificationLink: 'https://gcci.org.pk'
     _template: certificateCard
   - badgeText: 'ISO 9001:2015 Certified'
     title: 'ISO 9001:2015 Quality Management Systems Certification'

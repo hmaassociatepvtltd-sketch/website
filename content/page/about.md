@@ -11,7 +11,7 @@ blocks:
           and MEP Services across Pakistan. PEC-licensed C1 Constructor &
           AEDB-certified solar provider.
         animationType: fade-zoom
-        backgroundImage: /Landing%20Page/why_7.png
+        backgroundImage: /diverse-businesspeople-having-meeting.jpg
         buttonText: Contact Us
         buttonLink: /#contact
     _template: animatedHeroSection

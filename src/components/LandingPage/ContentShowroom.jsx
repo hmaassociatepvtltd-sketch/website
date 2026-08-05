@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { tinaField } from "tinacms/dist/react";
-import { Sparkles, CheckCircle2, Zap, ArrowRight, ShieldCheck, Play, Award, BarChart3, Star, Layers } from "lucide-react";
+import { CheckCircle2, Zap, ArrowRight, ShieldCheck, Play, Award, BarChart3, Star, Layers } from "lucide-react";
 
 export const ContentShowroom = (props) => {
     const bgTheme = props?.bgTheme || "dark-glass";
@@ -140,7 +140,7 @@ export const ContentShowroom = (props) => {
                         <div className="lg:col-span-6 space-y-6">
                             {badgeText && (
                                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider border backdrop-blur-md">
-                                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                                    <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
                                     <span data-tina-field={tinaField(props, "badgeText")}>{badgeText}</span>
                                 </div>
                             )}
@@ -184,7 +184,7 @@ export const ContentShowroom = (props) => {
                         <div className="lg:col-span-6 space-y-6 lg:order-1 order-2">
                             {badgeText && (
                                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider border backdrop-blur-md">
-                                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                                    <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
                                     <span data-tina-field={tinaField(props, "badgeText")}>{badgeText}</span>
                                 </div>
                             )}
@@ -360,7 +360,7 @@ export const ContentShowroom = (props) => {
                     <div className="text-center max-w-4xl mx-auto space-y-6">
                         {badgeText && (
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-lg border backdrop-blur-md">
-                                <Sparkles className="w-4 h-4 text-amber-400" />
+                                <ShieldCheck className="w-4 h-4 text-amber-400" />
                                 <span data-tina-field={tinaField(props, "badgeText")}>{badgeText}</span>
                             </div>
                         )}
@@ -400,7 +400,7 @@ export const ContentShowroom = (props) => {
                         <div className="text-center max-w-3xl mx-auto space-y-4">
                             {badgeText && (
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-md border backdrop-blur-md">
-                                    <Sparkles className="w-4 h-4 text-amber-400" />
+                                    <ShieldCheck className="w-4 h-4 text-amber-400" />
                                     <span data-tina-field={tinaField(props, "badgeText")}>{badgeText}</span>
                                 </div>
                             )}

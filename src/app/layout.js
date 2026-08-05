@@ -87,6 +87,7 @@ export async function generateMetadata() {
 
 
 import { JsonLd } from "@/components/Globals/JsonLd";
+import { QuickContactWidget } from "@/components/Globals/QuickContactWidget";
 
 export default async function RootLayout({ children }) {
 
@@ -128,6 +129,7 @@ export default async function RootLayout({ children }) {
                 {children}
                 <Footer serviceTypes={serviceTypes} productTypes={productTypes} site={siteSettings} />
                 <ScrollUp />
+                <QuickContactWidget />
                 {/* Floating Desktop Social Links (Hidden on Mobile to avoid clutter) */}
                 <div className="hidden md:flex flex-col gap-2.5 items-center fixed left-6 bottom-8 z-40">
                     {data?.site?.instagram && (

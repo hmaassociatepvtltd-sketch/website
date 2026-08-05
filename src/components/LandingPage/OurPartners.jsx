@@ -83,10 +83,10 @@ export const OurPartners = ({ partnersData = [], ...props }) => {
                         className="w-full !py-6 !px-2 overflow-visible"
                         slidesPerView={2}
                         spaceBetween={20}
-                        speed={3500}
+                        speed={1200}
                         loop={true}
                         autoplay={{
-                            delay: 0,
+                            delay: 2500,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}

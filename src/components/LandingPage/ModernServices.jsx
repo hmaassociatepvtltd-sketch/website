@@ -12,7 +12,6 @@ import {
     Users, 
     Sun, 
     Zap, 
-    Sparkles, 
     Building2, 
     CheckCircle2, 
     ArrowRight,
@@ -122,7 +121,7 @@ export const ModernServices = ({ servicesData = [], ...props }) => {
                 {/* Centerpiece Header */}
                 <div className="flex flex-col items-center text-center space-y-4 max-w-3xl mx-auto">
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest bg-primary/10 text-primary border border-primary/25 shadow-sm backdrop-blur-md">
-                        <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+                        <ShieldCheck className="w-4 h-4 text-primary" />
                         <span>Core Engineering Capabilities</span>
                     </span>
 

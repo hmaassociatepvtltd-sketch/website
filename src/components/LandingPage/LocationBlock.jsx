@@ -7,15 +7,27 @@ import { MapPin, Phone, Globe, Clock, Mail, Navigation, ExternalLink, ShieldChec
 export const LocationBlock = (props) => {
     const heading = props?.heading || "Visit Our Corporate Headquarters";
     const subHeading = props?.subHeading || "HEAD OFFICE & REGIONAL ENGINEERING HUB";
-    const companyName = props?.companyName || "HMA Associates (SMC-Private) Limited";
-    const address =
+    const rawCompanyName = props?.companyName || "HMA Associates\n(SMC-Private) Limited";
+    const companyName = rawCompanyName.includes("\n")
+        ? rawCompanyName
+        : rawCompanyName.replace(" (SMC-Private)", "\n(SMC-Private)");
+
+    const rawAddress =
         props?.address ||
-        "1st Floor, Chenab Cantt Gate, near Eagle Estate & Builders, Sethi Colony, Gujranwala, 50250, Pakistan";
+        "1st Floor, Chenab Cantt Gate, near Eagle Estate & Builders, Gujranwala, 50250, Pakistan";
+    const address = rawAddress.replace(/Sethi Colony,?\s*/gi, "");
+
     const phone = props?.phone || "+92 55 3828498";
     const mobilePhone = props?.mobilePhone || "+92 309 7778006";
     const email = props?.email || "info@hmago.com";
     const website = props?.website || "http://www.hmago.com/";
-    const operatingHours = props?.operatingHours || "Monday - Saturday: 9:00 AM - 6:00 PM (Sunday Closed)";
+
+    const rawOperatingHours =
+        props?.operatingHours || "Monday - Saturday: 9:00 AM - 6:00 PM\n(Sunday Closed)";
+    const operatingHours = rawOperatingHours.includes("\n")
+        ? rawOperatingHours
+        : rawOperatingHours.replace(/\s*\(Sunday Closed\)/i, "\n(Sunday Closed)");
+
     const mapEmbedUrl =
         props?.mapEmbedUrl ||
         "https://maps.google.com/maps?q=HMA%20Associates%20(SMC-Private)%20Limited,%20Gujranwala&t=&z=15&ie=UTF8&iwloc=&output=embed";
@@ -80,9 +92,20 @@ export const LocationBlock = (props) => {
                                 </span>
                                 <h3
                                     data-tina-field={tinaField(props, "companyName")}
-                                    className="text-xl sm:text-2xl font-bold font-josefin-sans text-white tracking-wide"
+                                    className="font-josefin-sans text-white tracking-wide"
                                 >
-                                    {companyName}
+                                    {typeof companyName === "string" && companyName.includes("\n") ? (
+                                        <>
+                                            <span className="block text-xl sm:text-2xl font-bold leading-snug">
+                                                {companyName.split("\n")[0]}
+                                            </span>
+                                            <span className="block text-sm sm:text-base font-medium text-slate-300 mt-1">
+                                                {companyName.split("\n").slice(1).join("\n")}
+                                            </span>
+                                        </>
+                                    ) : (
+                                        <span className="text-xl sm:text-2xl font-bold">{companyName}</span>
+                                    )}
                                 </h3>
                             </div>
 
@@ -131,7 +154,7 @@ export const LocationBlock = (props) => {
                                                 className="text-slate-200 hover:text-primary transition-colors duration-200 flex items-center gap-2 group"
                                             >
                                                 <span className="underline decoration-slate-500 group-hover:decoration-primary">{mobilePhone}</span>
-                                                <span className="text-xs text-emerald-400 font-normal">(Mobile / Direct)</span>
+                                                <span className="text-xs text-emerald-400 font-normal">(Mobile)</span>
                                             </a>
                                         )}
                                     </div>
@@ -182,7 +205,7 @@ export const LocationBlock = (props) => {
                                     </span>
                                     <p
                                         data-tina-field={tinaField(props, "operatingHours")}
-                                        className="text-sm font-medium text-slate-200"
+                                        className="text-sm font-medium text-slate-200 whitespace-pre-line"
                                     >
                                         {operatingHours}
                                     </p>
@@ -232,10 +255,10 @@ export const LocationBlock = (props) => {
                         )}
 
                         {/* Floating Location Tag Overlay */}
-                        <div className="absolute top-6 left-6 z-20 pointer-events-none">
+                        <div className="absolute top-6 right-6 z-20 pointer-events-none">
                             <span className="px-4 py-2 rounded-full bg-slate-950/90 backdrop-blur-md border border-white/20 text-xs font-semibold text-white uppercase tracking-wider shadow-2xl flex items-center gap-2">
-                                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                                <span>Official Office Location</span>
+                                <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+                                <span>Office Location</span>
                             </span>
                         </div>
                     </div>
