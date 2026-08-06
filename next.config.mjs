@@ -12,11 +12,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assets.tina.io'
+        hostname: '**'
       },
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com'
+        protocol: 'http',
+        hostname: '**'
       }
     ]
   }

@@ -3,17 +3,17 @@
 import React, { useState } from "react";
 import { tinaField } from "tinacms/dist/react";
 import { Button } from "@/components/ui/Button";
-import { 
-    Zap, 
-    Calculator, 
-    Sun, 
-    DollarSign, 
-    TrendingUp, 
-    CheckCircle2, 
-    Fan, 
-    Tv, 
-    Lightbulb, 
-    Refrigerator, 
+import {
+    Zap,
+    Calculator,
+    Sun,
+    DollarSign,
+    TrendingUp,
+    CheckCircle2,
+    Fan,
+    Tv,
+    Lightbulb,
+    Refrigerator,
     Flame,
     ArrowRight
 } from "lucide-react";
@@ -167,22 +167,20 @@ export const ModernCalculator = (props) => {
                         <div className="grid grid-cols-2 gap-3 p-1.5 rounded-2xl bg-black/20 border border-white/10">
                             <button
                                 onClick={() => setMode(CalculationMode.ByBill)}
-                                className={`py-3 px-4 rounded-xl text-sm font-semibold font-poppins transition-all duration-300 flex items-center justify-center gap-2 ${
-                                    mode === CalculationMode.ByBill
+                                className={`py-3 px-4 rounded-xl text-sm font-semibold font-poppins transition-all duration-300 flex items-center justify-center gap-2 ${mode === CalculationMode.ByBill
                                         ? "bg-primary text-white shadow-lg"
                                         : "text-gray-400 hover:text-white"
-                                }`}
+                                    }`}
                             >
                                 <DollarSign className="w-4 h-4" />
                                 <span>By Monthly Bill</span>
                             </button>
                             <button
                                 onClick={() => setMode(CalculationMode.ByAppliances)}
-                                className={`py-3 px-4 rounded-xl text-sm font-semibold font-poppins transition-all duration-300 flex items-center justify-center gap-2 ${
-                                    mode === CalculationMode.ByAppliances
+                                className={`py-3 px-4 rounded-xl text-sm font-semibold font-poppins transition-all duration-300 flex items-center justify-center gap-2 ${mode === CalculationMode.ByAppliances
                                         ? "bg-primary text-white shadow-lg"
                                         : "text-gray-400 hover:text-white"
-                                }`}
+                                    }`}
                             >
                                 <Zap className="w-4 h-4" />
                                 <span>By Heavy Appliances</span>

@@ -7,13 +7,13 @@ import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Button } from "@/components/ui/Button";
 import { motion, AnimatePresence } from "motion/react";
-import { 
-    ShieldCheck, 
-    Users, 
-    Sun, 
-    Zap, 
-    Building2, 
-    CheckCircle2, 
+import {
+    ShieldCheck,
+    Users,
+    Sun,
+    Zap,
+    Building2,
+    CheckCircle2,
     ArrowRight,
     Award,
     ChevronRight,
@@ -72,7 +72,7 @@ const getServiceDetails = (title = "") => {
 
 export const ModernServices = ({ servicesData = [], ...props }) => {
     const rawItems = props.items && props.items.length > 0 ? props.items : servicesData;
-    
+
     const items = rawItems.length > 0 ? rawItems : [
         {
             title: "Solar Power Solutions",
@@ -113,7 +113,7 @@ export const ModernServices = ({ servicesData = [], ...props }) => {
             {/* Ambient Background Lighting Orbs */}
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none opacity-80 animate-pulse" />
             <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-sky-400/15 rounded-full blur-[130px] pointer-events-none opacity-60" />
-            
+
             {/* Subtle Grid Accent Pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
@@ -154,7 +154,7 @@ export const ModernServices = ({ servicesData = [], ...props }) => {
                     {/* Left Column: Interactive Service Selector Tabs */}
                     <div className="lg:col-span-5 space-y-3">
                         <p className="text-xs uppercase tracking-wider font-bold text-muted-foreground px-2">Select Service to Explore</p>
-                        
+
                         <div className="space-y-3">
                             {items.map((item, idx) => {
                                 const isActive = idx === activeTab;
@@ -165,28 +165,25 @@ export const ModernServices = ({ servicesData = [], ...props }) => {
                                         role="button"
                                         tabIndex={0}
                                         onKeyDown={(e) => e.key === "Enter" && setActiveTab(idx)}
-                                        className={`group relative p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center justify-between ${
-                                            isActive
+                                        className={`group relative p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center justify-between ${isActive
                                                 ? "bg-white dark:bg-zinc-900 border-primary shadow-xl shadow-primary/10 scale-[1.02]"
                                                 : "bg-white/60 dark:bg-zinc-900/60 border-border/60 hover:bg-white dark:hover:bg-zinc-900 hover:border-primary/40"
-                                        }`}
+                                            }`}
                                     >
                                         <div className="flex items-center gap-4">
                                             {/* Icon Circle */}
-                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                                                isActive
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive
                                                     ? "bg-primary text-white shadow-md shadow-primary/30"
                                                     : "bg-primary/10 text-primary group-hover:bg-primary/20"
-                                            }`}>
+                                                }`}>
                                                 {idx === 0 && <Sun className="w-6 h-6" />}
                                                 {idx === 1 && <ShieldCheck className="w-6 h-6" />}
                                                 {idx === 2 && <Users className="w-6 h-6" />}
                                             </div>
 
                                             <div>
-                                                <h3 className={`text-lg font-bold font-josefin-sans transition-colors ${
-                                                    isActive ? "text-primary" : "text-foreground group-hover:text-primary"
-                                                }`}>
+                                                <h3 className={`text-lg font-bold font-josefin-sans transition-colors ${isActive ? "text-primary" : "text-foreground group-hover:text-primary"
+                                                    }`}>
                                                     {item.title}
                                                 </h3>
                                                 <p className="text-xs font-poppins text-muted-foreground line-clamp-1 mt-0.5">
@@ -195,9 +192,8 @@ export const ModernServices = ({ servicesData = [], ...props }) => {
                                             </div>
                                         </div>
 
-                                        <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${
-                                            isActive ? "text-primary translate-x-1" : "text-muted-foreground/60 group-hover:text-primary"
-                                        }`} />
+                                        <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${isActive ? "text-primary translate-x-1" : "text-muted-foreground/60 group-hover:text-primary"
+                                            }`} />
                                     </div>
                                 );
                             })}

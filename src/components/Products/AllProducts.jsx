@@ -173,6 +173,7 @@ const Product = ({ product }) => {
                         alt={product.name || "Product photo"}
                         fill
                         className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
+                        unoptimized={typeof (product.coverImage || product.image) === "string" && ((product.coverImage || product.image).startsWith("http://") || (product.coverImage || product.image).startsWith("https://"))}
                     />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">

@@ -2,32 +2,32 @@ import {Check} from "lucide-react";
 
 export const components = {
     h1: (props) => (
-        <h1 className={'text-3xl sm:text-4xl font-bold font-josefin-sans tracking-tight text-primary my-3'}>
+        <h1 className={'text-xl sm:text-2xl font-bold font-josefin-sans tracking-tight text-gray-900 dark:text-white my-3 border-b border-gray-100 dark:border-zinc-800 pb-2'}>
             {props.children}
         </h1>
     ),
     h2: (props) => (
-        <h2 className={'text-2xl sm:text-3xl font-bold font-josefin-sans tracking-tight text-primary my-3'}>
+        <h2 className={'text-lg sm:text-xl font-bold font-josefin-sans tracking-tight text-gray-800 dark:text-slate-200 mt-4 mb-2'}>
             {props.children}
         </h2>
     ),
     h3: (props) => (
-        <h3 className={'text-xl sm:text-2xl font-bold font-josefin-sans tracking-tight text-primary my-2'}>
+        <h3 className={'text-base sm:text-lg font-semibold font-josefin-sans tracking-tight text-gray-800 dark:text-slate-200 mt-3 mb-1.5'}>
             {props.children}
         </h3>
     ),
     h4: (props) => (
-        <h4 className={'text-lg sm:text-xl font-semibold font-josefin-sans text-primary my-2'}>
+        <h4 className={'text-base font-semibold font-josefin-sans text-gray-800 dark:text-slate-200 mt-3 mb-1'}>
             {props.children}
         </h4>
     ),
     h5: (props) => (
-        <h5 className={'text-base font-semibold font-josefin-sans text-primary my-2'}>
+        <h5 className={'text-sm font-semibold font-josefin-sans text-gray-700 dark:text-slate-300 mt-2 mb-1'}>
             {props.children}
         </h5>
     ),
     h6: (props) => (
-        <h6 className={'text-sm font-semibold font-josefin-sans text-primary my-1'}>
+        <h6 className={'text-xs font-semibold uppercase tracking-wider font-josefin-sans text-primary mt-2 mb-1'}>
             {props.children}
         </h6>
     ),

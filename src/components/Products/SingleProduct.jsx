@@ -36,9 +36,23 @@ export const SingleProduct = ({ product }) => {
         );
     }
 
-    const images = product?.images && product.images.length > 0 ? product.images : [];
     const productName = product?.name || "Premium Engineering Equipment";
     const categoryBreadcrumb = product?._sys?.breadcrumbs?.[0] || "Equipment";
+
+    // Robust Image Fallback Resolution
+    const fallbackImage = product?.coverImage || product?.image || "/products/Inverex-Nitrox-10-KW-3Ph-On-Grid-Solar-Inverter.jpg";
+    let images = [];
+    if (product?.images && product.images.length > 0) {
+        images = product.images.map((img) =>
+            typeof img === "string"
+                ? { image: img, alt: productName }
+                : img?.image
+                ? img
+                : { image: fallbackImage, alt: productName }
+        );
+    } else {
+        images = [{ image: fallbackImage, alt: productName }];
+    }
 
     const handleShare = () => {
         if (typeof window !== "undefined") {
@@ -94,7 +108,7 @@ export const SingleProduct = ({ product }) => {
                                 </button>
                             </div>
 
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-josefin-sans tracking-tight text-gray-900 dark:text-white leading-tight">
+                            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold font-josefin-sans tracking-tight text-gray-900 dark:text-white leading-tight">
                                 {productName}
                             </h1>
                         </div>
@@ -210,6 +224,7 @@ const ImagesShowcase = ({ images, productName }) => {
                             sizes="(max-width: 1024px) 100vw, 60vw"
                             className="object-contain p-6"
                             priority
+                            unoptimized={typeof activeImage.image === "string" && (activeImage.image.startsWith("http://") || activeImage.image.startsWith("https://"))}
                         />
                     </motion.div>
                 </AnimatePresence>

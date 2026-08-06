@@ -50,10 +50,10 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                     }`}>
                     <Link
                         className={`transition-colors duration-200 relative py-1 ${pathname === "/"
-                                ? "text-primary font-semibold"
-                                : isDarkHeader
-                                    ? "hover:text-primary text-slate-200"
-                                    : "hover:text-primary text-slate-800"
+                            ? "text-primary font-semibold"
+                            : isDarkHeader
+                                ? "hover:text-primary text-slate-200"
+                                : "hover:text-primary text-slate-800"
                             }`}
                         href="/"
                     >
@@ -70,20 +70,18 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                         className="relative group cursor-pointer"
                     >
                         <div
-                            className={`flex items-center gap-1.5 py-1 transition-colors duration-200 ${
-                                pathname === "/about" || pathname === "/ourclients" || pathname === "/certifications"
+                            className={`flex items-center gap-1.5 py-1 transition-colors duration-200 ${pathname === "/about" || pathname === "/ourclients" || pathname === "/certifications"
                                     ? "text-primary font-semibold"
                                     : isDarkHeader
                                         ? "hover:text-primary text-slate-200"
                                         : "hover:text-primary text-slate-800"
-                            }`}
+                                }`}
                         >
                             <Link href="/about" className="hover:text-primary">About</Link>
                             <ChevronDown
                                 size={14}
-                                className={`transition-transform duration-300 ${
-                                    aboutOpen ? "rotate-180 text-primary" : ""
-                                }`}
+                                className={`transition-transform duration-300 ${aboutOpen ? "rotate-180 text-primary" : ""
+                                    }`}
                             />
                         </div>
                         <AnimatePresence mode="wait">
@@ -138,10 +136,10 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                     >
                         <div
                             className={`flex items-center gap-1.5 py-1 transition-colors duration-200 ${pathname?.startsWith("/services")
-                                    ? "text-primary font-semibold"
-                                    : isDarkHeader
-                                        ? "hover:text-primary text-slate-200"
-                                        : "hover:text-primary text-slate-800"
+                                ? "text-primary font-semibold"
+                                : isDarkHeader
+                                    ? "hover:text-primary text-slate-200"
+                                    : "hover:text-primary text-slate-800"
                                 }`}
                         >
                             <span>Services</span>
@@ -185,10 +183,10 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                     >
                         <div
                             className={`flex items-center gap-1.5 py-1 transition-colors duration-200 ${pathname?.startsWith("/products")
-                                    ? "text-primary font-semibold"
-                                    : isDarkHeader
-                                        ? "hover:text-primary text-slate-200"
-                                        : "hover:text-primary text-slate-800"
+                                ? "text-primary font-semibold"
+                                : isDarkHeader
+                                    ? "hover:text-primary text-slate-200"
+                                    : "hover:text-primary text-slate-800"
                                 }`}
                         >
                             <span>Products</span>
@@ -226,10 +224,10 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
 
                     <Link
                         className={`transition-colors duration-200 relative py-1 ${pathname === "/work"
-                                ? "text-primary font-semibold"
-                                : isDarkHeader
-                                    ? "hover:text-primary text-slate-200"
-                                    : "hover:text-primary text-slate-800"
+                            ? "text-primary font-semibold"
+                            : isDarkHeader
+                                ? "hover:text-primary text-slate-200"
+                                : "hover:text-primary text-slate-800"
                             }`}
                         href="/work"
                     >
@@ -245,8 +243,8 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                     <a
                         href="tel:+923097778006"
                         className={`px-4 py-2.5 rounded-xl backdrop-blur-md border font-medium text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 ${isDarkHeader
-                                ? "bg-white/10 hover:bg-white/20 border-white/20 text-white"
-                                : "bg-slate-100 hover:bg-slate-200 border-slate-300 text-slate-900 shadow-sm"
+                            ? "bg-white/10 hover:bg-white/20 border-white/20 text-white"
+                            : "bg-slate-100 hover:bg-slate-200 border-slate-300 text-slate-900 shadow-sm"
                             }`}
                     >
                         <Phone className="w-4 h-4 text-primary" />
@@ -271,8 +269,8 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                         <SheetTrigger asChild>
                             <button
                                 className={`p-3 rounded-2xl border transition-all duration-300 shadow-xl focus:outline-none ${isDarkHeader
-                                        ? "bg-slate-900/90 border-white/20 text-white hover:bg-slate-800"
-                                        : "bg-slate-100 border-slate-300 text-slate-900 hover:bg-slate-200"
+                                    ? "bg-slate-900/90 border-white/20 text-white hover:bg-slate-800"
+                                    : "bg-slate-100 border-slate-300 text-slate-900 hover:bg-slate-200"
                                     }`}
                                 aria-label="Toggle Navigation Menu"
                             >
@@ -302,8 +300,8 @@ export const Navbar = ({ productTypes = [], serviceTypes = [] }) => {
                                         href={link.href}
                                         onClick={() => setMobileOpen(false)}
                                         className={`flex items-center gap-3 rounded-xl px-4 py-3.5 transition-all duration-200 font-medium ${pathname === link.href
-                                                ? "bg-primary/20 text-primary border border-primary/30"
-                                                : "text-slate-200 hover:bg-white/10 hover:text-white"
+                                            ? "bg-primary/20 text-primary border border-primary/30"
+                                            : "text-slate-200 hover:bg-white/10 hover:text-white"
                                             }`}
                                     >
                                         <ChevronRight className="h-4 w-4 text-primary shrink-0" />

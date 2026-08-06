@@ -16,7 +16,29 @@ export default async function ProductsPage() {
         console.error("Error fetching products", e);
     }
 
-    const groupedProducts = [{ name: "All Equipment", items: products }];
+    const categoriesMap = {};
+
+    products.forEach((prod) => {
+        const breadcrumbs = prod._sys?.breadcrumbs || [];
+        let categoryName = breadcrumbs[0] || "General Equipment";
+        const catLower = categoryName.toLowerCase();
+
+        if (catLower === "panels") categoryName = "Tier-1 Solar PV Modules (Canadian, Astronergy, Risen, Inverex)";
+        else if (catLower === "inverters") categoryName = "Solar Inverters (GoodWe, Solis, Nitrox)";
+        else if (catLower === "batteries") categoryName = "Lithium & Tall Tubular Batteries (Pylontech, Soluna, Inverex)";
+        else if (catLower === "breakers") categoryName = "AC & DC Circuit Breakers (Tomzn 2P/4P & GA/DA 2P/4P)";
+        else if (catLower === "db-boxes") categoryName = "Distribution Enclosure DB Boxes (IP65 Outdoor & Metal Clad)";
+
+        if (!categoriesMap[categoryName]) {
+            categoriesMap[categoryName] = [];
+        }
+        categoriesMap[categoryName].push(prod);
+    });
+
+    const groupedProducts = Object.keys(categoriesMap).map((catName) => ({
+        name: catName,
+        items: categoriesMap[catName],
+    }));
 
     return <AllProducts title="Products Catalog" groupedProducts={groupedProducts} />;
 }

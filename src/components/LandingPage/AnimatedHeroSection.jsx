@@ -134,105 +134,104 @@ export const AnimatedHeroSection = (props) => {
             {/* Slides Container */}
             <div data-tina-field={tinaField(props, "slides")} className="contents">
                 {slides.map((slide, index) => {
-                const isActive = index === currentSlide;
-                const anim = getAnimationStyles(slide?.animationType, isActive);
+                    const isActive = index === currentSlide;
+                    const anim = getAnimationStyles(slide?.animationType, isActive);
 
-                return (
-                    <div
-                        key={index}
-                        className={`absolute inset-0 w-full h-full transition-all ${anim.container}`}
-                    >
-                        {/* Background Video or Background Image with Dynamic Parallax Zoom Effect */}
-                        {slide?.backgroundVideo || slide?.video ? (
-                            <video
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className={`absolute inset-0 w-full h-full object-cover ${anim.image}`}
-                                src={slide.backgroundVideo || slide.video}
-                            />
-                        ) : (
-                            <div
-                                className={`absolute inset-0 bg-cover bg-center ${anim.image}`}
-                                style={{
-                                    backgroundImage: `url('${
-                                        slide?.backgroundImage ||
-                                        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
-                                    }')`,
-                                }}
-                            />
-                        )}
+                    return (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 w-full h-full transition-all ${anim.container}`}
+                        >
+                            {/* Background Video or Background Image with Dynamic Parallax Zoom Effect */}
+                            {slide?.backgroundVideo || slide?.video ? (
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className={`absolute inset-0 w-full h-full object-cover ${anim.image}`}
+                                    src={slide.backgroundVideo || slide.video}
+                                />
+                            ) : (
+                                <div
+                                    className={`absolute inset-0 bg-cover bg-center ${anim.image}`}
+                                    style={{
+                                        backgroundImage: `url('${slide?.backgroundImage ||
+                                            "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+                                            }')`,
+                                    }}
+                                />
+                            )}
 
-                        {/* Multi-layered Gradients for Premium Depth & Legibility */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
+                            {/* Multi-layered Gradients for Premium Depth & Legibility */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/40" />
 
-                        {/* Slide Content Box */}
-                        <div className="w-full h-full relative max-w-[1260px] mx-auto px-5 sm:px-8 xl:px-0 flex items-center pt-24 sm:pt-28 pb-20">
-                            <div className={`max-w-[780px] space-y-5 sm:space-y-6 text-left ${anim.content}`}>
-                                {/* Sub-heading Tag */}
-                                {slide?.subHeading && (
-                                    <div>
-                                        <span
-                                            data-tina-field={tinaField(slide, "subHeading")}
-                                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white shadow-lg"
-                                        >
-                                            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                                            <span>{slide.subHeading}</span>
-                                        </span>
-                                    </div>
-                                )}
-
-                                {/* Main Slide Title */}
-                                {slide?.slideHeading && (
-                                    <h1
-                                        data-tina-field={tinaField(slide, "slideHeading")}
-                                        className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-josefin-sans tracking-tight text-white leading-[1.08] uppercase drop-shadow-2xl"
-                                    >
-                                        {slide.slideHeading}
-                                    </h1>
-                                )}
-
-                                {/* Slide Description */}
-                                {slide?.description && (
-                                    <p
-                                        data-tina-field={tinaField(slide, "description")}
-                                        className="font-poppins text-sm sm:text-lg lg:text-xl text-slate-200/90 max-w-[660px] leading-relaxed"
-                                    >
-                                        {slide.description}
-                                    </p>
-                                )}
-
-                                {/* CTA Action Buttons */}
-                                <div className="flex flex-wrap items-center gap-4 pt-3">
-                                    {slide?.buttonText && (
-                                        <div data-tina-field={tinaField(slide, "buttonText")}>
-                                            <Button
-                                                link={slide?.buttonLink || "#"}
-                                                variant={slide?.buttonStyle || "primary-arrow"}
+                            {/* Slide Content Box */}
+                            <div className="w-full h-full relative max-w-[1260px] mx-auto px-5 sm:px-8 xl:px-0 flex items-center pt-24 sm:pt-28 pb-20">
+                                <div className={`max-w-[780px] space-y-5 sm:space-y-6 text-left ${anim.content}`}>
+                                    {/* Sub-heading Tag */}
+                                    {slide?.subHeading && (
+                                        <div>
+                                            <span
+                                                data-tina-field={tinaField(slide, "subHeading")}
+                                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold tracking-wider uppercase text-white shadow-lg"
                                             >
-                                                {slide.buttonText}
-                                            </Button>
+                                                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                                                <span>{slide.subHeading}</span>
+                                            </span>
                                         </div>
                                     )}
 
-                                    {slide?.secondaryButtonText && (
-                                        <Link
-                                            href={slide?.secondaryButtonLink || "#"}
-                                            data-tina-field={tinaField(slide, "secondaryButtonText")}
-                                            className="px-7 py-3.5 rounded-xl border border-white/30 hover:border-white hover:bg-white/15 text-white font-poppins font-medium text-sm sm:text-base transition-all duration-300 backdrop-blur-md shadow-lg active:scale-95 flex items-center gap-2"
+                                    {/* Main Slide Title */}
+                                    {slide?.slideHeading && (
+                                        <h1
+                                            data-tina-field={tinaField(slide, "slideHeading")}
+                                            className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-josefin-sans tracking-tight text-white leading-[1.08] uppercase drop-shadow-2xl"
                                         >
-                                            <span>{slide.secondaryButtonText}</span>
-                                            <ArrowRight className="w-4 h-4" />
-                                        </Link>
+                                            {slide.slideHeading}
+                                        </h1>
                                     )}
+
+                                    {/* Slide Description */}
+                                    {slide?.description && (
+                                        <p
+                                            data-tina-field={tinaField(slide, "description")}
+                                            className="font-poppins text-sm sm:text-lg lg:text-xl text-slate-200/90 max-w-[660px] leading-relaxed"
+                                        >
+                                            {slide.description}
+                                        </p>
+                                    )}
+
+                                    {/* CTA Action Buttons */}
+                                    <div className="flex flex-wrap items-center gap-4 pt-3">
+                                        {slide?.buttonText && (
+                                            <div data-tina-field={tinaField(slide, "buttonText")}>
+                                                <Button
+                                                    link={slide?.buttonLink || "#"}
+                                                    variant={slide?.buttonStyle || "primary-arrow"}
+                                                >
+                                                    {slide.buttonText}
+                                                </Button>
+                                            </div>
+                                        )}
+
+                                        {slide?.secondaryButtonText && (
+                                            <Link
+                                                href={slide?.secondaryButtonLink || "#"}
+                                                data-tina-field={tinaField(slide, "secondaryButtonText")}
+                                                className="px-7 py-3.5 rounded-xl border border-white/30 hover:border-white hover:bg-white/15 text-white font-poppins font-medium text-sm sm:text-base transition-all duration-300 backdrop-blur-md shadow-lg active:scale-95 flex items-center gap-2"
+                                            >
+                                                <span>{slide.secondaryButtonText}</span>
+                                                <ArrowRight className="w-4 h-4" />
+                                            </Link>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
             </div>
 
             {/* Side Navigation Arrows (Tablet & Desktop) */}
@@ -284,9 +283,8 @@ export const AnimatedHeroSection = (props) => {
                                         {/* Line Track */}
                                         <div className="relative h-1 bg-white/25 rounded-full overflow-hidden transition-all duration-500 w-10 sm:w-16 group-hover:bg-white/40">
                                             <div
-                                                className={`absolute inset-y-0 left-0 bg-primary rounded-full transition-all duration-500 ${
-                                                    isActive ? "w-full shadow-[0_0_10px_rgba(35,72,208,0.9)]" : "w-0"
-                                                }`}
+                                                className={`absolute inset-y-0 left-0 bg-primary rounded-full transition-all duration-500 ${isActive ? "w-full shadow-[0_0_10px_rgba(35,72,208,0.9)]" : "w-0"
+                                                    }`}
                                             />
                                         </div>
                                     </div>
