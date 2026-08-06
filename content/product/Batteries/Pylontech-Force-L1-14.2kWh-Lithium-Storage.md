@@ -1,18 +1,86 @@
 ---
-image: >-
-  https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80
-name: Pylontech Fidus Battery 5KWH High-Capacity Energy Storage System
+name: Pylontech Fidus 5.12kWh Lithium Storage
 coverImage: /Fidus电池产品图_20250721092212A585.png
+image: /Fidus电池产品图_20250721092212A585.png
 images:
-  - image: >-
-      https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80
+  - image: /Fidus电池产品图_20250721092212A585.png
 description: >
-  With 4.8kWh per unit, Fidus is a robust and safe residential energy storage
-  solution, designed for reliable operation in extreme temperatures from -20°C
-  to 55°C. Built for reliability, it offers seamless grid switching, strong
-  overload protection, and remote monitoring, delivering stable and flexible
-  energy for homes, farms, and small commercial applications — even in humid,
-  coastal, or dusty environments.
-detailDescription: "[# Fidus Battery FB-L-5.12\r\n\r\n\\## Key Features\r\n\r\n\\### 01. Wide Temperature Operation\r\n\\- Adaptable to \\*\\*-20°C to 55°C\\*\\* environments.\r\n\\- Stable performance in both hot and cold climates.\r\n\r\n\\### 02. Extraordinary Performance\r\n\\- \\*\\*Continuous 1C\\*\\* charge/discharge rate.\r\n\\- \\*\\*Peak 2C\\*\\* discharge rate for \\*\\*15 seconds\\*\\*.\r\n\\- \\*\\*95% Depth of Discharge (DoD)\\*\\* for maximum usable energy.\r\n\r\n\\### 03. Built for Harsh Environments\r\n\\- Cell-level heating ensures reliable operation in extremely cold regions.\r\n\\- Designed for various outdoor installation scenarios.\r\n\\- \\*\\*C5-M anti-corrosion\\*\\* protection.\r\n\\- \\*\\*IP65\\*\\* rated for dust and water resistance.\r\n\r\n\\### 04. Flexible & Highly Scalable\r\n\\- Modular \\*\\*4.8 kWh\\*\\* design.\r\n\\- Expandable up to \\*\\*576 kWh\\*\\* through parallel connection.\r\n\\- Supports up to \\*\\*20 battery modules\\*\\* per battery group.\r\n\\- Up to \\*\\*6 parallel strings\\*\\*.\r\n\r\n\\### 05. Easy Integration & Installation\r\n\\- Compatible with \\*\\*50+ popular inverter brands\\*\\*.\r\n\\- Supports:\r\n  \\- Wall-mounted installation\r\n  \\- Ground-mounted installation\r\n  \\- Rack-mounted installation\r\n\\- Communication via \\*\\*RS485\\*\\* and \\*\\*CAN\\*\\*.\r\n\\- Optional \\*\\*Bluetooth\\*\\* and \\*\\*Wi-Fi\\*\\* monitoring.\r\n\r\n\\---\r\n\r\n\\# Technical Specifications\r\n\r\n\\| Specification | Value |\r\n\\|--------------|-------|\r\n\\| \\*\\*Model\\*\\* | FB-L-5.12 |\r\n\\| \\*\\*Nominal Voltage\\*\\* | 51.2 VDC |\r\n\\| \\*\\*Battery Module Capacity\\*\\* | 5.12 kWh |\r\n\\| \\*\\*Usable Capacity\\*\\* | 4.97 kWh |\r\n\\| \\*\\*Dimensions (W × D × H)\\*\\* | 638 × 137 × 370 mm |\r\n\\| \\*\\*Weight\\*\\* | 45 kg |\r\n\\| \\*\\*Depth of Discharge (DoD)\\*\\* | 97% |\r\n\\| \\*\\*Normal Charge/Discharge Current\\*\\* | 100 A |\r\n\\| \\*\\*Maximum Charge/Discharge Current\\*\\* | 100 A |\r\n\\| \\*\\*Peak Charge/Discharge Current\\*\\* | 121–200 A @ 15s |\r\n\\| \\*\\*Communication\\*\\* | RS485 / CAN |\r\n\\| \\*\\*Interaction\\*\\* | LED, Bluetooth (Optional), Wi-Fi (Optional) |\r\n\\| \\*\\*IP Rating\\*\\* | IP65 |\r\n\\| \\*\\*Anti-Corrosion Rating\\*\\* | C5-M |\r\n\\| \\*\\*Maximum Parallel Strings\\*\\* | 6 |\r\n\\| \\*\\*Maximum Modules per Battery Group\\*\\* | 20 |\r\n\\| \\*\\*Charging Temperature\\*\\* | -10°C to 55°C |\r\n\\| \\*\\*Discharging Temperature\\*\\* | -10°C to 55°C |\r\n\\| \\*\\*Storage Temperature\\*\\* | -20°C to 60°C |\r\n\\| \\*\\*Humidity\\*\\* | 5–95% RH (Non-condensing) |\r\n\\| \\*\\*Maximum Altitude\\*\\* | ≤ 4,000 m |\r\n\\| \\*\\*Protective Class\\*\\* | Class I |\r\n\\| \\*\\*Design Life (@25°C)\\*\\* | 10 Years |\r\n\\| \\*\\*Cycle Life (@25°C)\\*\\* | 8,000+ Cycles |\r\n\r\n\\---\r\n\r\n\\# Certifications\r\n\r\n\\- IEC 62619\r\n\\- IEC 63056\r\n\\- VDE 2510-50\r\n\\- IEC 62477-1\r\n\\- EMC\r\n\\- CE\r\n\r\n\\---\r\n\r\n\\## Highlights\r\n\r\n\\- ✅ 5.12 kWh LiFePO₄ Battery Module\r\n\\- ✅ 97% Depth of Discharge\r\n\\- ✅ 8,000+ Charge Cycles\r\n\\- ✅ 10-Year Design Life\r\n\\- ✅ IP65 Outdoor Protection\r\n\\- ✅ Compatible with 50+ Inverter Brands\r\n\\- ✅ Modular Expansion up to 576 kWh\r\n\\- ✅ RS485 & CAN Communication\r\n\\- ✅ Optional Bluetooth & Wi-Fi Monitoring\r\n\\- ✅ Wide Operating Temperature (-20°C to 55°C)](<# Fidus Battery FB-L-5.12&#xD;&#xA;&#xD;&#xA;## Key Features&#xD;&#xA;&#xD;&#xA;### 01. Wide Temperature Operation&#xD;&#xA;- Adaptable to **-20°C to 55°C** environments.&#xD;&#xA;- Stable performance in both hot and cold climates.&#xD;&#xA;&#xD;&#xA;### 02. Extraordinary Performance&#xD;&#xA;- **Continuous 1C** charge/discharge rate.&#xD;&#xA;- **Peak 2C** discharge rate for **15 seconds**.&#xD;&#xA;- **95% Depth of Discharge (DoD)** for maximum usable energy.&#xD;&#xA;&#xD;&#xA;### 03. Built for Harsh Environments&#xD;&#xA;- Cell-level heating ensures reliable operation in extremely cold regions.&#xD;&#xA;- Designed for various outdoor installation scenarios.&#xD;&#xA;- **C5-M anti-corrosion** protection.&#xD;&#xA;- **IP65** rated for dust and water resistance.&#xD;&#xA;&#xD;&#xA;### 04. Flexible & Highly Scalable&#xD;&#xA;- Modular **4.8 kWh** design.&#xD;&#xA;- Expandable up to **576 kWh** through parallel connection.&#xD;&#xA;- Supports up to **20 battery modules** per battery group.&#xD;&#xA;- Up to **6 parallel strings**.&#xD;&#xA;&#xD;&#xA;### 05. Easy Integration & Installation&#xD;&#xA;- Compatible with **50+ popular inverter brands**.&#xD;&#xA;- Supports:&#xD;&#xA;  \\- Wall-mounted installation&#xD;&#xA;  \\- Ground-mounted installation&#xD;&#xA;  \\- Rack-mounted installation&#xD;&#xA;- Communication via **RS485** and **CAN**.&#xD;&#xA;- Optional **Bluetooth** and **Wi-Fi** monitoring.&#xD;&#xA;&#xD;&#xA;---&#xD;&#xA;&#xD;&#xA;# Technical Specifications&#xD;&#xA;&#xD;&#xA;| Specification | Value |&#xD;&#xA;|--------------|-------|&#xD;&#xA;| **Model** | FB-L-5.12 |&#xD;&#xA;| **Nominal Voltage** | 51.2 VDC |&#xD;&#xA;| **Battery Module Capacity** | 5.12 kWh |&#xD;&#xA;| **Usable Capacity** | 4.97 kWh |&#xD;&#xA;| **Dimensions (W × D × H)** | 638 × 137 × 370 mm |&#xD;&#xA;| **Weight** | 45 kg |&#xD;&#xA;| **Depth of Discharge (DoD)** | 97% |&#xD;&#xA;| **Normal Charge/Discharge Current** | 100 A |&#xD;&#xA;| **Maximum Charge/Discharge Current** | 100 A |&#xD;&#xA;| **Peak Charge/Discharge Current** | 121–200 A @ 15s |&#xD;&#xA;| **Communication** | RS485 / CAN |&#xD;&#xA;| **Interaction** | LED, Bluetooth (Optional), Wi-Fi (Optional) |&#xD;&#xA;| **IP Rating** | IP65 |&#xD;&#xA;| **Anti-Corrosion Rating** | C5-M |&#xD;&#xA;| **Maximum Parallel Strings** | 6 |&#xD;&#xA;| **Maximum Modules per Battery Group** | 20 |&#xD;&#xA;| **Charging Temperature** | -10°C to 55°C |&#xD;&#xA;| **Discharging Temperature** | -10°C to 55°C |&#xD;&#xA;| **Storage Temperature** | -20°C to 60°C |&#xD;&#xA;| **Humidity** | 5–95% RH (Non-condensing) |&#xD;&#xA;| **Maximum Altitude** | ≤ 4,000 m |&#xD;&#xA;| **Protective Class** | Class I |&#xD;&#xA;| **Design Life (@25°C)** | 10 Years |&#xD;&#xA;| **Cycle Life (@25°C)** | 8,000+ Cycles |&#xD;&#xA;&#xD;&#xA;---&#xD;&#xA;&#xD;&#xA;# Certifications&#xD;&#xA;&#xD;&#xA;- IEC 62619&#xD;&#xA;- IEC 63056&#xD;&#xA;- VDE 2510-50&#xD;&#xA;- IEC 62477-1&#xD;&#xA;- EMC&#xD;&#xA;- CE&#xD;&#xA;&#xD;&#xA;---&#xD;&#xA;&#xD;&#xA;## Highlights&#xD;&#xA;&#xD;&#xA;- ✅ 5.12 kWh LiFePO₄ Battery Module&#xD;&#xA;- ✅ 97% Depth of Discharge&#xD;&#xA;- ✅ 8,000+ Charge Cycles&#xD;&#xA;- ✅ 10-Year Design Life&#xD;&#xA;- ✅ IP65 Outdoor Protection&#xD;&#xA;- ✅ Compatible with 50+ Inverter Brands&#xD;&#xA;- ✅ Modular Expansion up to 576 kWh&#xD;&#xA;- ✅ RS485 & CAN Communication&#xD;&#xA;- ✅ Optional Bluetooth & Wi-Fi Monitoring&#xD;&#xA;- ✅ Wide Operating Temperature (-20°C to 55°C)>)\n"
----
+  The Pylontech Fidus FB-L-5.12 is a high-performance 5.12kWh LiFePO4 residential and commercial energy storage module. Engineered for extreme operating environments (-20°C to 55°C) with IP65 weather resistance, 97% Depth of Discharge (DoD), and 8,000+ charge cycles, it offers scalable modular expansion up to 576kWh.
+detailDescription: |
+  # Pylontech Fidus FB-L-5.12 Energy Storage System
 
+  The **Pylontech Fidus FB-L-5.12** is an advanced 5.12kWh Lithium Iron Phosphate (LiFePO₄) battery module designed for premium residential, agricultural, and commercial solar energy storage systems. Built to withstand extreme climate conditions and harsh coastal environments, it provides continuous 1C charge/discharge capability and maximum usable power with a 97% Depth of Discharge.
+
+  ---
+
+  ## Key System Features
+
+  ### 01. Extreme Wide-Temperature Performance
+  * **Operating Range**: Full rated performance in extreme temperatures from **-20°C to 55°C**.
+  * **Cell-Level Thermal Management**: Integrated internal heating element for automatic cold-weather protection.
+  * **Climate Adaptability**: Reliable operation in high-humidity, freezing, or desert heat environments.
+
+  ### 02. High Discharge Efficiency & Power
+  * **Continuous Rating**: **1C continuous** charge and discharge rate (100A output).
+  * **Overload Surge Capacity**: **2C peak discharge** (up to 200A for 15 seconds) for heavy inductive equipment start-up.
+  * **Maximized Capacity**: **97% Depth of Discharge (DoD)** for maximum usable stored kWh per cycle.
+
+  ### 03. Heavy-Duty IP65 & Anti-Corrosion Enclosure
+  * **Weatherproof Rating**: **IP65 dust-proof and water-resistant** enclosure suitable for indoor and outdoor installations.
+  * **C5-M Anti-Corrosion Standard**: Industrial-grade anti-corrosion protection against coastal salt air and industrial atmospheres.
+
+  ### 04. Flexible Modular Scalability
+  * **Modular Unit**: 5.12 kWh nominal capacity per battery pack.
+  * **High Expandability**: Parallel scale up to **576 kWh** total capacity.
+  * **Group Configuration**: Up to **20 modules per group** across **6 parallel strings**.
+
+  ### 05. Universal Inverter Compatibility & Monitoring
+  * **Inverter Ecosystem**: Pre-tested compatibility with **50+ leading inverter brands** (Solis, GoodWe, Inverex, Deye, Victron, etc.).
+  * **Installation Flexibility**: Supports Wall-Mount, Floor/Ground-Mount, or Standard Rack-Mount setups.
+  * **Communication Interfaces**: Built-in **CANbus** and **RS485** standard ports with optional **Bluetooth** & **Wi-Fi** mobile app monitoring.
+
+  ---
+
+  ## Technical Specifications
+
+  | Parameter | Technical Specification |
+  | :--- | :--- |
+  | **Model** | Pylontech Fidus FB-L-5.12 |
+  | **Battery Type** | Lithium Iron Phosphate (LiFePO₄) |
+  | **Nominal Voltage** | 51.2 VDC |
+  | **Nominal Energy Capacity** | 5.12 kWh |
+  | **Usable Energy Capacity** | 4.97 kWh |
+  | **Depth of Discharge (DoD)** | 97% |
+  | **Standard Charge/Discharge Current** | 100 A |
+  | **Peak Discharge Current** | 121 A – 200 A (@ 15 seconds) |
+  | **Dimensions (W × D × H)** | 638 × 137 × 370 mm |
+  | **Unit Weight** | 45 kg |
+  | **Ingress Protection Rating** | IP65 (Outdoor Rated) |
+  | **Anti-Corrosion Standard** | C5-M |
+  | **Communication Protocols** | RS485 / CANbus |
+  | **User Interaction** | LED Status Display, Optional Bluetooth & Wi-Fi |
+  | **Operating Temperature Range** | -20°C to 55°C |
+  | **Cycle Life (@ 25°C)** | **8,000+ Cycles** |
+  | **Design Service Life** | 10+ Years |
+
+  ---
+
+  ## International Certifications & Standards
+
+  * **IEC 62619** (Safety requirements for secondary lithium cells & batteries)
+  * **IEC 63056** (Energy storage system safety standard)
+  * **VDE 2510-50** (German battery safety standard)
+  * **IEC 62477-1** (Power electronic converter safety)
+  * **CE / EMC Certified**
+
+  ---
+
+  ## Key Highlights Summary
+
+  * ✅ **5.12 kWh LiFePO₄ Battery Storage Unit**
+  * ✅ **8,000+ Deep Charge/Discharge Cycles**
+  * ✅ **97% Depth of Discharge (DoD)**
+  * ✅ **IP65 Weatherproof & C5-M Marine Anti-Corrosion Protection**
+  * ✅ **Expandable up to 576 kWh**
+  * ✅ **Compatible with 50+ Hybrid & Off-Grid Inverters**
+---

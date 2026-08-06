@@ -1,3 +1,5 @@
+"use client";
+
 import {tinaField} from "tinacms/dist/react";
 
 export const Spacer = (props) => {

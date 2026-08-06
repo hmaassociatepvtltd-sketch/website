@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { tinaField } from "tinacms/dist/react";
 import { useEffect, useState } from "react";

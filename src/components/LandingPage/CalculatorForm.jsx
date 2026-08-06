@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckCircle, Copy, Fan, Lightbulb, LocationEdit, Mail, MapPin, Pencil, Phone, Refrigerator, ThermometerSnowflake, Tv, UserRound, Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { tinaField } from "tinacms/dist/react";

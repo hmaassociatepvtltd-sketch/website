@@ -9,7 +9,6 @@ import Link from "next/link";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { SiFacebook, SiLinkedin } from "react-icons/si";
 import { FaTwitter } from "react-icons/fa";
-import { useTina } from "tinacms/dist/react";
 
 const josefinSans = Josefin_Sans({
     subsets: ["latin"],

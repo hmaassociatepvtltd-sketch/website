@@ -194,7 +194,7 @@ const Product = ({ product }) => {
             {/* Product Details Content */}
             <div className="p-6 sm:p-8 space-y-4 relative z-20 flex-grow flex flex-col justify-between bg-white">
                 <div className="space-y-2">
-                    <h3 className="text-xl sm:text-2xl font-bold font-josefin-sans text-slate-900 group-hover:text-primary transition-colors leading-tight line-clamp-2">
+                    <h3 className="text-base sm:text-lg font-bold font-josefin-sans text-slate-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">
                         {product.name}
                     </h3>
                     {shortDesc && (
